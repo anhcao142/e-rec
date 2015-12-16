@@ -37,11 +37,11 @@ rf <- function(test.set, train.set) {
   return(test.set)
 }
 
-test.set <- read.csv('Archive 3/13-12/test_score.csv', header=T)
+test.set <- read.csv('Archive 3/16-12/test_score.csv', header=T)
 str(test.set)
-train.set <- read.csv('Archive 3/13-12/train_score.csv', header=T)
+train.set <- read.csv('Archive 3/16-12/train_score.csv', header=T)
 str(train.set)
 
 test <- rf(test.set, train.set)
 ## write test to csv
-write.csv(test, 'Archive 3/13-12/test_predict.csv', row.names=F)
+write.csv(test, 'Archive 3/16-12/test_predict.csv', row.names=F)

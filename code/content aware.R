@@ -47,8 +47,8 @@ calculate_score <- function(file_path) {
   }
   data.set <- cbind(data.set, time_score)
   data.set <- cbind(data.set, location_score)
-  write.csv(data.set, 'Archive 3/13-12/train_score.csv', row.names=T)
-  #write.csv(data.set, 'Archive 3/13-12/test_score.csv', row.names=T)
+  write.csv(data.set, 'Archive 3/13-12/train_score.csv', row.names=F)
+  #write.csv(data.set, 'Archive 3/13-12/test_score.csv', row.names=F)
 }
 
 file_path <- "Archive 3/13-12/train.csv"
