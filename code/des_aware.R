@@ -1,5 +1,35 @@
 library(tm)
 library(SnowballC)
+library(lsa)
+
+get_users_history <- function(file_path) {
+  attendee <- read.csv(file_path)
+  attendee <- attendee[order(attendee$userID),]
+  userID <- attendee$userID
+  userID <- userID[!duplicated(userID)]
+  user_history <- vector(mode="list", length=length(userID))
+  names(user_history) <- userID
+  j <- 1
+  history <- vector()
+  
+  for(i in 1:nrow(attendee)){
+    if(attendee$userID[i] == userID[j]) {
+      if(attendee$status[i] == 1) {
+        history <- c(history, attendee$eventID[i])
+      }
+    } else {
+      user_history[[j]] <- history
+      j <- j+1
+      history <- vector()
+      if(attendee$status[i] == 1) {
+        history <- c(history, attendee$eventID[i])
+      }
+    }
+  }
+  user_history[[j]] <- history
+  return(user_history)
+}
+
 
 create_event_top_words <- function(file_path) {
   options( stringsAsFactors=F )
@@ -41,7 +71,9 @@ create_event_top_words <- function(file_path) {
   return (events_top_word)
 }
 
-create_user_top_words <- function(history, events_top_word) {
+create_user_top_words <- function(history, events_top_word, number_of_words) {
+  print(number_of_words)
+  flush.console()
   lst <- list()
   for(i in 1: length(history)) {
     lst[[i]] <- events_top_word[[as.character(history[i])]]
@@ -49,11 +81,11 @@ create_user_top_words <- function(history, events_top_word) {
   user_tw <- tapply(unlist(lst), names(unlist(lst)), sum)
   user_tw <- sort(user_tw, decreasing = TRUE)
   
-  top_word <- matrix(data = NA, nrow = 1, ncol = 100)
+  top_word <- matrix(data = NA, nrow = 1, ncol = number_of_words)
   top_word <- as.vector(top_word)
   if(length(user_tw) == 0)
     return (top_word)
-  for(j in 1: min(100, length(user_tw))) {
+  for(j in 1: min(number_of_words, length(user_tw))) {
     if(user_tw[[j]] == 0) 
       break
     top_word[j] <- paste(names(user_tw)[j],"-",user_tw[[j]],sep="")
@@ -61,9 +93,9 @@ create_user_top_words <- function(history, events_top_word) {
   return (top_word)
 }
 
-create_user_top_word <- function() {
+create_user_top_word <- function(number_of_words) {
  
-  file_path <- 'Archive 3/16-12/events_top_words.csv'
+  file_path <- '29-12/events_top_words.csv'
   events <- read.csv(file_path, header = T, row.names = 1)
   events_top_word <- vector(mode="list", length=nrow(events))
   names(events_top_word) <- row.names(events)
@@ -76,25 +108,25 @@ create_user_top_word <- function() {
     events_top_word[[i]] <- event_tw
   }
   
-  file_path <- "Archive 3/13-12/prepare.csv"
+  file_path <- "29-12/prepare.csv"
   user_history <- get_users_history(file_path)
   
-  users_top_word <- matrix(data=NA, nrow = length(user_history), ncol = 100)
+  users_top_word <- matrix(data=NA, nrow = length(user_history), ncol = number_of_words)
   rownames(users_top_word) <- names(user_history)
     
   for(i in 1 : length(user_history)) {
     if(!length(user_history[[i]])==0) {
-      user_tw <- create_user_top_words(user_history[[i]], events_top_word)
+      user_tw <- create_user_top_words(user_history[[i]], events_top_word, number_of_words)
       users_top_word[i, ] <- user_tw
     }
   }
-  write.csv(users_top_word, 'Archive 3/16-12/users_top_words.csv', row.names=T)
+  write.csv(users_top_word, '29-12/users_top_words.csv', row.names=T)
 }
 
 write_events_top_words <- function() {
-  file_path <- 'Archive 3/event_des.csv'
+  file_path <- 'event_des.csv'
   events_top_word <- create_event_top_words(file_path)
-  write.csv(events_top_word, 'Archive 3/16-12/events_top_words.csv', row.names=T)
+  write.csv(events_top_word, '29-12/events_top_words.csv', row.names=T)
 }
 
 parse_top_word_file <-function(df) {
@@ -149,8 +181,8 @@ calculate_word_score_for_one_user <- function(user_tw, event_tw) {
 }
 create_user_word_score <- function(file_path, des_path) {
   data.set <- read.csv(file_path, header = T)
-  users_top_word <- read.csv("Archive 3/16-12/users_top_words.csv", header = T, row.names = 1)
-  event_top_word <- read.csv("Archive 3/16-12/events_top_words.csv", header = T, row.names = 1)
+  users_top_word <- read.csv("29-12/users_top_words.csv", header = T, row.names = 1)
+  event_top_word <- read.csv("29-12/events_top_words.csv", header = T, row.names = 1)
   
   users_top_word <- parse_top_word_file(users_top_word)
   event_top_word <- parse_top_word_file(event_top_word)
@@ -169,27 +201,27 @@ create_user_word_score <- function(file_path, des_path) {
 }
 
 create_scored_files <- function() {
-  train_scored <- read.csv("Archive 3/13-12/train_score.csv", header = T)
-  test_scored <- read.csv("Archive 3/13-12/test_score.csv", header = T)
-  train_word_score <- read.csv("Archive 3/16-12/train_word_score.csv", header = T)
-  test_word_score <- read.csv("Archive 3/16-12/test_word_score.csv", header = T)
+  train_scored <- read.csv("29-12/train_location_score.csv", header = T)
+  test_scored <- read.csv("29-12/test_location_score.csv", header = T)
+  train_word_score <- read.csv("29-12/train_word_score.csv", header = T)
+  test_word_score <- read.csv("29-12/test_word_score.csv", header = T)
   train_scored <- cbind(train_scored, word_score=train_word_score$word_score)
-  write.csv(train_scored, "Archive 3/16-12/train_score.csv", row.names=F)
+  write.csv(train_scored, "29-12/train_word_score.csv", row.names=F)
   test_scored <- cbind(test_scored, word_score=test_word_score$word_score)
-  write.csv(test_scored, "Archive 3/16-12/test_score.csv", row.names=F)
+  write.csv(test_scored, "29-12/test_word_score.csv", row.names=F)
 }
 
 create_word_score_train_test <- function() {
-  file_path <- "Archive 3/13-12/train.csv"
-  des_path <- "Archive 3/16-12/train_word_score.csv"
+  file_path <- "29-12/train.csv"
+  des_path <- "29-12/train_word_score.csv"
   create_user_word_score(file_path, des_path)
   
-  file_path <- "Archive 3/13-12/test.csv"
-  des_path <- "Archive 3/16-12/test_word_score.csv"
+  file_path <- "29-12/test.csv"
+  des_path <- "29-12/test_word_score.csv"
   create_user_word_score(file_path, des_path)
 }
 
 #write_events_top_words()
-#create_user_top_word()
-#create_word_score_train_test()
-create_scored_files
+create_user_top_word(number_of_words = 10)
+create_word_score_train_test()
+
