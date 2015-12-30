@@ -37,11 +37,30 @@ rf <- function(test.set, train.set) {
   return(test.set)
 }
 
-test.set <- read.csv('Archive 3/16-12/test_score.csv', header=T)
+test.set <- read.csv('29-12/test_word_score.csv', header=T)
 str(test.set)
-train.set <- read.csv('Archive 3/16-12/train_score.csv', header=T)
+train.set <- read.csv('29-12/train_word_score.csv', header=T)
 str(train.set)
 
 test <- rf(test.set, train.set)
 ## write test to csv
-write.csv(test, 'Archive 3/16-12/test_predict.csv', row.names=F)
+write.csv(test, '29-12/test_word_predict.csv', row.names=F)
+
+test.set <- read.csv('29-12/test_time_score.csv', header=T)
+str(test.set)
+train.set <- read.csv('29-12/train_time_score.csv', header=T)
+str(train.set)
+
+test <- rf(test.set, train.set)
+## write test to csv
+write.csv(test, '29-12/test_time_predict.csv', row.names=F)
+
+test.set <- read.csv('29-12/test_location_score.csv', header=T)
+str(test.set)
+train.set <- read.csv('29-12/train_location_score.csv', header=T)
+str(train.set)
+
+test <- rf(test.set, train.set)
+## write test to csv
+write.csv(test, '29-12/test_location_predict.csv', row.names=F)
+
