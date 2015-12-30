@@ -1,0 +1,1438 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"p",
+				"paste0"
+			],
+			[
+				"att",
+				"attendLimit"
+			],
+			[
+				"at",
+				"attendLimit"
+			],
+			[
+				"wri",
+				"writeCsvFile"
+			],
+			[
+				"ne",
+				"newRow"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"wr",
+				"writeRSVP"
+			],
+			[
+				"vali",
+				"validRSVPs"
+			],
+			[
+				"write",
+				"writeRSVP"
+			],
+			[
+				"Rsv",
+				"RSVP_ids"
+			],
+			[
+				"RS",
+				"RSVP_ids"
+			],
+			[
+				"RSV",
+				"RSVP_ids"
+			],
+			[
+				"err",
+				"errorIds"
+			],
+			[
+				"va",
+				"valid_members"
+			],
+			[
+				"us",
+				"users"
+			],
+			[
+				"res",
+				"resuming"
+			],
+			[
+				"er",
+				"errorIds"
+			],
+			[
+				"mem",
+				"members"
+			],
+			[
+				"f",
+				"function"
+			],
+			[
+				"me",
+				"members"
+			],
+			[
+				"m",
+				"meetup"
+			],
+			[
+				"pro",
+				"process"
+			],
+			[
+				"even",
+				"events"
+			],
+			[
+				"cou",
+				"counter"
+			],
+			[
+				"RSVP",
+				"RSVPResp"
+			],
+			[
+				"get",
+				"getRSVPByEvents"
+			],
+			[
+				"getR",
+				"getRSVPByAnEvent"
+			],
+			[
+				"Get",
+				"getRSVPByAnEvent"
+			],
+			[
+				"to",
+				"totalEventFile"
+			],
+			[
+				"R",
+				"RSVPs"
+			],
+			[
+				"do",
+				"doWhilst"
+			],
+			[
+				"meet",
+				"meetupAPI"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"dow",
+				"downloadUrls"
+			],
+			[
+				"downlo",
+				"downloadUrl"
+			],
+			[
+				"json",
+				"jsonBody"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"erro",
+				"errorCount"
+			],
+			[
+				"ev",
+				"events"
+			],
+			[
+				"met",
+				"metaData"
+			],
+			[
+				"evn",
+				"event_id"
+			],
+			[
+				"new",
+				"newerItem"
+			],
+			[
+				"eve",
+				"eventInfo"
+			],
+			[
+				"getF",
+				"getFbDataWithPages"
+			],
+			[
+				"getFb",
+				"getFbEventAttending"
+			],
+			[
+				"fbap",
+				"fbAppSecret"
+			],
+			[
+				"fb",
+				"fbAppId"
+			],
+			[
+				"tota",
+				"totalCount"
+			],
+			[
+				"tao",
+				"totalCount"
+			],
+			[
+				"curP",
+				"curPage"
+			],
+			[
+				"song",
+				"songUrl"
+			],
+			[
+				"curPage",
+				"curPageUrl"
+			],
+			[
+				"down",
+				"downloadUrl"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"border-ra",
+				"border-radius"
+			],
+			[
+				"marin",
+				"margin-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"padin",
+				"padding-left"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"mai",
+				"margin-bottom"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"co",
+				"cover"
+			],
+			[
+				"tabl",
+				"table-cell"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"ali",
+				"text-align"
+			],
+			[
+				"gray-",
+				"gray-border-color"
+			],
+			[
+				"ta",
+				"table"
+			],
+			[
+				"tab",
+				"table-cell"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"tabe",
+				"table-cell"
+			],
+			[
+				"bacgrou",
+				"background-color"
+			],
+			[
+				"backgr",
+				"background-position"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"box-",
+				"box-shadow"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"paddig",
+				"padding-bottom"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"con",
+				"condition"
+			],
+			[
+				"quest",
+				"questInstanceId"
+			],
+			[
+				"questJ",
+				"questUniversalObjects"
+			],
+			[
+				"qu",
+				"questInstances"
+			],
+			[
+				"getBy",
+				"getById"
+			],
+			[
+				"re",
+				"relationshipsDepth"
+			],
+			[
+				"questInsta",
+				"questInstance"
+			],
+			[
+				"ques",
+				"questInstanceUpdate"
+			],
+			[
+				"Qeu",
+				"QuestInstanceWrapper"
+			],
+			[
+				"return",
+				"returnResources"
+			],
+			[
+				"reou",
+				"resourceType"
+			],
+			[
+				"resou",
+				"resourceType"
+			],
+			[
+				"reaw",
+				"rewardItem"
+			],
+			[
+				"user",
+				"userResources"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"part",
+				"partnerId"
+			],
+			[
+				"partner",
+				"partnerAdmin"
+			],
+			[
+				"questIn",
+				"questInstance"
+			],
+			[
+				"Quest",
+				"QuestInstanceWrapper"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"par",
+				"partnerSlug"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"rep",
+				"repeat-x"
+			],
+			[
+				"Part",
+				"PartnerWrapper"
+			],
+			[
+				"Partner",
+				"PartnerMember"
+			],
+			[
+				"mari",
+				"margin-bottom"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"qun",
+				"questUniversalObject"
+			],
+			[
+				"qus",
+				"questInstance"
+			],
+			[
+				"q",
+				"quest"
+			],
+			[
+				"uni",
+				"questUniversalObjects"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"bacg",
+				"background-color"
+			],
+			[
+				"pat",
+				"partnerStaff"
+			],
+			[
+				"Parse",
+				"PartnerStaff"
+			],
+			[
+				"secu",
+				"secureAdminAuthority"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "python/setup.py",
+			"settings":
+			{
+				"buffer_size": 439,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "python/code/refine_events.py",
+			"settings":
+			{
+				"buffer_size": 135,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "python/code/refine_user_event.py",
+			"settings":
+			{
+				"buffer_size": 136,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "python/code/reformat_user_event.py",
+			"settings":
+			{
+				"buffer_size": 152,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "code/repair data.R",
+			"settings":
+			{
+				"buffer_size": 5156,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "python/code/events.csv",
+			"settings":
+			{
+				"buffer_size": 61244,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"j",
+				"JSCSFormatter: Format this file"
+			],
+			[
+				"jscs",
+				"JSCSFormatter: Format this file"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/13-12",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/16-12",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/code",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/python/tests"
+	],
+	"file_history":
+	[
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/python/code/lib.py",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/python/code/reformat_user_event.py",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/user-event.csv",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/event-user.csv",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/python/code/index.py",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/python/tests/__init__.py",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/python/code/__init__.py",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/python/tests/code_test.py",
+		"/Users/anhcao/Work/Thesis/sourcecode/e-rec/.gitignore",
+		"/Users/anhcao/Work/Thesis/Event-data/event-fb/index.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/getRSVP.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/getUserIds.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/getUser1.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/index.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/validateUser.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/validateRSVP.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/target/user/user_ids_160_end.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/target/user/user_ids_90_160.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/target/RSVP/RSVP_1.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/getRSVP2.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/tmp.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/target/user/user_ids_1000_1007.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/target/user/user_ids_1_48.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-meetup/data/event_1.js",
+		"/Users/anhcao/Work/Freelance/album-scraper/nct.js",
+		"/Users/anhcao/Work/Freelance/album-scraper/index.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-fb/fb-events.js",
+		"/Users/anhcao/Work/Thesis/Event-data/event-fb/sample.js",
+		"/Applications/Utilities/Boot Camp Assistant.app/Contents/Info.plist",
+		"/Users/anhcao/Desktop/Info.plist",
+		"/Users/anhcao/Desktop/rec/node/data_attendees.js",
+		"/Users/anhcao/Downloads/Hadoop-WordCount/WordCount.java",
+		"/Users/anhcao/Downloads/WordCount/WordCount.java",
+		"/Users/anhcao/Downloads/hadoop-0.20.2/conf/hadoop-env.sh",
+		"/Users/anhcao/Desktop/test.txt",
+		"/Users/anhcao/Downloads/MiA-master/src/main/resources/ratings.dat",
+		"/Users/anhcao/Downloads/mahout-distribution-0.5/taste-web/recommender.properties",
+		"/Users/anhcao/Work/hopamviet-scraper/index.js",
+		"/Users/anhcao/Work/hopamviet-scraper/out.json",
+		"/Users/anhcao/Work/hopamviet-scraper/out2.txt",
+		"/Users/anhcao/Work/album-scraper/package.json",
+		"/Users/anhcao/Work/album-scraper/routes/index.js",
+		"/Users/anhcao/Work/album-scraper/app.js",
+		"/Users/anhcao/Work/album-scraper/helpers/scraper.js",
+		"/Users/anhcao/Work/album-scraper/tests/helpers/scraper.js",
+		"/Users/anhcao/Work/album-scraper/app/app.js",
+		"/Users/anhcao/Work/album-scraper/app/routes/index.js",
+		"/Users/anhcao/Work/clinic/design01/index.html",
+		"/Users/anhcao/Work/clinic/design01/less/style.less",
+		"/Users/anhcao/Work/clinic/design01/clinic-detail.html",
+		"/Users/anhcao/Work/clinic/design01/less/clinic-detail.less",
+		"/Users/anhcao/Work/crawler/clini-scraper/index.js",
+		"/Users/anhcao/Work/clinic/design01/script/main.js",
+		"/Users/anhcao/Work/clinic/design01/css/bootstrap-theme.min.css",
+		"/Users/anhcao/Work/clinic/design01/script/tinycarousel-2.1.8/responsive/tinycarousel.css",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/models/wrapper/userResource.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/models/wrapper/quest.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/models/wrapper/base.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/user/quest.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/partnerAdmin/index.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/index.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/partner/index.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/user/index.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/partnerAdmin/adminGenerateCode.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/user/partner.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/layout_partner.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/user/view.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/user/viewInventory.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/production/user/viewInventory.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/user/inventory.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/index.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/admin/quest/instance.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/partnerAdmin/adminQuest.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/admin/announce.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/admin/resource/create.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/admin/quest/create.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/layout.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/partner/view.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/user/viewQuest.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/partner/partner.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/userQuest.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/partner.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/admin/admin.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/admin/resource/view.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/partnerAdmin/adminResource.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/partner/quest.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/css/partner/production/user/viewInventory.css",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/partner/inputMembershipCode.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/production/partner/viewPartnerList.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/partner/viewPartners.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/middleware/index.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/partner-list.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/production/user/view.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/admin/common.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/js/partner/admin/store/viewStore.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/models/wrapper/questInstance.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/global.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/admin/view.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/admin/store/view.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/api/quest.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/partnerAdmin/adminStore.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/common.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/production/user/viewQuest.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/user/viewQuests.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/js/partner/production/quest/viewQuest.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/models/questInstance.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/models/wrapper/questCode.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/user/message.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/user/viewPartners.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/production/user/viewPartners.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/user/layout.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/models/wrapper/partnerStore.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/js/partner/admin/store",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/production/user/common.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/partner-common.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/production/user/viewQuests.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/quest/view.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/production/quest/viewQuest.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/production/common.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/scss/partner/admin/quest/viewQuest.scss",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/css/partner/production/quest/viewQuest.css",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/layout.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/quest/view.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/api/partner.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner/admin/authentication/login.html",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/models/wrapper/partnerStaff.js",
+		"/Users/anhcao/Work/capstone/ws01/cedar-website/app/static/js/parallax.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/anhcao/Work/capstone/ws01/cedar-website/app",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views/partnerAdmin",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website/app/templates/partner",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website/app/views",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website/app",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website/app/api",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website/app/models/wrapper",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website/app",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website/app/",
+			"/Users/anhcao/Work/cedar/ws01/cedar-website/app/",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website/app/models/wrapper",
+			"/Users/anhcao/Work/capstone/ws01/cedar-website"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"length",
+			"eventCountToNotBeRemoved",
+			"168",
+			"\"",
+			"1001943059849268",
+			"Write",
+			"writeFileSync",
+			"counter_2",
+			"duration",
+			");\n",
+			")\n",
+			"FileSplit",
+			"class=\"name\">",
+			"a c",
+			"div",
+			"a c",
+			"div",
+			"a c",
+			"div",
+			"a c",
+			"div",
+			"div class=\"col-md",
+			"div class=\"col",
+			"highlight",
+			"btn-default",
+			"overlay",
+			"<span",
+			"<p",
+			"<span",
+			"<p",
+			"text-color",
+			"op:",
+			"deleted",
+			"op:",
+			"op",
+			"QuestInstance",
+			"QuestCodeWrapper.claimCode",
+			"QuestInstanceWrapper.giveReward",
+			"`",
+			"  ",
+			"partner",
+			"PartnerMember",
+			"Partner",
+			"-moz-box-shadow: 0px 0px 1px 0px rgba(147,147,153,1);\n        box-shadow: 0px 0px 1px 0px rgba(147,147,153,1);",
+			"PartnerMember",
+			"partnerMember",
+			"debugger",
+			"rewards",
+			"debugger",
+			"PartnerWrapper",
+			"PartnerWrapper.getOne",
+			"reviewDate",
+			"phone",
+			"nam",
+			"http://www.whatclinic.com/dentists/vietnam/district-3-ho-chi-minh/elite-dental",
+			"Remove",
+			"checkboxOne",
+			"Item",
+			"item",
+			"checkboxAll",
+			"  ",
+			"require('../",
+			"require",
+			"views.admin",
+			"views.",
+			"/admin",
+			"app",
+			"  ",
+			"/capstone/header.html",
+			"capstone",
+			"{% extends \"capstone",
+			"capstone",
+			"partner",
+			"capstone",
+			"getAvailableQuests",
+			"console.log",
+			"NULL",
+			"_resource",
+			"_questInstance",
+			"getAllResource",
+			"QuestTaskInstanceWrapper",
+			"../models/wrapper/questInstance",
+			"QuestInstanceWrapper",
+			"QuestTask",
+			"change",
+			"return",
+			"\n            ",
+			"debugger;",
+			"UserResource",
+			"\\n",
+			"=",
+			"export ",
+			"\n            async.each(quests, function (quest, innerCallback) {\n                getQuestUniversalObject(quest, function (err) {\n                    return innerCallback(err);\n                })\n            },\n            function (err) {",
+			"'../models/wrapper/resource'",
+			"partner",
+			"UniversalObjectWrapper.getById",
+			"UniversalObjectWrapper",
+			";\n",
+			"getObjectById",
+			"deleted",
+			"debugger",
+			"/partner",
+			"QuestTask",
+			"resource",
+			"QuestTask",
+			"user/quest",
+			"PartnerMember",
+			"MembershipCode",
+			"partnerMember",
+			"partner",
+			"\\t",
+			"      ",
+			"\\t",
+			"questInstanId",
+			"Quest",
+			"badgeInstance",
+			"BadgeInstance",
+			"questTask",
+			"Resource"
+		],
+		"highlight": true,
+		"in_selection": true,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"l",
+			"eventCountRequire",
+			"'",
+			"counter",
+			"class=\"name\">\n<i class=\"fa fa-caret-right\"></i>",
+			"class=\"name\">\\n<i class=\"fa fa-caret-right\"></i>",
+			"a href=\"#\" c",
+			"a",
+			"a href=\"#\" c",
+			"a",
+			"a href=\"#\" c",
+			"a",
+			"a href=\"#\" c",
+			"a",
+			"li class=\"col-md",
+			"li class=\"col",
+			"featured",
+			"btn-blending",
+			"<p class=\"address\"",
+			"<span class=\"address\"",
+			"<p class=\"title\"",
+			"<span class=\"address\"",
+			"<p class=\"title\"",
+			"gray-text-color",
+			"",
+			"    ",
+			"quest",
+			"PartnerMemberWrapper",
+			"PartnerWrapper",
+			"PartnerStaff",
+			"partnerStaff",
+			"Resource",
+			"resource",
+			"    ",
+			"require('../../",
+			"views.partnerAdmin.",
+			"views.partnerAdmin",
+			"",
+			"partnerAdmin",
+			"    ",
+			"{% extends \"partner",
+			"partner",
+			"0",
+			"QuestPerformance",
+			"UserResourceWrapper",
+			"\"\\n",
+			"=\"",
+			"",
+			"partnerStore",
+			"getById",
+			"QuestType",
+			"QuestUniversalObject",
+			"Partner",
+			"PartnerMember",
+			"membershipCode",
+			"partnerMember",
+			"    ",
+			"};\n",
+			"QuestCode",
+			"questCode",
+			"QuestCode",
+			"questUniversalObject",
+			"ActivityHistory",
+			"ActivityHistory6§"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "python/setup.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 439,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								346,
+								346
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "python/code/refine_events.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "python/code/refine_user_event.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								136
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "python/code/reformat_user_event.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								123,
+								123
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "code/repair data.R",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4282,
+								4282
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/R/R.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "python/code/events.csv",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 61244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20467,
+								20470
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 17701.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "event-rec.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"viewquest",
+				"app/templates/partner/production/user/viewQuest.html"
+			],
+			[
+				"viewinve",
+				"app/static/scss/partner/production/user/viewInventory.scss"
+			],
+			[
+				"viewin",
+				"app/static/css/partner/production/user/viewInventory.css"
+			],
+			[
+				"viewquests",
+				"app/templates/partner/production/user/viewQuests.html"
+			],
+			[
+				"user/parnt",
+				"app/views/user/partner.js"
+			],
+			[
+				"viewquests.html",
+				"app/templates/partner/production/user/viewQuests.html"
+			],
+			[
+				"middleware/index",
+				"app/middleware/index.js"
+			],
+			[
+				"viewquest.scss",
+				"app/static/scss/partner/production/quest/viewQuest.scss"
+			],
+			[
+				"quest/viewquest",
+				"app/static/scss/partner/admin/quest/viewQuest.scss"
+			],
+			[
+				"quest/view",
+				"app/static/css/partner/production/quest/viewQuest.css"
+			],
+			[
+				"api/par",
+				"app/api/partner.js"
+			],
+			[
+				"api/partner",
+				"app/api/partner.js"
+			],
+			[
+				"in",
+				"app/index.js"
+			],
+			[
+				"para",
+				"app/static/js/parallax.js"
+			],
+			[
+				"common",
+				"app/lib/common.js"
+			],
+			[
+				"viewquest.js",
+				"app/static/js/partner/production/quest/viewQuest.js"
+			],
+			[
+				"partner/quest/view",
+				"app/templates/partner/quest/view.html"
+			],
+			[
+				"resource/view",
+				"app/templates/partner/admin/resource/view.html"
+			],
+			[
+				"common.js",
+				"app/static/js/partner/admin/common.js"
+			],
+			[
+				"viewresour",
+				"app/static/js/partner/admin/resource/viewResource.js"
+			],
+			[
+				"view/admin",
+				"app/views/partnerAdmin/adminResource.js"
+			],
+			[
+				"viewinsta",
+				"app/static/js/partner/admin/quest/viewInstance.js"
+			],
+			[
+				"common.scss",
+				"app/static/scss/partner/admin/common.scss"
+			],
+			[
+				"common.cs",
+				"app/static/css/partner/admin/common.css"
+			],
+			[
+				"index",
+				"app/index.js"
+			],
+			[
+				"createquest",
+				"app/static/js/partner/admin/quest/createQuest.js"
+			],
+			[
+				"create.html",
+				"app/templates/partner/admin/quest/create.html"
+			],
+			[
+				"js/partner/admin/",
+				"app/static/js/partner/admin/quest/viewQuest.js"
+			],
+			[
+				"admin/quest/vi",
+				"app/templates/partner/admin/quest/view.html"
+			],
+			[
+				"view/quest",
+				"app/views/partnerAdmin/adminQuest.js"
+			],
+			[
+				"admin.html",
+				"app/templates/partner/admin/admin.html"
+			],
+			[
+				"admin/admin",
+				"app/templates/partner/admin/admin.html"
+			],
+			[
+				"partner/admin",
+				"app/static/scss/partner/admin.scss"
+			],
+			[
+				"resource/",
+				"app/static/scss/partner/admin/resource/viewResource.scss"
+			],
+			[
+				"quest/create",
+				"app/static/scss/partner/admin/quest/createQuest.scss"
+			],
+			[
+				"template/partner/admin/quest",
+				"app/templates/partner/admin/create_quest.html"
+			],
+			[
+				"template/partner/admin/quest/cre",
+				"app/templates/partner/admin/quest/create.html"
+			],
+			[
+				"quest/createq",
+				"app/static/js/partner/admin/quest/createQuest.js"
+			],
+			[
+				"static/js/partner/admin/quest",
+				"app/static/js/partner/admin/quest/viewQuest.js"
+			],
+			[
+				"template/partner/admin/quest/create",
+				"ws01/cedar-website/app/templates/partner/admin/quest/create.html"
+			],
+			[
+				"template/partner/admin/resource/view",
+				"ws01/cedar-website/app/templates/partner/admin/resource/view.html"
+			],
+			[
+				"models/wrapper/base",
+				"ws01/cedar-website/app/models/wrapper/base.js"
+			],
+			[
+				"models/wrapper/resource",
+				"cedar/ws01/cedar-website/app/models/wrapper/resource.js"
+			],
+			[
+				"view/adminre",
+				"capstone/ws01/cedar-website/app/views/partnerAdmin/adminResource.js"
+			],
+			[
+				"view/adminresource",
+				"capstone/ws01/cedar-website/app/views/partnerAdmin/adminResource.js"
+			],
+			[
+				"view/adminresource.js",
+				"capstone/ws01/cedar-website/app/views/partnerAdmin/adminResource.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 251.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}
