@@ -1,7 +1,9 @@
-test <- read.csv("300 items/POPULAR.csv", header = TRUE)
-test <- read.csv("300 items/UBCF_jacard.csv", header = TRUE)
-test <- read.csv("300 items/POPULAR.csv", header = TRUE)
-test <- read.csv("300 items/POPULAR.csv", header = TRUE)
+test1 <- read.csv("POPULAR.csv", header = TRUE)
+test2 <- read.csv("UBCF_jacard.csv", header = TRUE)
+test3 <- read.csv("IBCF_jacard.csv", header = TRUE)
+test4 <- read.csv("UBCF_COSINE.csv", header = TRUE)
+test5 <- read.csv("BASELINE.csv", header = TRUE)
+test6 <- read.csv("BELLKOV.csv", header = TRUE)
 
 
 
@@ -17,14 +19,24 @@ mae <- function(error)
   mean(abs(error))
 }
 
-# Example data
-names(test) <- c("user", "item", "real_rating", "rating")
-actual <- test$real_rating
-predicted <- test$rating
 
-# Calculate error
-error <- actual - predicted
+run <- function(test) {
+  # Example data
+  names(test) <- c("user", "item", "real_rating", "rating")
+  actual <- test$real_rating
+  predicted <- test$rating
+  
+  # Calculate error
+  error <- actual - predicted
+  
+  # Example of invocation of functions
+  print(rmse(error))
+  print(mae(error))
+}
 
-# Example of invocation of functions
-rmse(error)
-mae(error)
+#run(test1)
+#run(test2)
+#run(test3)
+#run(test4)
+run(test5)
+run(test6)

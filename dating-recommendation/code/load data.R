@@ -1,24 +1,7 @@
+setwd("~/e-rec/dating-recommendation")
 library(recommenderlab)
 library(reshape2)
 library(ggplot2)
-
-tr <- read.csv('train.csv', header = TRUE)
-test<-read.csv("test.csv",header=TRUE)
-
-# Using acast to convert above data as follows:
-#       m1  m2   m3   m4
-# u1    3   4    2    5
-# u2    1   6    5
-# u3    4   4    2    5
-g<-acast(tr, user ~ item)
-uID <- row.names(g)
-# Convert it as a matrix
-R<-as.matrix(g)
-
-# Convert R into realRatingMatrix data structure
-#   realRatingMatrix is a recommenderlab sparse-matrix like data-structure
-r <- as(R, "realRatingMatrix")
-
 
 
 prepare_data <- function() {
@@ -30,7 +13,8 @@ prepare_data <- function() {
   item <- data$item
   a <- as.data.frame(table(item))
   a <- a[order(a$Freq, decreasing = TRUE),]
-  item <- a$item[1:300]
+  write.csv(a, "item.csv", row.names = FALSE)
+  item <- a$item[17900:18200]
   item <- as.numeric(levels(item))[item]
   new_data <- matrix(data = NA, nrow = 0, ncol = 3)
   for(i in 1: nrow(data)) {
@@ -60,6 +44,57 @@ prepare_data <- function() {
   
   write.csv(test, 'test.csv', row.names=F)
 }
+
+create_data <- function(index1, index2) {
+  data <- read.csv("100000.csv", header = TRUE)
+  a <- read.csv("item.csv", header = TRUE)
+  item <- a$item[index1:index2]
+  new_data <- matrix(data = NA, nrow = 0, ncol = 3)
+  for(i in 1: nrow(data)) {
+    if(!is.na(match(data$item[i],item))) {
+      new_data <- rbind(new_data, data[i,])
+    }
+  }
+  new_data <- data.frame(new_data)
+  names(new_data) <- c("user", "item", "rating")
+  write.csv(new_data, 'data.csv', row.names=F)
+  
+  data <- read.csv("data.csv", header = TRUE)
+  set.seed(7)
+  ss <- sample(1:2,size=nrow(data),replace=TRUE,prob=c(0.9,0.1))
+  train <- data[ss==1,]
+  test <- data[ss==2,]
+  write.csv(train, 'train.csv', row.names=F)
+  write.csv(test, 'test.csv', row.names=F)
+  for(i in 1: nrow(test)) {
+    if(is.na(match(test$user[i],train$user))) {
+      print(nrow(test))
+      flush.console()
+      test <- test[-c(i),]
+      i <- i-1
+    }
+  }
+  
+  write.csv(test, 'test.csv', row.names=F)
+}
+
+#create_data(1686, 1389)
+tr <- read.csv('train.csv', header = TRUE)
+test<-read.csv("test.csv",header=TRUE)
+
+# Using acast to convert above data as follows:
+#       m1  m2   m3   m4
+# u1    3   4    2    5
+# u2    1   6    5
+# u3    4   4    2    5
+g<-acast(tr, user ~ item)
+uID <- row.names(g)
+# Convert it as a matrix
+R<-as.matrix(g)
+
+# Convert R into realRatingMatrix data structure
+#   realRatingMatrix is a recommenderlab sparse-matrix like data-structure
+r <- as(R, "realRatingMatrix")
 
 collaborative <- function(rec, file_path) {
   # This prediction does not predict movie ratings for test.
@@ -114,6 +149,8 @@ collaborative <- function(rec, file_path) {
   write.table(tx,file=file_path,row.names=FALSE,col.names=FALSE,sep=',')
   return(rec_list)
 }
+
+
 
 rec1=Recommender(r[1:nrow(r)],method="UBCF", param=list(normalize = "Z-score",method="Cosine",nn=5, minRating=1))
 rec2=Recommender(r[1:nrow(r)],method="UBCF", param=list(normalize = "Z-score",method="Jaccard",nn=5, minRating=1))
