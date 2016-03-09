@@ -1,9 +1,9 @@
 #setwd("~/e-rec/dating-recommendation")
-setwd("~/e-rec/dating-recommendation/test_number_item/1-2")
+#setwd("~/e-rec/dating-recommendation/test_number_item/1-2")
 library(recommenderlab)
 library(reshape2)
 #library(irlba)
-library(svd)
+#library(svd)
 
 l1 = 25
 l2 = 10
@@ -44,8 +44,8 @@ baseline_prediction <- function(file_path) {
     # Read userid and movieid from columns 2 and 3 of test data
     userid <- test[u,1]
     itemid<-test[u,2]
-    print(u)
-    flush.console()
+    #print(u)
+    #flush.console()
     
     # Get as list & then convert to data frame all recommendations for user: userid
     r <- baseline_sim(average, userid, userid)
@@ -54,8 +54,8 @@ baseline_prediction <- function(file_path) {
     } else {
       ratings[u] <- r
     }
-    print(r)
-    flush.console()
+    #print(r)
+    #flush.console()
   }
   tx<-cbind(test,round(ratings))
   # Write to a csv file: submitfile.csv in your folder
@@ -106,10 +106,10 @@ bellkov_prediction <- function(file_path) {
     } else {
       ratings[u] <- r
     }
-    print(u)
-    flush.console()
-    print(r)
-    flush.console()
+    #print(u)
+    #flush.console()
+    #print(r)
+    #flush.console()
   }
   tx<-cbind(test,round(ratings))
   # Write to a csv file: submitfile.csv in your folder

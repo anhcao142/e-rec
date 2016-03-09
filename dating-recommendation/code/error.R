@@ -1,7 +1,7 @@
-test1 <- read.csv("POPULAR.csv", header = TRUE)
-test2 <- read.csv("UBCF_jacard.csv", header = TRUE)
-test3 <- read.csv("IBCF_jacard.csv", header = TRUE)
-test4 <- read.csv("UBCF_COSINE.csv", header = TRUE)
+#test1 <- read.csv("POPULAR.csv", header = TRUE)
+#test2 <- read.csv("UBCF_jacard.csv", header = TRUE)
+#test3 <- read.csv("IBCF_jacard.csv", header = TRUE)
+#test4 <- read.csv("UBCF_COSINE.csv", header = TRUE)
 test5 <- read.csv("BASELINE.csv", header = TRUE)
 test6 <- read.csv("BELLKOV.csv", header = TRUE)
 
@@ -32,6 +32,7 @@ run <- function(test) {
   # Example of invocation of functions
   print(rmse(error))
   print(mae(error))
+  return(list(rmse = rmse(error), mae = mae(error)))
 }
 
 #run(test1)

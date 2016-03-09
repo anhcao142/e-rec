@@ -1,4 +1,4 @@
-setwd("~/e-rec/dating-recommendation")
+#setwd("~/e-rec/dating-recommendation")
 library(recommenderlab)
 library(reshape2)
 library(ggplot2)
@@ -6,7 +6,7 @@ library(ggplot2)
 
 prepare_data <- function() {
   #readLines("libimseti/ratings.dat",  n=10)
-  data <- read.table("libimseti/ratings.dat",header=FALSE, sep = ",", nrows = 100000)
+  data <- read.table("ratings.dat",header=FALSE, sep = ",")
   names(data) <- c("user", "item", "rating")
   write.csv(data, "100000.csv", row.names=F)
   data <- read.csv("100000.csv", header = TRUE)
@@ -28,7 +28,7 @@ prepare_data <- function() {
   
   data <- read.csv("data.csv", header = TRUE)
   set.seed(7)
-  ss <- sample(1:2,size=nrow(data),replace=TRUE,prob=c(0.9,0.1))
+  ss <- sample(1:2,size=nrow(data),replace=TRUE,prob=c(0.999,0.001))
   train <- data[ss==1,]
   test <- data[ss==2,]
   write.csv(train, 'train.csv', row.names=F)
@@ -60,6 +60,8 @@ create_data <- function(index1, index2) {
   write.csv(new_data, 'data.csv', row.names=F)
   
   data <- read.csv("data.csv", header = TRUE)
+  data <- read.csv("ratings.dat", header = TRUE)
+  names(data) <- c("user", "item", "rating")
   set.seed(7)
   ss <- sample(1:2,size=nrow(data),replace=TRUE,prob=c(0.9,0.1))
   train <- data[ss==1,]
@@ -152,18 +154,18 @@ collaborative <- function(rec, file_path) {
 
 
 
-rec1=Recommender(r[1:nrow(r)],method="UBCF", param=list(normalize = "Z-score",method="Cosine",nn=5, minRating=1))
-rec2=Recommender(r[1:nrow(r)],method="UBCF", param=list(normalize = "Z-score",method="Jaccard",nn=5, minRating=1))
-rec3=Recommender(r[1:nrow(r)],method="IBCF", param=list(normalize = "Z-score",method="Jaccard",minRating=1))
+#rec1=Recommender(r[1:nrow(r)],method="UBCF", param=list(normalize = "Z-score",method="Cosine",nn=5, minRating=1))
+#rec2=Recommender(r[1:nrow(r)],method="UBCF", param=list(normalize = "Z-score",method="Jaccard",nn=5, minRating=1))
+#rec3=Recommender(r[1:nrow(r)],method="IBCF", param=list(normalize = "Z-score",method="Jaccard",minRating=1))
 rec4=Recommender(r[1:nrow(r)],method="POPULAR")
-file_path <- "UBCF_COSINE.csv"
-rec_list <- collaborative(rec1, file_path)
+#file_path <- "UBCF_COSINE.csv"
+#rec_list <- collaborative(rec1, file_path)
 
-file_path <- "UBCF_jacard.csv"
-rec_list <- collaborative(rec2, file_path)
+#file_path <- "UBCF_jacard.csv"
+#rec_list <- collaborative(rec2, file_path)
 
-file_path <- "IBCF_jacard.csv"
-rec_list <- collaborative(rec3, file_path)
+#file_path <- "IBCF_jacard.csv"
+#rec_list <- collaborative(rec3, file_path)
 
 file_path <- "POPULAR.csv"
 rec_list <- collaborative(rec4, file_path)
