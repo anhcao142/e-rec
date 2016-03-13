@@ -58,7 +58,6 @@ def bellkor_sim(item_bias, user_bias, average, iid, uid):
     user_index = user_bias.loc[user_bias['user'] == uid].index.tolist()
     if len(user_index)!=0:
         bu = user_bias.at[user_index[0],'bias']
-    print([iid, uid, bi, bu])
     return average + bi + bu
 
 def bellkor_predictor(item_bias, user_bias, average):
