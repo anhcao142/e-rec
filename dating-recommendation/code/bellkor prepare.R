@@ -1,7 +1,8 @@
 l1 = 25
 l2 = 10
-tr <- read.csv('new train 1000.csv', header = TRUE)
-test<-read.csv("test.csv",header=TRUE, nrows = 1000)
+tr <- read.csv('train.csv', header = TRUE)
+tr <- tr[order(tr$user),]
+test<-read.csv("test.csv",header=TRUE)
 
 
 average <- mean(tr$rating, na.rm=TRUE)
@@ -35,7 +36,6 @@ user_bias <- function() {
   item_bias <- read.csv('item bias.csv', header = TRUE)
   user <- tr$user
   count <- as.data.frame(table(user))
-  count <- count[order(count$user, decreasing = FALSE),]
   count$user <- as.numeric(levels(count$user))[count$user]
   index <- 1
   bui <- 0
@@ -45,9 +45,11 @@ user_bias <- function() {
     for(j in 1: count$Freq[i]) {
       id <- match(tr$item[index], item_bias$item)
       bui <- tr$rating[index] - average - item_bias$bias[id] + bui
+      print(c(tr$item[index], tr$rating[index], item_bias$bias[id], bui))
       index <- index+1
     }
     bu[i] <- bui/(l2 + count$Freq[i])
+    print(bu[i])
     print(i)
     flush.console()
     bui <- 0
@@ -57,7 +59,7 @@ user_bias <- function() {
   # Write to a csv file: submitfile.csv in your folder
   write.table(tx,file="user bias.csv",row.names=FALSE,col.names=TRUE,sep=',')
 }
-#item_bias()
+item_bias()
 user_bias()
 
 
@@ -82,14 +84,23 @@ bias_user <- function(average, userid) {
 }
 
 bellkov_sim <- function(average, userid, itemid) {
-  return(average + bias_user(average, userid) + bias_item(average, itemid))
+  bi = bias_item(average, itemid)
+  bu = bias_user(average, userid)
+  print(c(itemid, userid))
+  flush.console()
+  print(c(bi, bu))
+  flush.console()
+  return(average + bi + bu)
 }
 
 bellkov_prediction <- function(file_path) {
   # For all lines in test file, one by one
   ratings<-NULL
+  #length(test[,2])
   for ( u in 1:length(test[,2]))
   {
+    print(u)
+    flush.console()
     # Read userid and movieid from columns 2 and 3 of test data
     userid <- test[u,1]
     itemid<-test[u,2]
@@ -101,10 +112,6 @@ bellkov_prediction <- function(file_path) {
     } else {
       ratings[u] <- r
     }
-    print(u)
-    flush.console()
-    print(r)
-    flush.console()
   }
   tx<-cbind(test,round(ratings))
   # Write to a csv file: submitfile.csv in your folder

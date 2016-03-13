@@ -35,7 +35,6 @@ baseline_sim <- function(average, userid, itemid){
   return(average + u + i)
 }
 
-
 baseline_prediction <- function(file_path) {
   # For all lines in test file, one by one
   ratings<-NULL
@@ -62,6 +61,7 @@ baseline_prediction <- function(file_path) {
   write.table(tx,file=file_path,row.names=FALSE,col.names=FALSE,sep=',')
 }
 
+
 bias_item <- function(average, itemid) {
   if(is.na(match(itemid, colnames(g)))) {
     return(-average/l1)
@@ -87,13 +87,20 @@ bias_user <- function(average, userid) {
 }
 
 bellkov_sim <- function(average, userid, itemid) {
-  return(average + bias_user(average, userid) + bias_item(average, itemid))
+  bi = bias_item(average, itemid)
+  bu = bias_user(average, userid)
+  print(c(itemid, userid))
+  flush.console()
+  print(c(bi, bu))
+  flush.console()
+  return(average + bi + bu)
 }
 
 bellkov_prediction <- function(file_path) {
   # For all lines in test file, one by one
   ratings<-NULL
-  for ( u in 1:length(test[,2]))
+  #length(test[,2])
+  for ( u in 1:100)
   {
     # Read userid and movieid from columns 2 and 3 of test data
     userid <- test[u,1]
@@ -111,7 +118,7 @@ bellkov_prediction <- function(file_path) {
     #print(r)
     #flush.console()
   }
-  tx<-cbind(test,round(ratings))
+  tx<-cbind(test,ratings)
   # Write to a csv file: submitfile.csv in your folder
   write.table(tx,file=file_path,row.names=FALSE,col.names=FALSE,sep=',')
 }
