@@ -15,7 +15,7 @@ l1 = 25
 l2 = 10
 
 def create_train_test(data_path):
-    df = pd.read_csv(data_path)
+    df = pd.read_csv(data_path, header=None, names = ['user', 'item', 'rating'])
     train, test = train_test_split(df, train_size = 0.9)
     train.to_csv('train.csv',index=False)
     test.to_csv('test.csv',index=False)
