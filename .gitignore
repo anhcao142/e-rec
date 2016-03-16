@@ -74,3 +74,5 @@ docs/_build/
 target/
 
 *.DS_Store
+
+ratings.csv
