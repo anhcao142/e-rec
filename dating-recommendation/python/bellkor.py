@@ -33,7 +33,7 @@ def create_train_test(prefix, data_path):
     trainPath = prefix + '_train.csv'
     testPath = prefix + '_test.csv'
 
-    df = pd.read_csv(data_path, header=None, names = ['user', 'item', 'rating'])
+    df = pd.read_csv(data_path)
     train, test = train_test_split(df, train_size = 0.9)
     train.to_csv(trainPath, index = False)
     test.to_csv(testPath, index = False)
