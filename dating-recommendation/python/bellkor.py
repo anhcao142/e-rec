@@ -10,6 +10,7 @@ import numpy as np
 import sys
 from sklearn.cross_validation import train_test_split
 from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_absolute_error
 
 data_path = sys.argv[1]
 minimumRatings = sys.argv[2]
@@ -109,7 +110,8 @@ def bellkor_predictor(item_bias, user_bias, average, testPath, prefix):
 def evaluate(result):
     print 'Calculating result...'
     RMSE = mean_squared_error(result['rating'], result['predict'])**0.5
-    return RMSE
+    MAE = mean_absolute_error(result['rating'],result['predict'])
+    return RMSE, MAE
 
 def main():
     print 'Processing data from ' + data_path + ' with every user must have at least ' + minimumRatings + ' ratings.'
@@ -119,8 +121,9 @@ def main():
     trainPath, testPath = create_train_test(prefix, newDataPath)
     temp = prepare(prefix, trainPath)
     result = bellkor_predictor(temp[0], temp[1], temp[2], testPath, prefix)
-    rmse = evaluate(result)
-    print rmse
+    error = evaluate(result)
+    print error[0]
+    print error[1]
     print '\nDONE'
 
 main()

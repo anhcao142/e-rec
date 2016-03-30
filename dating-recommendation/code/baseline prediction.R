@@ -89,10 +89,6 @@ bias_user <- function(average, userid) {
 bellkov_sim <- function(average, userid, itemid) {
   bi = bias_item(average, itemid)
   bu = bias_user(average, userid)
-  print(c(itemid, userid))
-  flush.console()
-  print(c(bi, bu))
-  flush.console()
   return(average + bi + bu)
 }
 
@@ -100,12 +96,11 @@ bellkov_prediction <- function(file_path) {
   # For all lines in test file, one by one
   ratings<-NULL
   #length(test[,2])
-  for ( u in 1:100)
+  for ( u in 1:length(test[,2]))
   {
     # Read userid and movieid from columns 2 and 3 of test data
     userid <- test[u,1]
     itemid<-test[u,2]
-    
     # Get as list & then convert to data frame all recommendations for user: userid
     r <- bellkov_sim(average, userid, itemid)
     if(is.na(r)) {
