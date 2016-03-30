@@ -1,0 +1,4 @@
+Dataset: .\demo\Datasets\5.txt
+With Setup: cv -k 5 -p on --rand-seed 1 --test-view all
+SVD++,1.767685,2.210451,0.196409,1.753500,2.228800,0.830500,,10, 0.01, -1.0, 0.1, 0.1, 0.1, 200, true,'00:02','00:00'
+

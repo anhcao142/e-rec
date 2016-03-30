@@ -15,7 +15,7 @@ def NMAE():
     result = pd.read_csv('BELLKOR.csv')
     mae = mean_absolute_error(result['rating'],result['predict'])
     nmae = mae/(max(result['rating'])-min(result['rating']))
-    RMSE = mean_squared_error(result['rating'], result['predict'])**0.5
+    RMSE = mean_squared_error(result['rating']/2, result['predict']/2)**0.5
     print nmae
     print mae  
     print RMSE
