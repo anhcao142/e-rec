@@ -1,0 +1,5 @@
+Dataset: .\demo\Datasets\50_0.txt
+With Setup: train_test -k 5 -p off --rand-seed 1 --test-view all
+Dataset: .\demo\Datasets\50_test.txt
+SVD++,1.393719,1.989282,0.154858,1.366650,2.015549,0.670092,,100, 0.01, -1.0, 0.1, 0.1, 0.1, 1000, true,'39494.0','246.0'
+
