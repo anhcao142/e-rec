@@ -16,14 +16,14 @@ write.table(t4,file="50_4.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 write.table(t5,file="50_5.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 
 
-data = read.table("ratings.dat", sep=":", fill=FALSE, strip.white=TRUE, nrows = 100000)
+data = read.table("ratings.dat", sep=":", fill=FALSE, strip.white=TRUE, nrows = 1000000)
 data$V2 = NULL
 data$V4 = NULL
 data$V6 = NULL
 set.seed(7)
-ss <- sample(1:2,size=nrow(data),replace=TRUE,prob=c(0.8,0.2))
+ss <- sample(1:2,size=nrow(data),replace=TRUE,prob=c(0.9,0.1))
 d <- data[ss==2,]
-write.table(d,file="20 000.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d,file="100 000.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 
 d = read.table("20 000.txt", sep="\t", fill=FALSE, strip.white=TRUE)
 d <- d[order(d$V7, decreasing = TRUE),]
@@ -68,21 +68,21 @@ d <- d[order(d$V4, decreasing = TRUE),]
 
 d$V4 = NULL
 d_1 <- head(d,1000)
-d_2 = d[1001:1050,]
-d_3 = d[1051:1100,]
-d_4 = d[1101:1150,]
-d_5 = d[1151:1200,]
-d_6 = d[1201:1250,]
-d_0 = d[1251: length(d$V1),]
+d_2 = d[2001:2200,]
+d_3 = d[2201:2400,]
+d_4 = d[2401:2600,]
+d_5 = d[2601:2800,]
+d_6 = d[2801:3000,]
+d_0 = d[3001: length(d$V1),]
 
 d$V3[d$V3 >0] <- 0
-d1 <- rbind(d_1, d[1001:length(d$V1),])
-d2 <- rbind(d[0:1000,],d_2 , d[1051:length(d$V1),])
-d3 <- rbind(d[0:1050,],d_3 , d[1101:length(d$V1),])
-d4 <- rbind(d[0:1100,],d_4 , d[1151:length(d$V1),])
-d5 <- rbind(d[0:1150,],d_5 , d[1201:length(d$V1),])
-d6 <- rbind(d[0:1200,],d_6 , d[1251:length(d$V1),])
-d0 <- rbind(d[0:1250,],d_0)
+d1 <- rbind(d_1, d[2001:length(d$V1),])
+d2 <- rbind(d[0:2000,],d_2 , d[2201:length(d$V1),])
+d3 <- rbind(d[0:2200,],d_3 , d[2401:length(d$V1),])
+d4 <- rbind(d[0:2400,],d_4 , d[2601:length(d$V1),])
+d5 <- rbind(d[0:2600,],d_5 , d[2801:length(d$V1),])
+d6 <- rbind(d[0:2800,],d_6 , d[3001:length(d$V1),])
+d0 <- rbind(d[0:3000,],d_0)
 
 write.table(d0,file="20 000_0.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 write.table(d2,file="20 000_1.txt",row.names=FALSE,col.names=FALSE,sep='\t')
@@ -92,11 +92,11 @@ write.table(d5,file="20 000_4.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 write.table(d6,file="20 000_5.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 #write.table(d1,file="20 000_test.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 
-d6 <- rbind(d[0:1250,],d_6 , d_0)
-d5 <- rbind(d[0:1200,],d_5 , d6[1251:length(d$V1),])
-d4 <- rbind(d[0:1150,],d_4 , d5[1201:length(d$V1),])
-d3 <- rbind(d[0:1100,],d_3 , d4[1151:length(d$V1),])
-d2 <- rbind(d[0:1050,],d_2 , d3[1101:length(d$V1),])
+d6 <- rbind(d[0:2800,],d_6 , d_0)
+d5 <- rbind(d[0:2600,],d_5 , d6[2801:length(d$V1),])
+d4 <- rbind(d[0:2400,],d_4 , d5[2601:length(d$V1),])
+d3 <- rbind(d[0:2200,],d_3 , d4[2401:length(d$V1),])
+d2 <- rbind(d[0:2000,],d_2 , d3[2201:length(d$V1),])
 
 #write.table(d0,file="20 000_0n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 write.table(d2,file="20 000_1n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
@@ -104,3 +104,90 @@ write.table(d3,file="20 000_2n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 write.table(d4,file="20 000_3n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 write.table(d5,file="20 000_4n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 write.table(d6,file="20 000_5n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+
+d = read.table("null 20 000.txt", sep="\t", fill=FALSE, strip.white=TRUE)
+d <- d[order(d$V4, decreasing = TRUE),]
+
+d$V4 = NULL
+d_1 <- head(d,1000)
+d_2 = d[1001:1500,]
+d_3 = d[1501:2000,]
+d_4 = d[2001:2500,]
+d_5 = d[2501:3000,]
+d_6 = d[3001:3500,]
+d_0 = d[3501: length(d$V1),]
+
+d$V3[d$V3 >0] <- 0
+d1 <- rbind(d_1, d[1001:length(d$V1),])
+d2 <- rbind(d[0:1000,],d_2 , d[1501:length(d$V1),])
+d3 <- rbind(d[0:1500,],d_3 , d[2001:length(d$V1),])
+d4 <- rbind(d[0:2000,],d_4 , d[2501:length(d$V1),])
+d5 <- rbind(d[0:2500,],d_5 , d[3001:length(d$V1),])
+d6 <- rbind(d[0:3000,],d_6 , d[3501:length(d$V1),])
+d0 <- rbind(d[0:3500,],d_0)
+
+write.table(d0,file="20 029_0.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d2,file="20 029_1.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d3,file="20 029_2.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d4,file="20 029_3.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d5,file="20 029_4.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d6,file="20 029_5.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d1,file="20 029_test.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+
+d6 <- rbind(d[0:3000,],d_6 , d_0)
+d5 <- rbind(d[0:2500,],d_5 , d6[3001:length(d$V1),])
+d4 <- rbind(d[0:2000,],d_4 , d5[2501:length(d$V1),])
+d3 <- rbind(d[0:1500,],d_3 , d4[2001:length(d$V1),])
+d2 <- rbind(d[0:1000,],d_2 , d3[1501:length(d$V1),])
+
+#write.table(d0,file="20 000_0n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d2,file="20 029_1n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d3,file="20 029_2n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d4,file="20 029_3n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d5,file="20 029_4n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d6,file="20 029_5n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+
+
+
+d = read.table("100 000.txt", sep="\t", fill=FALSE, strip.white=TRUE)
+d <- d[order(d$V4, decreasing = TRUE),]
+
+d$V4 = NULL
+d_1 <- head(d,5000)
+d_2 = d[5001:7000,]
+d_3 = d[7001:9000,]
+d_4 = d[9001:11000,]
+d_5 = d[11001:13000,]
+d_6 = d[13001:15000,]
+d_0 = d[15001: length(d$V1),]
+
+d$V3[d$V3 >0] <- 0
+d1 <- rbind(d_1, d[5001:length(d$V1),])
+d2 <- rbind(d[0:5000,],d_2 , d[7001:length(d$V1),])
+d3 <- rbind(d[0:7000,],d_3 , d[9001:length(d$V1),])
+d4 <- rbind(d[0:9000,],d_4 , d[11001:length(d$V1),])
+d5 <- rbind(d[0:11000,],d_5 , d[13001:length(d$V1),])
+d6 <- rbind(d[0:13000,],d_6 , d[15001:length(d$V1),])
+d0 <- rbind(d[0:15000,],d_0)
+
+#write.table(d0,file="100 000_0.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d2,file="100 000_1.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d3,file="100 000_2.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d4,file="100 000_3.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d5,file="100 000_4.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d6,file="100 000_5.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+#write.table(d1,file="100 000_test.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+
+d6 <- rbind(d[0:13000,],d_6 , d_0)
+d5 <- rbind(d[0:11000,],d_5 , d6[13001:length(d$V1),])
+d4 <- rbind(d[0:9000,],d_4 , d5[11001:length(d$V1),])
+d3 <- rbind(d[0:7000,],d_3 , d4[9001:length(d$V1),])
+d2 <- rbind(d[0:5000,],d_2 , d3[7001:length(d$V1),])
+
+#write.table(d0,file="20 000_0n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d2,file="100 000_1n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d3,file="100 000_2n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d4,file="100 000_3n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d5,file="100 000_4n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+write.table(d6,file="100 000_5n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+
