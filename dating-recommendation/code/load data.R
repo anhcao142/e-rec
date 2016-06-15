@@ -154,10 +154,10 @@ collaborative <- function(rec, file_path) {
 
 
 
-#rec1=Recommender(r[1:nrow(r)],method="UBCF", param=list(normalize = "Z-score",method="Cosine",nn=5, minRating=1))
+rec1=Recommender(r[1:nrow(r)],method="UBCF", param=list(normalize = "Z-score",method="Cosine",nn=5, minRating=1))
 #rec2=Recommender(r[1:nrow(r)],method="UBCF", param=list(normalize = "Z-score",method="Jaccard",nn=5, minRating=1))
-#rec3=Recommender(r[1:nrow(r)],method="IBCF", param=list(normalize = "Z-score",method="Jaccard",minRating=1))
-rec4=Recommender(r[1:nrow(r)],method="POPULAR")
+#rec3=Recommender(r[1:nrow(r)],method="IBCF", param=list(normalize = "Z-score",method="Cosine",minRating=1))
+#rec4=Recommender(r[1:nrow(r)],method="POPULAR")
 #file_path <- "UBCF_COSINE.csv"
 #rec_list <- collaborative(rec1, file_path)
 

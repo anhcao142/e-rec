@@ -94,7 +94,7 @@ public class SVDPlusPlus extends BiasedMF {
 		String suffix = foldInfo + ".bin";
 
 		//trainMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "trainMatrix" + suffix);
-		testMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "testMatrix" + suffix);
+		//testMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "testMatrix" + suffix);
 		updateMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "trainMatrix" + "update.bin");
 
 		// write matrices P, Q

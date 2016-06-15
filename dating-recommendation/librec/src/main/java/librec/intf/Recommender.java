@@ -638,7 +638,7 @@ public abstract class Recommender implements Runnable {
 			double pred = predict(u, j, true);
 			if (Double.isNaN(pred))
 				continue;
-
+			
 			// perplexity: for some graphic model
 			double perp = perplexity(u, j, pred);
 			sum_perps += perp;
@@ -670,7 +670,7 @@ public abstract class Recommender implements Runnable {
 				}
 			}
 		}
-
+		
 		if (isResultsOut && preds.size() > 0) {
 			FileIO.writeList(toFile, preds, true);
 			Logs.debug("{}{} has writeen rating predictions to {}", algoName, foldInfo, toFile);

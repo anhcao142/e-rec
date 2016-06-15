@@ -191,3 +191,30 @@ write.table(d4,file="100 000_3n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 write.table(d5,file="100 000_4n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 write.table(d6,file="100 000_5n.txt",row.names=FALSE,col.names=FALSE,sep='\t')
 
+
+d$V4 = NULL
+d_1 <- d[5001,]
+d$V3[d$V3 >0] <- 0
+d1 <- rbind(d[0:5000,],d_1 , d[5002:length(d$V1),])
+write.table(d1,file="100 000_1_1.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+
+d = read.table("100 000_0.txt", sep="\t", fill=FALSE, strip.white=TRUE)
+
+dd1 = d
+a = d_1
+dd1 <- cbind(dd1, 0)
+for(i in 1: nrow(a)) {
+  print(i);
+  dd1[dd1$V1 == a$V1[i],]$'0' <- 1
+  dd1[dd1$V2 == a$V2[i],]$'0' <- 1
+}
+dd1[dd1$`0`==0,]$V3 <- 0
+dd1$`0` = NULL
+write.table(dd1,file="100 000_1_1t.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+
+d = read.table("100 000_test.txt", sep="\t", fill=FALSE, strip.white=TRUE)
+dd1 <- cbind(d, 0)
+dd1[dd1$V1 == 3125 & dd1$V2 == 707,]$'0' <- 1
+dd1[dd1$`0`==0,]$V3 <- 0
+dd1$`0` = NULL
+write.table(dd1,file="100 000_1_test.txt",row.names=FALSE,col.names=FALSE,sep='\t')
