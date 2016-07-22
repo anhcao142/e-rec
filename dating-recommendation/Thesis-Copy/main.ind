@@ -1,5 +1,45 @@
 \begin{theindex}
 
+  \item CbF, 9
+  \item Collaborative filtering, 2, 12
+  \item Content-based filtering, 2, 9
+  \item Cosine similarity, 15
+
+  \indexspace
+
+  \item Hybrid recommendation approaches, 19
+  \item Hybrid recommender, 2
+
+  \indexspace
+
+  \item Item-based methods, 17
+
+  \indexspace
+
+  \item Latent factor models, 21
+
+  \indexspace
+
+  \item Matrix Factorization, 21
+  \item Memory-based methods, 15
+  \item Model-based methods, 18
+
+  \indexspace
+
+  \item Pearson correlation, 15
+
+  \indexspace
+
   \item Recommender systems, 1, 8
+
+  \indexspace
+
+  \item Singular Value Decomposition, 22
+  \item stochastic gradient descent, 23
+  \item SVD, 22
+
+  \indexspace
+
+  \item User-based methods, 16
 
 \end{theindex}
