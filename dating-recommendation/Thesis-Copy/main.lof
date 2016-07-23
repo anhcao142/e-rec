@@ -1,12 +1,12 @@
 \select@language {english}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Recommendations of Amazon\relax }}{3}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Recommendation techniques\relax }}{3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Recommendation techniques\relax }}{4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces The principle behind collaborative and content-based filtering\relax }}{9}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces High level architecture of a Content-based Recommender~\cite {Lops11}\relax }}{10}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The Collaborative Filtering Process.\relax }}{13}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The principle behind collaborative and content-based filtering\relax }}{10}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces High level architecture of a Content-based Recommender~\cite {Lops11}\relax }}{12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The Collaborative Filtering Process.\relax }}{14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The process of a recommender system\relax }}{29}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The process of a recommender system\relax }}{30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

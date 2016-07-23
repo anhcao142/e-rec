@@ -1,20 +1,20 @@
 \indexentry{Recommender systems}{1}
-\indexentry{Content-based filtering}{2}
-\indexentry{Collaborative filtering}{2}
-\indexentry{Hybrid recommender}{2}
-\indexentry{Recommender systems}{8}
-\indexentry{Content-based filtering}{9}
-\indexentry{CbF}{9}
-\indexentry{Collaborative filtering}{12}
-\indexentry{Memory-based methods}{15}
-\indexentry{Pearson correlation}{15}
-\indexentry{Cosine similarity}{15}
-\indexentry{User-based methods}{16}
-\indexentry{Item-based methods}{17}
-\indexentry{Model-based methods}{18}
-\indexentry{Hybrid recommendation approaches}{19}
-\indexentry{Matrix Factorization}{21}
-\indexentry{Latent factor models}{21}
-\indexentry{Singular Value Decomposition}{22}
-\indexentry{SVD}{22}
+\indexentry{Content-based filtering}{4}
+\indexentry{Collaborative filtering}{4}
+\indexentry{Hybrid recommender}{4}
+\indexentry{Recommender systems}{9}
+\indexentry{Content-based filtering}{10}
+\indexentry{CbF}{10}
+\indexentry{Collaborative filtering}{14}
+\indexentry{Memory-based methods}{16}
+\indexentry{Pearson correlation}{16}
+\indexentry{Cosine similarity}{16}
+\indexentry{User-based methods}{17}
+\indexentry{Item-based methods}{18}
+\indexentry{Model-based methods}{19}
+\indexentry{Hybrid recommendation approaches}{20}
+\indexentry{Matrix Factorization}{22}
+\indexentry{Latent factor models}{22}
 \indexentry{stochastic gradient descent}{23}
+\indexentry{Singular Value Decomposition}{23}
+\indexentry{SVD}{23}
