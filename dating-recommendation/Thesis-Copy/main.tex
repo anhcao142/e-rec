@@ -94,7 +94,7 @@ abs
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 Recommender systems were developed to help users deal with information. These systems have become an important part of e-commerce. With the tremendous growth of e-commerce, scalability is one of the biggest challenges for recommender systems. 
-To address the scalability problem, we propose \textit{Incremental SVD++} method. \textit{Incremental SVD++} is based on the state-of-the-art recommendation algorithm SVD++. To our knowledge, our work is the first to extend SVD++ with incremental updates. Our method improves performance of classic SVD++, while maintaining the recommendation quality.
+To address the scalability problem, we propose \textit{Incremental SVD++} method which enables online integration of new ratings. \textit{Incremental SVD++} is based on the state-of-the-art recommendation algorithm SVD++. To our knowledge, our work is the first to extend SVD++ with incremental updates. Our method improves performance of classic SVD++, while maintaining the recommendation quality.
 
 \chapter{Introduction}
 \renewcommand{\thepage}{\arabic{page}}
@@ -334,7 +334,7 @@ of collaborative filtering, including memory-based methods and model-based metho
 
 \subsection{Notations}
 The notations used in this thesis are described as follows. Suppose that we are given
-a set of $M$ users $U = \left\{ {{u_1},{u_2},...,{u_M}} \right\}$ and a set of $N$ items $I = \left\{ {{i_1},{i_2},...,{i_M}} \right\}$. Users’ rating on the items are arranged in a $N \times M$ matrix $R$ where entry $r_ui$ denote the rating that user $u$ gives to item
+a set of $M$ users $U = \left\{ {{u_1},{u_2},...,{u_M}} \right\}$ and a set of $N$ items $I = \left\{ {{i_1},{i_2},...,{i_M}} \right\}$. Users’ rating on the items are arranged in a $N \times M$ matrix $R$ where entry $r_{u,i}$ denote the rating that user $u$ gives to item
 $i$ and $r_{u,i} = 0$ if $u$ have not rated $i$. The set of all items that user $u$
 have rated is denoted by $I_u$ and the set of all users who have rated item $i$ is denoted by $U_i$. Alternatively, we denote the set of all observed
 triplet $\left( {u,i,r} \right) \in K$  where $u$ is the user id, $i$ is the item id
@@ -448,38 +448,88 @@ Content-based and collaborative filtering approaches have been widely used in co
 \chapter{Incremental SVD++}
 \label{ISVD++_chapter}
 
-\section{Matrix Factorization}
+\section{Singular Value Decomposition based models}
 \index{Matrix Factorization}
 \index{Latent factor models}
 Before delving into models, we first describe the notations used in this chapter. Suppose that we are given
-a set of $M$ users $U = \left\{ {{u_1},{u_2},...,{u_N}} \right\}$ and a set of $N$ items $I = \left\{ {{i_1},{i_2},...,{i_M}} \right\}$. Users’ rating on the items are arranged in a $M \times N$ matrix $R$ where entry $r_ui$ denote the rating that user $u$ gives to item $i$ and $r_{u,i} = 0$ if $u$ have not rated $i$. The predicted value of $r_{u,i}$ is denoted by $\hat r_{u,i}$. The set of all items that user $u$
+a set of $M$ users $U = \left\{ {{u_1},{u_2},...,{u_N}} \right\}$ and a set of $N$ items $I = \left\{ {{i_1},{i_2},...,{i_M}} \right\}$. Users’ rating on the items are arranged in a $M \times N$ matrix $R$ where entry $r_{u,i}$ denote the rating that user $u$ gives to item $i$ and $r_{u,i} = 0$ if $u$ have not rated $i$. The predicted value of $r_{u,i}$ is denoted by $\hat r_{u,i}$. The set of all items that user $u$
 have rated is denoted by $I_u$ and the set of all users who have rated item $i$ is denoted by $U_i$. Alternatively, we denote the set of all observed
 triplet $\left( {u,i,r} \right) \in K$  where $u$ is the user id, $i$ is the item id
 and $r$ is the rating given by $u$ to $i$. The whole set is denoted by $K$. 
 
 \subsection{Fundamentals of Matrix factorization}
-The underlining assumption of latent factor model is that user’s behavior is determined by only a few factors that affect his/her preferences. Matrix factorization based methods use low-rank matrix
-to approximate user item rating matrix. They learn two low-rank matrices, one captures users’ latent features and the other capture items’ latent features.
+
+In recent years, many SVM algorithms such as SVM, boosting, ... was exploited by researchers to solve recommendation problems. One of the most popular algorithms is latent factor models. The underlining assumption of latent factor model is that we can find some hidden factors which could link users and items. And that helps to explain the ratings. 
+
+%\clearpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{"latent_factors_example".jpg} 
+    \caption{A simplified illustration of the latent factor approach, which
+characterizes both users and movies using two axes—male versus female
+and serious versus escapist.}
+\caption*{Source: Netflix Prize diagram~\cite(KorenMatrix)}
+    \label{fig:LFM_example}
+\end{figure}
+
+Some of the most successful realizations of latent factor models are based on matrix factorization. Matrix factorization based methods use low-rank matrix to approximate user item rating matrix $R$. They learn two low-rank matrices, one captures users’ latent features - $P$ and the other capture items’ latent features- $Q^T$. 
+
+%\clearpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{"Matrix factorization".png} 
+    \caption{A illustration of the Matrix factorization}
+    \label{fig:MF}
+\end{figure}
+
+The product of $P$ and $Q^T$ approximately equals to $R$. 
+\begin{eqnarray}
+\label{eq:MF_predict}
+R \approx P\times{Q^T} = \widehat R
+\end{eqnarray}
+ The approximation is to minimize the error between the predicted and the original rating matrix.
+  
 \subsubsection{Matrix factorization techniques}
 \index{stochastic gradient descent}
-There are two approaches to minimizing Equation~\ref{eq: MBMF}: stochastic
+There are two standard approaches to learn $P$ and $Q^T$: stochastic
 gradient descent(SGD) and alternating least squares (ALS).
 \begin{description}
     \item{\textbf{Stochastic gradient descent(SGD)}} 
-    \\Stochastic gradient descent (SGD) try to find minimums or maximums by iteration. SGD in contrast performs a parameter updating ($q_i$ and $p_u$) for each training example in order to calculate their product $\hat r_{u,i}$.
+    \\Stochastic gradient descent (SGD) is widely used in many machine learning problems. SGD try to find minimums or maximums by iteration. In an SGD (Stochastic Gradient descent) approach, for each example in the training set the error ${e_{u,i}} \stackrel{\text{def}}{=} \;{r_{u,i}} - \hat r_{u,i}$ is computed and the parameters ($p_u$ and $q_i$) are updated by a factor in the opposite direction of the gradient.
+
+$\begin{array}{l}{p_u} \leftarrow {p_u} + {\rm{\;}}\gamma \left( {{e_{u,i}}{q_i} - \lambda {p_u}} \right)\\{q_i} \leftarrow {q_i} + {\rm{\;}}\gamma \left( {{e_{u,i}}{p_u} - \lambda {q_i}} \right)\end{array}
+$    
+    
     \item{\textbf{Alternating Least Squares(ALS)}}
-    \\ALS is similar to SGD with the exception that instead of updating the values
-in both $P$ and $Q^T$ on every iteration, the values in $P$ are fixed when solving $Q^T$
-and vice versa. In other words, there is an alternation between updating the
-user factors and item factors. This allows for an optimal solving as it makes the
-optimization problem quadratic. In other words, the function of a quadratic
-optimization problem has only one maximum or minimum hence no other local
-maximums or minimums to be misinterpreted as optimal
+    \\ALS represents a different approach to optimizing the loss function. The values in $P$ are fixed when solving $Q^T$ and vice versa. This allows for an optimal solving as it makes the
+optimization problem quadratic. 
 \end{description}
 
 In this section we describe several matrix factorization techniques like SVD and SVD++.
 
-\subsection{Singular Value Decomposition (SVD)}
+\subsection{Baseline predictors}
+ Some users will tend to give higher or lower ratings than others. And some items received higher or lower ratings than others. So we consider two parameter: one parameter $b_u$ for each user and one $b_i$ for each item. The parameters $b_u$ and $b_i$ indicate the observed deviations of user $u$ and item $i$ from the average. For example, the average rating over all movies is 3.7 stars. Furthermore, \emph{Titanic} is better than an average movie, so it receives 0.5 stars above the average. On the other hand, \emph{Joe} is a critical user, who tends to rate 0.3 stars lower than the average. Thus, 0.5 and -0.3 reflects the deviations of \emph{Titanic} and \emph{Joe} from the global average 0.37. 
+ 
+The overall average rating is denoted by $\mu$. Prediction is done by the rule:
+\begin{eqnarray}
+\label{eq:Baseline_predict}
+{\hat r_{u,i}} = \mu + {b_u} + {b_i}
+\end{eqnarray}
+
+The parameters $b_u$ and $b_i$ are estimated by solving the least squares problem: 
+\begin{eqnarray}
+mi{n_{{b_*}}}\mathop \sum \limits_{\left( {u,\;i} \right) \in K} {\left( {{r_{u,i}} - \;\mu  + \;{b_u} + \;{b_i}} \right)^2} + \;\lambda \left( {{b_u}^2 + \;{b_i}^2} \right)
+\label{eq:Baseline_minimize}
+{\hat r_{u,i}} = \mu + {b_u} + {b_i}
+\end{eqnarray}
+
+ A simple gradient descent technique was applied successfully to solving (\ref{eq: Baseline_minimize}).
+We loop through all ratings in the training set. The associated prediction error is denoted by ${e_{u,i}} \stackrel{\text{def}}{=} \;{r_{u,i}} - \hat r_{u,i}$. For a given training case $r_{u,i}$, we modify the parameters by moving in the opposite direction of the gradient, yielding:
+$
+\begin{array}{l}{b_u} \leftarrow {b_u} + {\rm{\;}}\gamma .\left( {{e_{u,i}} - {\rm{\;}}\lambda .{b_u}} \right)\\{b_i} \leftarrow {b_i} + {\rm{\;}}\gamma .\left( {{e_{u,i}} - {\rm{\;}}\lambda .{b_i}} \right)\end{array}
+$
+\\where $\gamma$ is the learning rate.
+\subsection{Regularized Singular Value Decomposition (Regularized-SVD)}
 \index{Singular Value Decomposition}
 \index{SVD}
 Singular value decomposition (SVD) is one type of matrix factorization. Matrix factorization models transform both users and items into the same latent feature space of dimensionality $f$. The prediction is done by taking an inner product in that space: 
@@ -564,18 +614,17 @@ The first term ${\left( {{r_{u,i}} - \;\;q_i^T{p_u}} \right)^2}$ strives to find
 The regularizing term – $\lambda \left( {\;{{\left\| {{q_i}} \right\|}^2} + \;{{\left\| {{p_u}} \right\|}^2}}  \right)$ – avoids overfitting by penalizing the magnitudes of the parameters.
 
     A simple gradient descent technique was applied successfully to solving (\ref{eq: MBMF}).
-We loop through all ratings in the training set. The associated prediction error is denoted by ${e_{ui}} \stackrel{\text{def}}{=} \;{r_{u,i}} - \hat r_{u,i}$. For a given training case $r_{u,i}$, we modify the parameters by moving in the opposite direction of the gradient, yielding:
+We loop through all ratings in the training set. The associated prediction error is denoted by ${e_{u,i}} \stackrel{\text{def}}{=} \;{r_{u,i}} - \hat r_{u,i}$. For a given training case $r_{u,i}$, we modify the parameters by moving in the opposite direction of the gradient, yielding:
 
-$\begin{array}{l}{q_i} \leftarrow {q_i} + {\rm{\;}}\gamma \left( {{e_{ui}}{p_u} - {\lambda}{q_i}} \right)\\{p_u} \leftarrow {p_u} + {\rm{\;}}\gamma \left( {{e_{ui}}{q_i} - {\lambda}{p_u}} \right)\end{array}
+$\begin{array}{l}{q_i} \leftarrow {q_i} + {\rm{\;}}\gamma \left( {{e_{u,i}}{p_u} - {\lambda}{q_i}} \right)\\{p_u} \leftarrow {p_u} + {\rm{\;}}\gamma \left( {{e_{u,i}}{q_i} - {\lambda}{p_u}} \right)\end{array}
 $
 
 where $\gamma$ is the learning rate.
     
 
-\subsection{Baseline predictor}
 
 \subsection{SVD with Bias Terms(Bias-SVD )}
-We add biases to the regularized SVD model, one parameter $b_u$ for each user and one $b_i$ for each item. The parameters $b_u$ and $b_i$ indicate the observed deviations of user $u$ and item $i$ from the average. For example, the average rating over all movies is 3.7 stars. Furthermore, \emph{Titanic} is better than an average movie, so it receives 0.5 stars above the average. On the other hand, \emph{Joe} is a critical user, who tends to rate 0.3 stars lower than the average. Thus, 0.5 and -0.3 reflects the deviations of \emph{Titanic} and \emph{Joe} from the global average 0.37. Therefore, in this model,
+We add biases to the regularized SVD model. Therefore, in this model,
 a rating is predicted by the rule:
 
 \begin{equation}
@@ -591,10 +640,10 @@ mi{n_{{q_*},{p_*},\;\;{b_*}}}\mathop \sum \limits_{\left( {u,\;i} \right) \in K}
 Similarly, we use the gradient descent method to get the update rule for each parameter:
 
 $
-\begin{array}{l}{b_u} \leftarrow {b_u} + {\rm{\;}}\gamma .\left( {{e_{ui}} - {\rm{\;}}{\lambda _1}.{b_u}} \right)\\{b_i} \leftarrow {b_i} + {\rm{\;}}\gamma .\left( {{e_{ui}} - {\rm{\;}}{\lambda _1}.{b_i}} \right)\\{p_u} \leftarrow {p_u} + {\rm{\;}}\gamma .\left( {{e_{ui}}.{q_i} - {\lambda _2}.{p_u}} \right)\\{q_i} \leftarrow {q_i} + {\rm{\;}}\gamma .\left( {{e_{ui}}.{p_u} - {\lambda _2}.{q_i}} \right)\end{array}
+\begin{array}{l}{b_u} \leftarrow {b_u} + {\rm{\;}}\gamma .\left( {{e_{u,i}} - {\rm{\;}}{\lambda _1}.{b_u}} \right)\\{b_i} \leftarrow {b_i} + {\rm{\;}}\gamma .\left( {{e_{u,i}} - {\rm{\;}}{\lambda _1}.{b_i}} \right)\\{p_u} \leftarrow {p_u} + {\rm{\;}}\gamma .\left( {{e_{u,i}}.{q_i} - {\lambda _2}.{p_u}} \right)\\{q_i} \leftarrow {q_i} + {\rm{\;}}\gamma .\left( {{e_{u,i}}.{p_u} - {\lambda _2}.{q_i}} \right)\end{array}
 $
 \\
-where ${e_{ui}} \stackrel{\text{def}}{=} \;{r_{u,i}} - \hat r_{u,i}$ and $\gamma$ is the learning rate.
+where ${e_{u,i}} \stackrel{\text{def}}{=} \;{r_{u,i}} - \hat r_{u,i}$ and $\gamma$ is the learning rate.
 
 \subsection{SVD with implicit feedback (SVD++)}
 \subsubsection{Explicit and implicit feedback}
@@ -612,11 +661,11 @@ Explicit feedback is generally more accurate than implicit feedback in represent
 \subsubsection{SVD with implicit feedback (SVD++)}
 SVD++ is another extension of SVD method. SVD++ uses implicit feedback as a secondary source of information. It also combines bias terms into the system. So this model produces more accurate prediction than other factor models. 
 
-For simplicity, we consider the rated history of users as a part of input data. This type of implicit feedback can be extracted from ratings matrix by reducing the ratings matrix into a binary matrix. $p_ui$, which indicates the preference of user $u$ to item $i$, are derived by binarizing the $r_{u,i}$ values:
+For simplicity, we consider the rated history of users as a part of input data. This type of implicit feedback can be extracted from ratings matrix by reducing the ratings matrix into a binary matrix. $p_{u,i}$, which indicates the preference of user $u$ to item $i$, are derived by binarizing the $r_{u,i}$ values:
 
 \begin{eqnarray}
 \label{eq:implicit_binary}
-q_{ui} = \begin{cases} 1 & \quad \text{if } r_{u,i} > 0\\ -0 & \quad \text{if } r_{u,i} = 0\\ \end{cases}
+q_{u,i} = \begin{cases} 1 & \quad \text{if } r_{u,i} > 0\\ -0 & \quad \text{if } r_{u,i} = 0\\ \end{cases}
 \end{eqnarray}
 
 The set of all items for which $u$ provided an implicit preference is denoted by $N_u$. To keep generality, each user $u$ is associated with two sets of items $I_u$ and $N_u$.
@@ -647,10 +696,39 @@ Model parameters are determined by minimizing the associated regularized
 squared error function through stochastic gradient descent. We loop over all training set, computing:
 
 $
-\begin{array}{l}{b_u} \leftarrow {b_u} + {\rm{\;}}{\gamma}.\left( {{e_{ui}} - {\rm{\;}}{\lambda _1}.{b_u}} \right)\\{b_i} \leftarrow {b_i} + {\rm{\;}}{\gamma}.\left( {{e_{ui}} - {\rm{\;}}{\lambda _1}.{b_i}} \right)\\{q_i} \leftarrow {q_i} + {\rm{\;}}{\gamma}.\left( {{e_{ui}}.\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in {N_u}} {{y_j}} } \right) - {\lambda _2}.{q_i}} \right)\\{p_u} \leftarrow {p_u} + {\rm{\;}}{\gamma}.\left( {{e_{ui}}.{q_i} - {\lambda _2}.{p_u}} \right)\\\forall j \in {N_u}:\\{y_j} \leftarrow {y_j} + {\rm{\;}}{\gamma}.\left( {{e_{ui}}.{{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}.{q_i} - {\lambda _2}.{y_j}} \right)\end{array}
+\begin{array}{l}{b_u} \leftarrow {b_u} + {\rm{\;}}{\gamma}.\left( {{e_{u,i}} - {\rm{\;}}{\lambda _1}.{b_u}} \right)\\{b_i} \leftarrow {b_i} + {\rm{\;}}{\gamma}.\left( {{e_{u,i}} - {\rm{\;}}{\lambda _1}.{b_i}} \right)\\{q_i} \leftarrow {q_i} + {\rm{\;}}{\gamma}.\left( {{e_{u,i}}.\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in {N_u}} {{y_j}} } \right) - {\lambda _2}.{q_i}} \right)\\{p_u} \leftarrow {p_u} + {\rm{\;}}{\gamma}.\left( {{e_{u,i}}.{q_i} - {\lambda _2}.{p_u}} \right)\\\forall j \in {N_u}:\\{y_j} \leftarrow {y_j} + {\rm{\;}}{\gamma}.\left( {{e_{ui}}.{{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}.{q_i} - {\lambda _2}.{y_j}} \right)\end{array}
 $
+\\\\
+The SVD++ algorithm is summarized in the following pseudo-code:
 \\
-\\
+
+\begin{algorithm}[H]
+ \KwData{$K$}
+ \KwResult{Updated model }
+ Initialize model\;
+ \Repeat{convergence}{
+
+	\ForAll{$(u, i, r) \in K$}
+	{ 	${e_{u,i}} = \;{r_{u,i}} - \hat r_{u,i}$\\
+		$\Delta b_u = e_{u,i} - \lambda_1 .{b_u}$\\
+		$\Delta b_i = e_{u,i} - \lambda_1 .{b_i}$\\
+		$\Delta p_u = e_{u,i}.q_i - \lambda_2 .{p_u}$\\
+		$\Delta {q_i} \leftarrow {e_{ui}}.\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in  \in {N_u}} {{y_j}} } \right) - {\lambda _2}.{q_i}$\\ 
+		
+			$b_u = b_u + \gamma.\Delta b_u$\\
+			$p_u = p_u + \gamma.\Delta b_u$\\
+			\ForAll{$j \in N_u$}
+			{
+					${y_j} = {y_j} + {\rm{\;}}{\gamma}.\left( {{e_{ui}}.{{\left| {{N_u}} 									\right|}^{ - \frac{1}{2}}}.{q_i} - {\lambda _2}.{y_j}} \right)$
+			}
+			$b_i = b_i + \gamma.\Delta b_i$\\
+			$q_i = q_i + \gamma.\Delta q_i$\\
+	}
+}
+ \caption{SVD++}
+\end{algorithm}
+\clearpage
+
 Several types of implicit feedback can be simultaneously introduced into the
 model by using extra sets of item factors. For example, if a user $u$ has a certain
 kind of implicit preference to the items in ${N^1}_u$ (e.g., she rented them), and a different
@@ -801,7 +879,7 @@ To minimize the regularized squared error on the training set, we minimize the r
 
 Model parameters are determined by minimizing the associated regularized squared error function through conditional gradient descent on the related ratings $S_1$. Obviously, \ref{eq:isvd++_min2} is unchanged, so it is not concerned in the learning process. 
 
-$Q$ is denoted as the set of objects (e.g. $x$, $y$) which need to be updated. The Incremental SVD++ is summarized in the following pseudocode:
+$Q$ is denoted as the set of objects (e.g. $x$, $y$) which need to be updated. The Incremental SVD++ is summarized in the following pseudo-code:
 \\\\
 
 \begin{algorithm}[H]
@@ -811,14 +889,30 @@ $Q$ is denoted as the set of objects (e.g. $x$, $y$) which need to be updated. T
  \Repeat{convergence}{
 
 	\ForAll{$(u, i, r) \in S_1$}
-	{ 
-		\If{$u \in Q$}
+	{ 	${e_{u,i}} = \;{r_{u,i}} - \hat r_{u,i}$\\
+		$\Delta b_u = e_{u,i} - \lambda_1 .{b_u}$\\
+		$\Delta b_i = e_{u,i} - \lambda_1 .{b_i}$\\
+		$\Delta p_u = e_{u,i}.q_i - \lambda_2 .{p_u}$\\
+		$\Delta {q_i} \leftarrow {e_{ui}}.\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in  \in {N_u}} {{y_j}} } \right) - {\lambda _2}.{q_i}$\\ 
+		\CommentSty{//this is an extra condition in Incremental SVD++}\\
+		\If{$u \in Q$} 
 		{
-			$\begin{array}{l}{b_u} \leftarrow {b_u} + {\rm{\;}}{\gamma _1}.\left( {{e_{ui}} - {\rm{\;}}{\lambda _1}.{b_u}} \right)\\{p_u} \leftarrow {p_u} + {\rm{\;}}{\gamma _2}.\left( {{e_{ui}}.{q_i} - {\lambda _2}.{p_u}} \right)\\\forall j \in {N_u}:\\{y_j} \leftarrow {y_j} + {\rm{\;}}{\gamma _2}.\left( {{e_{ui}}.{{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}.{q_i} - {\lambda _2}.{y_j}} \right)\end{array}$
+			$b_u = b_u + \gamma.\Delta b_u$\\
+			$p_u = p_u + \gamma.\Delta b_u$\\
+			\ForAll{$j \in N_u$}
+			{
+				\If{$j \in Q$}
+				{
+					
+					${y_j} = {y_j} + {\rm{\;}}{\gamma}.\left( {{e_{ui}}.{{\left| {{N_u}} 									\right|}^{ - \frac{1}{2}}}.{q_i} - {\lambda _2}.{y_j}} \right)$
+				}
+			}
 		}
-		\If{$i \in Q$}
+		\CommentSty{//this is an extra condition in Incremental SVD++}\\
+		\If{$i \in Q$} 
 		{
-		$\begin{array}{l}{b_i} \leftarrow {b_i} + {\rm{\;}}{\gamma _1}.\left( {{e_{ui}} - {\rm{\;}}{\lambda _1}.{b_i}} \right)\\{q_i} \leftarrow {q_i} + {\rm{\;}}{\gamma _2}.\left( {{e_{ui}}.\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in  \in {N_u}} {{y_j}} } \right) - {\lambda _2}.{q_i}} \right)\end{array}$ 
+			$b_i = b_i + \gamma.\Delta b_i$\\
+			$q_i = q_i + \gamma.\Delta q_i$\\
 		}
 	}
 }
@@ -826,15 +920,16 @@ $Q$ is denoted as the set of objects (e.g. $x$, $y$) which need to be updated. T
 \end{algorithm}
 
 
-\chapter{Experiments \& Development}
+\chapter{Experiments}
 \label{experiments}
 
 In this section, we conduct experiments to compare the performance
 of our Incremental SVD++ algorithm with classic SVD++ algorithm.
 
-\section{Experiment datasets}
+\section{Experiment setup}
+\subsection{Data}
 We choose MovieLens\footnote{http://grouplens.org/datasets/movielens/} dataset to study empirical
-performance of our algorithms. Table~\ref{tab:MovieLens} shows the basic statistics of the dataset.
+performance of our algorithms. The basic statistics of the dataset.
 
 \begin{table}[h!]
     \small\centering
@@ -844,34 +939,129 @@ performance of our algorithms. Table~\ref{tab:MovieLens} shows the basic statist
         \hline
         No. ratings & 100 000 \\
         \hline
-        No. users &  943  \\
+         No. ratings of training set & 90 000 \\
         \hline
-        No. items &  1682 \\
+         No. ratings of test set & 10 000 \\
+        \hline
+        No. users &  5949  \\
+        \hline
+        No. items &  3295 \\
         \hline
         Rating range & $\left[1, 5\right[$ \\
         \hline
         Rating type &  Integer\\
         \hline
     \end{tabular}
-    \label{tab:MovieLens}
+    \label{tab:MovieLens_datatest}
     \caption{ Statistics of MovieLens dataset}
 \end{table}
 
-\section{Evaluation Measures}
+The data set is  randomly from the MovieLens 1M dataset. All the ratings are ordered by the time stamp. Test set includes $10000$ newest ratings. Training set includes $90000$ ratings.
+\subsection{Parameters} 
+The meta-parameters are the same in all experiments. 
+Number of factors $k = 100$. $\gamma = \lambda = 0.01$.
+
+\subsection{Hardware}
+The parame
+
+We ran all experiments on a single machine.
+
+
+\section{Evaluation measures}
 We adopt Root Mean Square Error(RMSE) to evaluate two algorithms i.e. SVD++ and Incremental SVD++.
 RMSE evaluates the root of average square error between true rating and predicted rating. Denote the test set by $T$ , the definition of RMSE is given below:
 \begin{eqnarray}
 \label{eq:RMSE}
 RMSE = \sqrt {\frac{{\sum\limits_{(u,i,r) \in T} {{{(\widehat {{r_{u,i}}} - r)}^2}} }}{{\left| T \right|}}} 
  \end{eqnarray}
-\section{Evaluation Protocol}
-\section{Experiment result}
 
+\section{Experiment Result}
+We denote the training set of the initialization model by $T$ and the updating set by $U$.  
+
+\subsection{Comparisons between SVD++ and Incremental SVD++}
+The aim of this experiment is to compare the accuracy and training time of SVD++ and Incremental SDV++ in dynamic scenario where ratings happen continuously. 
+
+Experimental Scenario: 
+\begin{description}
+    \item{\textbf{1.}} The model is pre-buit with a subset of $20000$ ratings
+    \item{\textbf{2.}} The ISVD++, as an online training system, updates the model per $2000$ new ratings
+    \item{\textbf{3.}} The SVD++, as an offline training system, updates the model per $10000$ new ratings
+\end{description}
+
+
+
+\clearpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{"result1".png} 
+    \caption{ Recommendation accuracy (RMSE) comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens}
+    \label{fig:RMSE}
+\end{figure}
+Figure~\ref{fig:RMSE} shows a comparison between SVD++ and ISVD++ based on their recommendation accuracies. SVD++ methods updates the model after each $10000$ new ratings. So the recommendations are not modified in the period between two updates and the accuracy remained the same. On the other hand, ISVD++ constantly updates the model after each $2000$ news ratings. According to the increasing of observed ratings, the accuracy of two methods significantly increases. But ISVD++ has a slightly better accuracy.
+
+\clearpage
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{"training_timeSVD".png} 
+    \caption{Training times (ms) of SVD++}
+    \label{fig:train_timeSVD++}
+\end{figure}
+%\clearpage
+
+Average training time of SVD++: $\bar t_{SVD++} = 305832.75$
+
+Figure~\ref{fig:train_timeSVD++} shows the traning times of SVD++ method. It is clearly seen that the training times of SVD++ method increases rapidly according to the number of observed ratings. This is a drawback of SVD++ method when applying in a large-scale dataset. 
+\clearpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{"training_timeISVD".png} 
+    \caption{Updating times (ms) of ISVD++}
+    \label{fig:train_timeISVD++}
+\end{figure}
+%\clearpage
+Average training time of ISVD++: $\bar t_{ISVD++} =94476.44$
+
+The updating times of ISVD++ method are erratic. Unlike SVD++, the updating time of ISVD++ does not depend on the number of observed ratings. Because ISVD++ only scans over a subset of ratings when modifying the model.
+In the next experiments, we will evaluate the factors that affect the updating tims of ISVD++ method. Based on the average updating time, ISVD++ method has smaller updating time than than SVD++ method.
+
+Based on the accuracy (RMSE) and the updating time, ISVD++ performs better recommendation than SVD++.
+\subsection{Impact of Parameters}
+\label{Impact of Parameters}
+In this section, we evaluate the impact of parameters on the performance of ISVD++.
+\subsubsection{Impact of the stable of pre-built model}
+We assume that the stable of pre-built model depends on the number of observed ratings which are used to build the model. In this experiment, we evaluate the impact of the number of ratings which are used to pre-built the model, on the updating time of ISVD++ method.
+
+Experimental Scenario: 
+\begin{quote}
+The set of new ratings is fixed. ISVD++ will integrate this dataset into models which built of various training datasets. The number of ratings in each dataset are different. 
+
+Specifically, the number of ratings in each training datasets are: $20000$, $30000$, $40000$, $50000$, $60000$, $70000$, $80000$. The updating data includes $2000$ ratings.
+\end{quote}
+
+\subsubsection{Impact of the amount of new ratings}
+As mentioned before, ISVD++ method only scans over a subset of ratings which is relevant to new ratings. So in this experiment, we evaluate the relation between the updating time of ISVD++ method and the amount of these ratings dataset.
+ 
+Experimental Scenario: 
+\begin{quote}
+The model is pre-buit with a fix amount of ratings. ISVD++ updates the model with various dataset. And the number of ratings in these dataset are different. Each update, the model will be rebuilt based on the original dataset. So the stable of pre-built model does not affect the result. 
+
+Specifically, the training data includes $70000$ ratings. The number of ratings in updating datasets are: $1$, $100$, $1000$, $5000$, $10000$, $20000$.
+\end{quote}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{"no_new".png} 
+    \caption{Updating times (ms) of ISVD++}
+    \label{fig:train_timeISVD++_impact_2}
+\end{figure}
+%\clearpage
 
 \chapter{Summarization}
 \label{Summarization}
 \section{Summarization}
-
+This work proposed improvements to the state-of-the-art recommendation algorithm SVD++ in 
 \section{Future development}
 \label{future_work}
 

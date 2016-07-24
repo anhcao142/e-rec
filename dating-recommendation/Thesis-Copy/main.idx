@@ -15,6 +15,6 @@
 \indexentry{Hybrid recommendation approaches}{20}
 \indexentry{Matrix Factorization}{22}
 \indexentry{Latent factor models}{22}
-\indexentry{stochastic gradient descent}{23}
-\indexentry{Singular Value Decomposition}{23}
-\indexentry{SVD}{23}
+\indexentry{stochastic gradient descent}{24}
+\indexentry{Singular Value Decomposition}{26}
+\indexentry{SVD}{26}

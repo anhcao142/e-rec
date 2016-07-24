@@ -83,60 +83,85 @@
 \citation{Burke07}
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}Hybrid recommendation approaches}{20}}
 \citation{Burke02}
+\citation{(}
+\citation{(}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Incremental SVD++}{22}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{ISVD++_chapter}{{3}{22}{Incremental SVD++}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Matrix Factorization}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Singular Value Decomposition based models}{22}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Fundamentals of Matrix factorization}{22}}
-\@writefile{toc}{\contentsline {subsubsection}{Matrix factorization techniques}{23}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Singular Value Decomposition (SVD)}{23}}
-\newlabel{eq:MF_predict}{{3.1}{24}{Singular Value Decomposition (SVD)}{}{}}
-\newlabel{eq: MBMF}{{3.2}{25}{Singular Value Decomposition (SVD)}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Baseline predictor}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}SVD with Bias Terms(Bias-SVD )}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces A simplified illustration of the latent factor approach, which characterizes both users and movies using two axes\IeC {\textemdash }male versus female and serious versus escapist.\relax }}{23}}
+\newlabel{fig:LFM_example}{{3.1}{23}{A simplified illustration of the latent factor approach, which characterizes both users and movies using two axes—male versus female and serious versus escapist.\relax }{}{}}
+\newlabel{eq:MF_predict}{{3.1}{23}{Fundamentals of Matrix factorization}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces A illustration of the Matrix factorization\relax }}{24}}
+\newlabel{fig:MF}{{3.2}{24}{A illustration of the Matrix factorization\relax }{}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Matrix factorization techniques}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Baseline predictors}{25}}
+\newlabel{eq:Baseline_predict}{{3.2}{25}{Baseline predictors}{}{}}
+\newlabel{eq:Baseline_minimize}{{3.3}{25}{Baseline predictors}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Regularized Singular Value Decomposition (Regularized-SVD)}{26}}
+\newlabel{eq:MF_predict}{{3.4}{26}{Regularized Singular Value Decomposition (Regularized-SVD)}{}{}}
+\newlabel{eq: MBMF}{{3.5}{27}{Regularized Singular Value Decomposition (Regularized-SVD)}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}SVD with Bias Terms(Bias-SVD )}{27}}
 \citation{Oard98}
-\newlabel{eq: SVD}{{3.3}{26}{SVD with Bias Terms(Bias-SVD )}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}SVD with implicit feedback (SVD++)}{26}}
-\@writefile{toc}{\contentsline {subsubsection}{Explicit and implicit feedback}{26}}
-\@writefile{toc}{\contentsline {subsubsection}{SVD with implicit feedback (SVD++)}{27}}
-\newlabel{eq:implicit_binary}{{3.5}{27}{SVD with implicit feedback (SVD++)}{}{}}
-\newlabel{eq:svd++_pre}{{3.6}{28}{SVD with implicit feedback (SVD++)}{}{}}
-\newlabel{eq:svd++_min}{{3.7}{28}{SVD with implicit feedback (SVD++)}{}{}}
-\newlabel{eq:svd++_pre2}{{3.8}{29}{SVD with implicit feedback (SVD++)}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Incremental SVD++}{29}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces The process of a recommender system\relax }}{30}}
-\newlabel{fig:RS_process}{{3.1}{30}{The process of a recommender system\relax }{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Notations}{31}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Algorithm}{31}}
-\newlabel{eq:isvd++_pre1}{{3.9}{31}{Algorithm}{}{}}
-\newlabel{eq:isvd++_min}{{3.10}{33}{Algorithm}{}{}}
-\newlabel{eq:isvd++_min1}{{3.11}{33}{Algorithm}{}{}}
-\newlabel{eq:isvd++_min2}{{3.12}{33}{Algorithm}{}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Incremental SVD++\relax }}{34}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Experiments \& Development}{35}}
+\newlabel{eq: SVD}{{3.6}{28}{SVD with Bias Terms(Bias-SVD )}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}SVD with implicit feedback (SVD++)}{28}}
+\@writefile{toc}{\contentsline {subsubsection}{Explicit and implicit feedback}{28}}
+\@writefile{toc}{\contentsline {subsubsection}{SVD with implicit feedback (SVD++)}{29}}
+\newlabel{eq:implicit_binary}{{3.8}{29}{SVD with implicit feedback (SVD++)}{}{}}
+\newlabel{eq:svd++_pre}{{3.9}{30}{SVD with implicit feedback (SVD++)}{}{}}
+\newlabel{eq:svd++_min}{{3.10}{30}{SVD with implicit feedback (SVD++)}{}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces SVD++\relax }}{31}}
+\newlabel{eq:svd++_pre2}{{3.11}{32}{SVD with implicit feedback (SVD++)}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Incremental SVD++}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces The process of a recommender system\relax }}{33}}
+\newlabel{fig:RS_process}{{3.3}{33}{The process of a recommender system\relax }{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Notations}{34}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Algorithm}{34}}
+\newlabel{eq:isvd++_pre1}{{3.12}{34}{Algorithm}{}{}}
+\newlabel{eq:isvd++_min}{{3.13}{36}{Algorithm}{}{}}
+\newlabel{eq:isvd++_min1}{{3.14}{36}{Algorithm}{}{}}
+\newlabel{eq:isvd++_min2}{{3.15}{36}{Algorithm}{}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Incremental SVD++\relax }}{38}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Experiments}{39}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{experiments}{{4}{35}{Experiments \& Development}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Experiment datasets}{35}}
-\newlabel{tab:MovieLens}{{\caption@xref {tab:MovieLens}{ on input line 856}}{35}{Experiment datasets}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces  Statistics of MovieLens dataset\relax }}{35}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Evaluation Measures}{36}}
-\newlabel{eq:RMSE}{{4.1}{36}{Evaluation Measures}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Evaluation Protocol}{36}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Experiment result}{36}}
+\newlabel{experiments}{{4}{39}{Experiments}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Experiment setup}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Data}{39}}
+\newlabel{tab:MovieLens_datatest}{{\caption@xref {tab:MovieLens_datatest}{ on input line 955}}{39}{Data}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces  Statistics of MovieLens dataset\relax }}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Parameters}{40}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Hardware}{40}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Evaluation measures}{40}}
+\newlabel{eq:RMSE}{{4.1}{40}{Evaluation measures}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Experiment Result}{40}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Comparisons between SVD++ and Incremental SVD++}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces  Recommendation accuracy (RMSE) comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens\relax }}{42}}
+\newlabel{fig:RMSE}{{4.1}{42}{Recommendation accuracy (RMSE) comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens\relax }{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Training times (ms) of SVD++\relax }}{43}}
+\newlabel{fig:train_timeSVD++}{{4.2}{43}{Training times (ms) of SVD++\relax }{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Updating times (ms) of ISVD++\relax }}{44}}
+\newlabel{fig:train_timeISVD++}{{4.3}{44}{Updating times (ms) of ISVD++\relax }{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Impact of Parameters}{45}}
+\newlabel{Impact of Parameters}{{4.3.2}{45}{Impact of Parameters}{}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Impact of the stable of pre-built model}{45}}
+\@writefile{toc}{\contentsline {subsubsection}{Impact of the amount of new ratings}{45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Updating times (ms) of ISVD++\relax }}{46}}
+\newlabel{fig:train_timeISVD++_impact_2}{{4.4}{46}{Updating times (ms) of ISVD++\relax }{}{}}
 \bibdata{reference}
 \bibstyle{ieeetr}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Summarization}{37}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Summarization}{47}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{Summarization}{{5}{37}{Summarization}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Summarization}{37}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Future development}{37}}
-\newlabel{future_work}{{5.2}{37}{Future development}{}{}}
+\newlabel{Summarization}{{5}{47}{Summarization}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Summarization}{47}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Future development}{47}}
+\newlabel{future_work}{{5.2}{47}{Future development}{}{}}
 \bibcite{SarwarApplication}{1}
 \bibcite{SimonFunk}{2}
 \bibcite{BellKorFactor}{3}
@@ -162,4 +187,4 @@
 \bibcite{Jin03}{23}
 \bibcite{Rendle10}{24}
 \bibcite{Ma11}{25}
-\@writefile{toc}{\contentsline {chapter}{Index}{41}}
+\@writefile{toc}{\contentsline {chapter}{Index}{51}}
