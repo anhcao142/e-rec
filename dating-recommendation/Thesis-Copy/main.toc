@@ -1,9 +1,9 @@
 \select@language {english}
 \contentsline {chapter}{Acknowledgements}{i}
-\contentsline {chapter}{Table of contents}{i}
-\contentsline {chapter}{List of Figures}{iv}
-\contentsline {chapter}{List of Tables}{v}
-\contentsline {chapter}{Abstract}{vi}
+\contentsline {chapter}{Table of contents}{ii}
+\contentsline {chapter}{List of Figures}{vi}
+\contentsline {chapter}{List of Tables}{vii}
+\contentsline {chapter}{Abstract}{viii}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Recommender systems}{1}
 \contentsline {subsection}{\numberline {1.1.1}Applications of recommender systems}{2}
@@ -38,14 +38,16 @@
 \contentsline {section}{\numberline {4.1}Experiment setup}{39}
 \contentsline {subsection}{\numberline {4.1.1}Data}{39}
 \contentsline {subsection}{\numberline {4.1.2}Parameters}{40}
-\contentsline {subsection}{\numberline {4.1.3}Hardware}{40}
 \contentsline {section}{\numberline {4.2}Evaluation measures}{40}
 \contentsline {section}{\numberline {4.3}Experiment Result}{40}
-\contentsline {subsection}{\numberline {4.3.1}Comparisons between SVD++ and Incremental SVD++}{41}
-\contentsline {subsection}{\numberline {4.3.2}Impact of Parameters}{45}
-\contentsline {subsubsection}{Impact of the stable of pre-built model}{45}
-\contentsline {subsubsection}{Impact of the amount of new ratings}{45}
-\contentsline {chapter}{\numberline {5}Summarization}{47}
-\contentsline {section}{\numberline {5.1}Summarization}{47}
-\contentsline {section}{\numberline {5.2}Future development}{47}
-\contentsline {chapter}{Index}{51}
+\contentsline {subsection}{\numberline {4.3.1}Comparisons between SVD++ and Incremental SVD++}{40}
+\contentsline {subsection}{\numberline {4.3.2}Impact of Parameters}{44}
+\contentsline {subsubsection}{Impact of the stable of pre-built model}{44}
+\contentsline {subsubsection}{Impact of the number of new ratings}{45}
+\contentsline {subsubsection}{Explanation}{47}
+\contentsline {chapter}{\numberline {5}Summarization}{48}
+\contentsline {section}{\numberline {5.1}Summarization}{48}
+\contentsline {section}{\numberline {5.2}Future work}{48}
+\contentsline {subsection}{\numberline {5.2.1}Application using Incremental SVD++ with offline SVD++}{49}
+\contentsline {subsection}{\numberline {5.2.2}Storing model to database management system}{49}
+\contentsline {chapter}{Index}{55}

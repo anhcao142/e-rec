@@ -31,8 +31,12 @@ import java.lang.reflect.Method;
  */
 public class Debug
 {
+	//update mode
+	
 	public final static boolean	ON		= false;
 	public final static boolean	OFF		= true;
+	
+	//init mode
 	
 //	public final static boolean	ON		= true;
 //	public final static boolean	OFF		= false;

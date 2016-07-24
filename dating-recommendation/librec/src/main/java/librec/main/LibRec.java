@@ -479,6 +479,9 @@ public class LibRec {
 		case "train_test":
 			runTrainTest(evalOptions);
 			return;
+		case "train_test_update":
+			runTrainTestupdate(evalOptions);
+			return;
 		default:
 			ratio = evalOptions.getDouble("-r", 0.8);
 			data = ds.getRatioByRating(ratio);
@@ -531,6 +534,22 @@ public class LibRec {
 
 	
 	private void runTrainTest(LineConfiger params) throws Exception {
+		SparseMatrix testData = readTest();
+		//readUpdate();
+		SparseMatrix.reshape(rateMatrix);
+		SparseMatrix.reshape(testData);
+		SparseMatrix[] data = new SparseMatrix[] { rateMatrix, testData};
+		Recommender algo = getRecommender(data, 1);
+
+		Thread ts = new Thread(algo);
+		ts.start();
+		ts.join();
+
+		Logs.debug("finished train_test!");
+		printEvalInfo(algo, algo.measures);
+	}
+	
+	private void runTrainTestupdate(LineConfiger params) throws Exception {
 		SparseMatrix testData = readTest();
 		readUpdate();
 		SparseMatrix.reshape(rateMatrix);

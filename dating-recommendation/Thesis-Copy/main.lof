@@ -11,8 +11,10 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces A illustration of the Matrix factorization\relax }}{24}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces The process of a recommender system\relax }}{33}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Recommendation accuracy (RMSE) comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens\relax }}{42}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Training times (ms) of SVD++\relax }}{43}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Updating times (ms) of ISVD++\relax }}{44}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Updating times (ms) of ISVD++\relax }}{46}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Recommendation accuracy (RMSE) comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens\relax }}{41}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Training times (ms) of SVD++\relax }}{42}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Updating times (ms) of ISVD++\relax }}{43}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Updating times (ms) of ISVD++\relax }}{45}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Updating times (ms) of ISVD++\relax }}{46}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Database structure\relax }}{50}

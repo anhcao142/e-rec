@@ -321,18 +321,24 @@ public class SVDPlusPlus extends BiasedMF {
 	protected void rebuildModel() throws Exception {
 		Logs.debug("REBUILD ++");
 		for (int iter = 1; iter <= numIters; iter++) {
-
 			loss = 0;
-			int[] userid = new int[updateMatrix.numRows()];
-			int[] itemid = new int[updateMatrix.numColumns()];
+			int[] userid = new int[trainMatrix.size()];
+			int[] itemid = new int[trainMatrix.size()];
+			
 			int i = 0;
+			int a = 0;
 			for (MatrixEntry me : trainMatrix) {
 
 				int u = me.row(); // user
 				int j = me.column(); // item
-				userid[i] = u;
-				itemid[i] = j;
-				++i;
+				if(!contains(userid, u)) {
+					userid[i] = u;
+					++i;
+				}
+				if(!contains(itemid, i)) {
+					itemid[a] = j;
+					++a;
+				}
 				double ruj = me.get();
 
 				double pred = predict(u, j);
@@ -387,7 +393,7 @@ public class SVDPlusPlus extends BiasedMF {
 				}
 
 			}
-			
+			//Logs.debug(userid.length);
 			for (MatrixEntry me : updateMatrix) {
 
 				int u = me.row(); // user
@@ -427,6 +433,11 @@ public class SVDPlusPlus extends BiasedMF {
 
 						for (int k : items) {
 							double ykf = Y.get(k, f);
+							
+							if(contains(itemid, i)) {
+								double delta_y = euj * qjf / w - regU * ykf;
+								Y.add(k, f, lRate * delta_y);
+							}
 
 							loss += regU * ykf * ykf;
 						}
@@ -439,9 +450,12 @@ public class SVDPlusPlus extends BiasedMF {
 
 					// update factors
 					double bu = userBias.get(u);
+					double sgd = euj - regB * bu;
 					loss += regB * bu * bu;
 
 					double bj = itemBias.get(j);
+					sgd = euj - regB * bj;
+					itemBias.add(j, lRate * sgd);
 
 					loss += regB * bj * bj;
 
@@ -457,11 +471,18 @@ public class SVDPlusPlus extends BiasedMF {
 					for (int f = 0; f < numFactors; f++) {
 						double puf = P.get(u, f);
 						double qjf = Q.get(j, f);
+						
+						double sgd_j = euj * (puf + sum_ys[f]) - regI * qjf;
+						Q.add(j, f, lRate * sgd_j);
 
 						loss += regU * puf * puf + regI * qjf * qjf;
 
 						for (int k : items) {
 							double ykf = Y.get(k, f);
+							if(contains(itemid, i)) {
+								double delta_y = euj * qjf / w - regU * ykf;
+								Y.add(k, f, lRate * delta_y);
+							}
 							loss += regU * ykf * ykf;
 						}
 					}
@@ -496,5 +517,6 @@ public class SVDPlusPlus extends BiasedMF {
 		} 
 		return false; 
 	}
+    
 
 }

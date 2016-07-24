@@ -7,6 +7,7 @@
 \usepackage[utf8]{inputenc}
 %\usepackage{mathptmx} % Times new Roman font
 %\usepackage[charter]{mathdesign}
+\usepackage{cite}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[lined, linesnumbered, longend]{algorithm2e}
@@ -76,7 +77,16 @@
 \setcounter{page}{1}
 
 \addcontentsline{toc}{chapter}{Acknowledgements}
-abs
+First and foremost, we have to thank our thesis supervisors, Mr. Mai Le Tung and Mr Le Ngoc Thanh. Without their assistance and dedicated involvement in every step throughout the process, this thesis would have never been accomplished. We would like to thank you very much for your support and understanding over these past four years.
+
+We would also like to show gratitude to our committee, including Prof. Vu DUONG, Assoc.Prof. Minh-Triet TRAN, Dr. Ba-Tien DINH, Quoc-Hoang VU and Dr. Thai-Son TRAN and all of our lecturers and teaching assistants in all four academic year at University of Science. Dr. Ba-Tien DINH was our first-year lecturer at HCM University of Science. His teaching style and enthusiasm for the topic made a strong impression on us and we have always carried positive memories of his classes with us.
+
+Getting through our thesis required more than academic support, and we have many, many people to thank for supporting and, at times, having to tolerate us over the past year. We cannot begin to express our gratitude and appreciation for their friendship. Viet-Hoang NGUYEN QUANG, Phong-Quoc DANG, and Tri NGUYEN have been unwavering in their personal and professional support during the time we spent at the University. For many memorable evenings out and in, we must thank everyone above as well as Quang-Minh Trinh, Phuc-Quang LE and Quang-Thang TAT. We would also like to thank Hue-Dang Nguyen who helped us find data on the internet and lent his house when we need a place to work.
+
+Most importantly, none of this could have happened without our family. To our parents, our brothers and sisters – who always be besides to encourage us with their love and support. Every time we was ready to quit, they did not let us and we are forever grateful. This thesis stands as a testament to their unconditional love and encouragement.
+
+Finally, we would like thank to each other - a strong passionate research team - for spending, sharing spirit, patience, idea, algorithm, methods, time, space, result, resource, sad and happiness through many difficulties of the thesis together.
+
 
 \renewcommand\contentsname{Table of contents}
 \addcontentsline{toc}{chapter}{Table of contents}
@@ -961,12 +971,6 @@ The data set is  randomly from the MovieLens 1M dataset. All the ratings are ord
 The meta-parameters are the same in all experiments. 
 Number of factors $k = 100$. $\gamma = \lambda = 0.01$.
 
-\subsection{Hardware}
-The parame
-
-We ran all experiments on a single machine.
-
-
 \section{Evaluation measures}
 We adopt Root Mean Square Error(RMSE) to evaluate two algorithms i.e. SVD++ and Incremental SVD++.
 RMSE evaluates the root of average square error between true rating and predicted rating. Denote the test set by $T$ , the definition of RMSE is given below:
@@ -981,16 +985,16 @@ We denote the training set of the initialization model by $T$ and the updating s
 \subsection{Comparisons between SVD++ and Incremental SVD++}
 The aim of this experiment is to compare the accuracy and training time of SVD++ and Incremental SDV++ in dynamic scenario where ratings happen continuously. 
 
-Experimental Scenario: 
+Experimental 1 scenario: 
 \begin{description}
-    \item{\textbf{1.}} The model is pre-buit with a subset of $20000$ ratings
-    \item{\textbf{2.}} The ISVD++, as an online training system, updates the model per $2000$ new ratings
-    \item{\textbf{3.}} The SVD++, as an offline training system, updates the model per $10000$ new ratings
+    \item{\textbf{1.}} The model is pre-buit with a subset of $20000$ ratings.
+    \item{\textbf{2.}} The ISVD++, as an online training system, updates the model per $2000$ new ratings.
+    \item{\textbf{3.}} The SVD++, as an offline training system, updates the model per $10000$ new ratings.
 \end{description}
 
 
 
-\clearpage
+%\clearpage
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{"result1".png} 
@@ -1032,19 +1036,27 @@ In this section, we evaluate the impact of parameters on the performance of ISVD
 \subsubsection{Impact of the stable of pre-built model}
 We assume that the stable of pre-built model depends on the number of observed ratings which are used to build the model. In this experiment, we evaluate the impact of the number of ratings which are used to pre-built the model, on the updating time of ISVD++ method.
 
-Experimental Scenario: 
+Experimental 2 scenario: 
 \begin{quote}
 The set of new ratings is fixed. ISVD++ will integrate this dataset into models which built of various training datasets. The number of ratings in each dataset are different. 
 
 Specifically, the number of ratings in each training datasets are: $20000$, $30000$, $40000$, $50000$, $60000$, $70000$, $80000$. The updating data includes $2000$ ratings.
 \end{quote}
+\clearpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{"init".png} 
+    \caption{Updating times (ms) of ISVD++}
+    \label{fig:train_timeISVD++_impact_1}
+\end{figure}
+Figure~\ref{fig:train_timeISVD++_impact_1} shows the updating times of ISVD++ method with the given trainning datasets. The updating times of ISVD++ method increases steadily according to the number of new ratings.
 
-\subsubsection{Impact of the amount of new ratings}
-As mentioned before, ISVD++ method only scans over a subset of ratings which is relevant to new ratings. So in this experiment, we evaluate the relation between the updating time of ISVD++ method and the amount of these ratings dataset.
+\subsubsection{Impact of the number of new ratings}
+As mentioned before, ISVD++ method only scans over a subset of ratings which is relevant to new ratings. So in this experiment, we evaluate the relation between the updating time of ISVD++ method and the number of updating dataset.
  
-Experimental Scenario: 
+Experimental 3 scenario: 
 \begin{quote}
-The model is pre-buit with a fix amount of ratings. ISVD++ updates the model with various dataset. And the number of ratings in these dataset are different. Each update, the model will be rebuilt based on the original dataset. So the stable of pre-built model does not affect the result. 
+The model is pre-buit with a fix number of ratings. ISVD++ updates the model with various dataset. And the number of ratings in these dataset are different. Each update, the model will be rebuilt based on the original dataset. So the stable of pre-built model does not affect the result. 
 
 Specifically, the training data includes $70000$ ratings. The number of ratings in updating datasets are: $1$, $100$, $1000$, $5000$, $10000$, $20000$.
 \end{quote}
@@ -1057,21 +1069,88 @@ Specifically, the training data includes $70000$ ratings. The number of ratings 
     \label{fig:train_timeISVD++_impact_2}
 \end{figure}
 %\clearpage
+Figure~\ref{fig:train_timeISVD++_impact_2} shows the updating times of ISVD++ method with the given updating datasets. It is clearly seen that the updating times of ISVD++ method increases rapidly according to the number of new ratings. It cost too much time to update model with large updating data.
+
+\subsubsection{Explanation}
+The result in experiment 2 and experiment 3 can be explained by the number of related ratings in each experiment. Table~\ref{tab:related_1} and ~\ref{tab:related_2} show the number of related ratings in each experiment.
+\begin{table}[h!]
+    \small\centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        No. new ratings & 1 &	100 &	1000&	5000&	10000&	20000\\
+        \hline
+         No. related ratings & 47&	5650&	33003&	60865&	66246&	68502 \\
+        \hline
+    \end{tabular}
+    \caption{ The number of related ratings in experiment 2}
+    \label{tab:related_1}
+\end{table}
+
+\begin{table}[h!]
+    \small\centering
+    \begin{tabular}{|c|c|c|c|c|c||c|c|}
+        \hline
+        No. traning ratings & 20000	&30000	&40000	&50000&	60000&	70000&	80000\\
+        \hline
+         No. related ratings & 15126&	20475&	27147&	33984&	40887&	47873&	54736\\
+        \hline
+    \end{tabular}
+    
+    \caption{ The number of related ratings in experiment 3}
+    \label{tab:related_2}
+\end{table}
+
+The updating step of ISVD++ is faster than SVD++ because it only minimizes the regularized squared error on a subset, the related ratings $S_1$. In experiment 2 and experiment 3, the number of related ratings changes when adjusting other parameters. Therefore, the updating time changes according to the related dataset. 
+
+On the other hand, the increasing of the number of related ratings reduces the speed of the system. In order to get the best performance of ISVD++, the size of updating steps must be adjusting based on the related ratings.
 
 \chapter{Summarization}
 \label{Summarization}
 \section{Summarization}
-This work proposed improvements to the state-of-the-art recommendation algorithm SVD++ in 
-\section{Future development}
+We have thoroughly investigated the 
+Incremental SVD++ has performed an out standing performance in comparison with one of the best recommendation algorithm in the world - Singular Value Decomposition with implicit feedback.
+
+In a dynamic scenario, Incremental SVD++ totally beats SVD++ in updating time. In average, ISVD++ run faster than SVD++ 3 times. ISVD++ also produces a slightly better recommendation accuracy then SVD++.
+
+On the other hand, we also evaluate the impart of the size of training data and updating data on the updating time of ISVD++. In order to apply ISVD++ into a real system, we have to adjust the size of updating step to achieve the best results.
+ 
+\section{Future work}
 \label{future_work}
+Incremetal SVD++ has a major flaw that is it can not run as an offline algorithms. If we use ISVD++ to pre-compute the model, the systems will face the same  as using ISVD++ to update model with a huge updating dataset.  So in order to get advantage of live update from incremetal SVD++ and recommendations for new data we propose a system where both SVD++ and Incremental SVD++ must be implemented.
+
+Also despite the fact that Incremental SVD++ was researched for scaled commercial systems, the project was not production ready. Every time we want to recommend a list of items to user we need to reload the whole trained model into memory in which when the model file size becomes to big it won't be able to fit onto the computer's RAM.
+
+\subsection{Application using Incremental SVD++ with offline SVD++}
+
+In this project we computed and stored the trained model into our data structure matrices - sparse matrix and dense matrix - which the size of the matrices were defined before hand by processing the input data such as the number of items, the number of users and the number of implicit feedback features for each user. These matrices are isolated within the input data, new users and items with new ratings won't get their recommendation list until the whole data model is re-trained, so a system with Incremental SVD++ alone won't generate much profit. In this thesis, we propose a system using the combination of both SVD++ and Incremental SVD++ where Incremental SVD++ is call periodically to update ratings for old data (e.g. update every several minutes) and daily rebuild new model with new data using SVD++.
+
+\subsection{Storing model to database management system}
+
+Our model data is first stored in matrices and then writed to binary files. Next time we want to update our model or suggest items to someone, we have to load the model from files to our data struture and store it in the memory. The problem for scale is that, when the files size exceed the memory size, the memory will be out of ram and crash the application.
+
+On the other hand, our Incremental SVD++ algorithm was fast because it only rebuild a portion of the trained model to predict items more up to date. But with the currently save-load model mechanism, time and resource was wasted to load and save other unnecessary data during the process.
+
+To be able to scale and using Incremental SVD++ more effectively, we suggest re-structuring data and storing SVD++ trained model into a database management system such as relational database like MySQL or Microsoft SQL Server. By using these relational database management system (RDBMS) we can take advantage of the built-in scalability options and responsive support from its' huge communities. We may also reduce a lot of load time since only relevant data was load.
+
+Propose database structure: 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{"database".png} 
+    \caption{Database structure}
+    \label{fig:database}
+\end{figure}
+%\clearpage
+
 
 
 \vfill
 \noindent{\fbox{\parbox{\textwidth}{Last but not least, we will welcome anyone caring about this thesis to give ideas or join us and develop Incremental SVD++. Please contact us at: \textsf{cdanh@apcs.vn} (Dung-Anh CAO) or \textsf{hpanh@apcs.vn} (Phuong-Anh HOANG) for more information.}}}
 
 
-\bibliography{reference}
+
 \bibliographystyle{ieeetr}
+\bibliography{reference}
 \begin{thebibliography}{10}
 %1
 \bibitem{SarwarApplication}  
