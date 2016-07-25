@@ -313,7 +313,7 @@ public abstract class Recommender implements Runnable {
 	public void execute() throws Exception {
 
 		Stopwatch sw = Stopwatch.createStarted();
-		if (Debug.ON) {
+		if (Debug.isUpdate == false) {
 			Logs.debug("INIT MODEL");
 			// learn a recommender model
 			initModel();
@@ -343,6 +343,7 @@ public abstract class Recommender implements Runnable {
 			// post-processing after building a model, e.g., release intermediate memory to avoid memory leak
 			postModel();
 		}
+
 		long trainTime = sw.elapsed(TimeUnit.MILLISECONDS);
 
 		// validation

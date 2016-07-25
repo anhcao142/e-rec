@@ -35,6 +35,8 @@ public class Debug
 	
 	public final static boolean	ON		= false;
 	public final static boolean	OFF		= true;
+
+	public static boolean isUpdate 		= false;
 	
 	//init mode
 	

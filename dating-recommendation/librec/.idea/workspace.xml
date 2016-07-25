@@ -1,0 +1,1621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c2b8d4e1-912f-4de4-82a4-091dff61d9c8" name="Default" comment="" />
+    <ignored path="librec.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="librec" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="LibRec.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/LibRec.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#execute#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#readData#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#preset#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#main#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#cmdLine#0;class#LibRec#0" expanded="false" />
+                <element signature="method#cmdLine#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#writeMatrix#0;class#LibRec#0" expanded="false" />
+                <element signature="method#writeMatrix#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#run#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#runAlgorithm#0;class#LibRec#0" expanded="false" />
+                <element signature="method#runCrossValidation#0;class#LibRec#0" expanded="false" />
+                <element signature="method#runTrainTest#0;class#LibRec#0" expanded="false" />
+                <element signature="method#runTrainTestupdate#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+                <element signature="method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+                <element signature="method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#notifyMe#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#getRecommender#0;class#LibRec#0" expanded="false" />
+                <element signature="e#20696#20735#0" expanded="false" />
+                <element signature="method#writeData#0;class#LibRec#0" expanded="false" />
+                <element signature="docComment;method#setConfigFiles#0;class#LibRec#0" expanded="false" />
+                <element signature="e#25267#25268#0" expanded="true" />
+                <element signature="e#25317#25318#0" expanded="true" />
+                <element signature="docComment;method#about#0;class#LibRec#0" expanded="false" />
+                <element signature="method#about#0;class#LibRec#0" expanded="false" />
+                <element signature="method#readUpdate#0;class#LibRec#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SVDPlusPlusDemo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/SVDPlusPlusDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49046323">
+              <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+              <folding>
+                <element signature="docComment;class#SVDPlusPlusDemo#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileIO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/librec/util/FileIO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="166" column="54" selection-start-line="166" selection-start-column="54" selection-end-line="166" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/librec/data/DataDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SVD++_init.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/config/SVD++_init.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.111111">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/librec/main/LibRec.java" />
+        <option value="$PROJECT_DIR$/demo/config/SVD++.conf" />
+        <option value="$PROJECT_DIR$/src/main/java/librec/rating/IncrementalSVDPlusPlus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/librec/rating/SVDPlusPlus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/librec/main/Demo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/librec/util/Debug.java" />
+        <option value="$PROJECT_DIR$/src/main/java/librec/intf/Recommender.java" />
+        <option value="$PROJECT_DIR$/demo/config/SVD++_update_2.conf" />
+        <option value="$PROJECT_DIR$/demo/config/SVD++_update_1.conf" />
+        <option value="$PROJECT_DIR$/demo/config/SVD++_init.conf" />
+        <option value="$PROJECT_DIR$/src/main/java/librec/main/SVDPlusPlusDemo.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+        <option name="lookForNested" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="813" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="librec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="librec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="librec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/demo/config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SVDPlusPlusDemo">
+    <configuration default="false" name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="librec.main.Demo" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="librec.main.Demo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="librec" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SVDPlusPlusDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="librec.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="librec.main.SVDPlusPlusDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="librec" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="librec" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="LibRec" type="Application" factoryName="Application" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="librec.main.Demo" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="librec.main.LibRec" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="librec" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.LibRec" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Demo" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SVDPlusPlusDemo" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.SVDPlusPlusDemo" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Demo" />
+      </list>
+    </recent_temporary>
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2b8d4e1-912f-4de4-82a4-091dff61d9c8" name="Default" comment="" />
+      <created>1464791133012</created>
+      <option name="number" value="Default" />
+      <updated>1464791133012</updated>
+      <workItem from="1464791134370" duration="626000" />
+      <workItem from="1464791817110" duration="2304000" />
+      <workItem from="1465979044635" duration="7058000" />
+      <workItem from="1466410820280" duration="274000" />
+      <workItem from="1469184629647" duration="2101000" />
+      <workItem from="1469201743529" duration="346000" />
+      <workItem from="1469203772686" duration="10171000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="22880000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="813" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45214978" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3994452" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/librec/rating/SVDPlusPlus.java</url>
+          <line>120</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/librec/rating/SVDPlusPlus.java</url>
+          <line>336</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/librec/main/LibRec.java</url>
+          <line>233</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="trainMatrix" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/intf/Recommender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="371" column="66" selection-start-line="371" selection-start-column="66" selection-end-line="371" selection-end-column="66" />
+          <folding>
+            <element signature="docComment;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#cf#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#resetStatics#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#algoName#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;class#Measure#0;class#Recommender#0" expanded="false" />
+            <element signature="class#Measure#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#Recommender#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#execute#0;class#Recommender#0" expanded="false" />
+            <element signature="e#10906#10975#0" expanded="false" />
+            <element signature="method#printAlgoConfig#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#validateModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#getEvalInfo#0;class#Recommender#0" expanded="false" />
+            <element signature="method#getEvalInfo#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#initModel#0;class#Recommender#0" expanded="false" />
+            <element signature="method#getModelParams#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#buildCorrs#0;class#Recommender#0" expanded="false" />
+            <element signature="method#buildCorrs#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#correlation#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#correlation#1;class#Recommender#0" expanded="false" />
+            <element signature="method#correlation#1;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#buildModel#0;class#Recommender#0" expanded="false" />
+            <element signature="method#rebuildModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#saveModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#loadModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#isTestable#0;class#Recommender#0" expanded="false" />
+            <element signature="method#isTestable#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#evalRankings#0;class#Recommender#0" expanded="false" />
+            <element signature="method#evalRankings#0;class#Recommender#0" expanded="false" />
+            <element signature="e#20761#20819#0" expanded="false" />
+            <element signature="docComment;method#predict#0;class#Recommender#0" expanded="false" />
+            <element signature="method#predict#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#predict#1;class#Recommender#0" expanded="false" />
+            <element signature="method#predict#1;class#Recommender#0" expanded="false" />
+            <element signature="method#perplexity#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#ranking#0;class#Recommender#0" expanded="false" />
+            <element signature="method#ranking#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#diverseAt#0;class#Recommender#0" expanded="false" />
+            <element signature="method#diverseAt#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#g#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#gd#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#gaussian#0;class#Recommender#0" expanded="false" />
+            <element signature="method#gaussian#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#normalize#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#checkBinary#0;class#Recommender#0" expanded="false" />
+            <element signature="method#checkBinary#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#denormalize#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#setAlgoName#0;class#Recommender#0" expanded="false" />
+            <element signature="method#setAlgoName#0;class#Recommender#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/data/SparseMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="54" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
+          <folding>
+            <element signature="docComment;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#SparseMatrix#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#SparseMatrix#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#SparseMatrix#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#SparseMatrix#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#SparseMatrix#2;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#SparseMatrix#2;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#SparseMatrix#3;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#SparseMatrix#3;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#copyCRS#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#copyCCS#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#clone#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#transpose#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#transpose#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getRowPointers#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getColumnIndices#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#size#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#getDataTable#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#construct#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#numRows#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#numColumns#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getData#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#set#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#set#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#add#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#add#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#get#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#get#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#row#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#row#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getColumns#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#getColumns#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#rowCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#rowCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#rowColumnsCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#rowColumnsCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#columnCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#columnCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#columnRowsCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#columnRowsCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#row#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#row#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#rowSize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#rowSize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#rows#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#rows#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#column#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#columnSize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getRows#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#columns#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#sum#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#mean#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#normalize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#normalize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#normalize#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#standardize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#standardize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#reshape#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#reshape#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#toString#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#matString#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#matString#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getCRSIndex#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#getCRSIndex#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getCCSIndex#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;class#SparseMatrixEntry#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="class#SparseMatrixEntry#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#update#0;class#SparseMatrixEntry#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#update#0;class#SparseMatrixEntry#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="class#MatrixIterator#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#MatrixIterator#0;class#MatrixIterator#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#nextNonEmptyRow#0;class#MatrixIterator#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#nextNonEmptyRow#0;class#MatrixIterator#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#next#0;class#MatrixIterator#0;class#SparseMatrix#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/LibRec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="542" column="18" selection-start-line="542" selection-start-column="18" selection-end-line="542" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#execute#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#readData#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#preset#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#cmdLine#0;class#LibRec#0" expanded="false" />
+            <element signature="method#cmdLine#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#writeMatrix#0;class#LibRec#0" expanded="false" />
+            <element signature="method#writeMatrix#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#run#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#runAlgorithm#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runCrossValidation#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runTrainTest#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runTrainTestupdate#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+            <element signature="method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#notifyMe#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#getRecommender#0;class#LibRec#0" expanded="false" />
+            <element signature="e#20696#20735#0" expanded="false" />
+            <element signature="method#writeData#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#setConfigFiles#0;class#LibRec#0" expanded="false" />
+            <element signature="e#25267#25268#0" expanded="true" />
+            <element signature="e#25317#25318#0" expanded="true" />
+            <element signature="docComment;method#about#0;class#LibRec#0" expanded="false" />
+            <element signature="method#about#0;class#LibRec#0" expanded="false" />
+            <element signature="method#readUpdate#0;class#LibRec#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/util/Debug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#2719#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/SVDPlusPlusDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/rating/SVDPlusPlus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#SVDPlusPlus#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/intf/Recommender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="573" column="19" selection-start-line="573" selection-start-column="19" selection-end-line="573" selection-end-column="19" />
+          <folding>
+            <element signature="docComment;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#cf#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#resetStatics#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#algoName#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;class#Measure#0;class#Recommender#0" expanded="false" />
+            <element signature="class#Measure#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#Recommender#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#execute#0;class#Recommender#0" expanded="false" />
+            <element signature="e#10906#10975#0" expanded="false" />
+            <element signature="method#printAlgoConfig#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#validateModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#getEvalInfo#0;class#Recommender#0" expanded="false" />
+            <element signature="method#getEvalInfo#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#initModel#0;class#Recommender#0" expanded="false" />
+            <element signature="method#getModelParams#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#buildCorrs#0;class#Recommender#0" expanded="false" />
+            <element signature="method#buildCorrs#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#correlation#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#correlation#1;class#Recommender#0" expanded="false" />
+            <element signature="method#correlation#1;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#buildModel#0;class#Recommender#0" expanded="false" />
+            <element signature="method#rebuildModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#saveModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#loadModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#isTestable#0;class#Recommender#0" expanded="false" />
+            <element signature="method#isTestable#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#evalRankings#0;class#Recommender#0" expanded="false" />
+            <element signature="method#evalRankings#0;class#Recommender#0" expanded="false" />
+            <element signature="e#20761#20819#0" expanded="false" />
+            <element signature="docComment;method#predict#0;class#Recommender#0" expanded="false" />
+            <element signature="method#predict#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#predict#1;class#Recommender#0" expanded="false" />
+            <element signature="method#predict#1;class#Recommender#0" expanded="false" />
+            <element signature="method#perplexity#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#ranking#0;class#Recommender#0" expanded="false" />
+            <element signature="method#ranking#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#diverseAt#0;class#Recommender#0" expanded="false" />
+            <element signature="method#diverseAt#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#g#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#gd#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#gaussian#0;class#Recommender#0" expanded="false" />
+            <element signature="method#gaussian#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#normalize#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#checkBinary#0;class#Recommender#0" expanded="false" />
+            <element signature="method#checkBinary#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#denormalize#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#setAlgoName#0;class#Recommender#0" expanded="false" />
+            <element signature="method#setAlgoName#0;class#Recommender#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/config/SVD++_init.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/LibRec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="542" column="18" selection-start-line="542" selection-start-column="18" selection-end-line="542" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#execute#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#readData#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#preset#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#cmdLine#0;class#LibRec#0" expanded="false" />
+            <element signature="method#cmdLine#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#writeMatrix#0;class#LibRec#0" expanded="false" />
+            <element signature="method#writeMatrix#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#run#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#runAlgorithm#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runCrossValidation#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runTrainTest#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runTrainTestupdate#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+            <element signature="method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#notifyMe#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#getRecommender#0;class#LibRec#0" expanded="false" />
+            <element signature="e#20696#20735#0" expanded="false" />
+            <element signature="method#writeData#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#setConfigFiles#0;class#LibRec#0" expanded="false" />
+            <element signature="e#25267#25268#0" expanded="true" />
+            <element signature="e#25317#25318#0" expanded="true" />
+            <element signature="docComment;method#about#0;class#LibRec#0" expanded="false" />
+            <element signature="method#about#0;class#LibRec#0" expanded="false" />
+            <element signature="method#readUpdate#0;class#LibRec#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/util/Debug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#2719#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/SVDPlusPlusDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/rating/SVDPlusPlus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#SVDPlusPlus#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/intf/Recommender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="573" column="19" selection-start-line="573" selection-start-column="19" selection-end-line="573" selection-end-column="19" />
+          <folding>
+            <element signature="docComment;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#cf#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#resetStatics#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#algoName#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;class#Measure#0;class#Recommender#0" expanded="false" />
+            <element signature="class#Measure#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#Recommender#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#execute#0;class#Recommender#0" expanded="false" />
+            <element signature="e#10906#10975#0" expanded="false" />
+            <element signature="method#printAlgoConfig#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#validateModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#getEvalInfo#0;class#Recommender#0" expanded="false" />
+            <element signature="method#getEvalInfo#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#initModel#0;class#Recommender#0" expanded="false" />
+            <element signature="method#getModelParams#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#buildCorrs#0;class#Recommender#0" expanded="false" />
+            <element signature="method#buildCorrs#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#correlation#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#correlation#1;class#Recommender#0" expanded="false" />
+            <element signature="method#correlation#1;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#buildModel#0;class#Recommender#0" expanded="false" />
+            <element signature="method#rebuildModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#saveModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#loadModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#isTestable#0;class#Recommender#0" expanded="false" />
+            <element signature="method#isTestable#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#evalRankings#0;class#Recommender#0" expanded="false" />
+            <element signature="method#evalRankings#0;class#Recommender#0" expanded="false" />
+            <element signature="e#20761#20819#0" expanded="false" />
+            <element signature="docComment;method#predict#0;class#Recommender#0" expanded="false" />
+            <element signature="method#predict#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#predict#1;class#Recommender#0" expanded="false" />
+            <element signature="method#predict#1;class#Recommender#0" expanded="false" />
+            <element signature="method#perplexity#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#ranking#0;class#Recommender#0" expanded="false" />
+            <element signature="method#ranking#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#diverseAt#0;class#Recommender#0" expanded="false" />
+            <element signature="method#diverseAt#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#g#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#gd#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#gaussian#0;class#Recommender#0" expanded="false" />
+            <element signature="method#gaussian#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#normalize#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#checkBinary#0;class#Recommender#0" expanded="false" />
+            <element signature="method#checkBinary#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#denormalize#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#setAlgoName#0;class#Recommender#0" expanded="false" />
+            <element signature="method#setAlgoName#0;class#Recommender#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/config/SVD++_init.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/LibRec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="542" column="18" selection-start-line="542" selection-start-column="18" selection-end-line="542" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#execute#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#readData#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#preset#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#cmdLine#0;class#LibRec#0" expanded="false" />
+            <element signature="method#cmdLine#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#writeMatrix#0;class#LibRec#0" expanded="false" />
+            <element signature="method#writeMatrix#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#run#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#runAlgorithm#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runCrossValidation#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runTrainTest#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runTrainTestupdate#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+            <element signature="method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#notifyMe#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#getRecommender#0;class#LibRec#0" expanded="false" />
+            <element signature="e#20696#20735#0" expanded="false" />
+            <element signature="method#writeData#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#setConfigFiles#0;class#LibRec#0" expanded="false" />
+            <element signature="e#25267#25268#0" expanded="true" />
+            <element signature="e#25317#25318#0" expanded="true" />
+            <element signature="docComment;method#about#0;class#LibRec#0" expanded="false" />
+            <element signature="method#about#0;class#LibRec#0" expanded="false" />
+            <element signature="method#readUpdate#0;class#LibRec#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/util/Debug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#2719#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/SVDPlusPlusDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/config/SVD++_init.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/LibRec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#execute#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#readData#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#preset#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#cmdLine#0;class#LibRec#0" expanded="false" />
+            <element signature="method#cmdLine#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#writeMatrix#0;class#LibRec#0" expanded="false" />
+            <element signature="method#writeMatrix#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#run#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#runAlgorithm#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runCrossValidation#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runTrainTest#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runTrainTestupdate#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+            <element signature="method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#notifyMe#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#getRecommender#0;class#LibRec#0" expanded="false" />
+            <element signature="e#20696#20735#0" expanded="false" />
+            <element signature="method#writeData#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#setConfigFiles#0;class#LibRec#0" expanded="false" />
+            <element signature="e#25267#25268#0" expanded="true" />
+            <element signature="e#25317#25318#0" expanded="true" />
+            <element signature="docComment;method#about#0;class#LibRec#0" expanded="false" />
+            <element signature="method#about#0;class#LibRec#0" expanded="false" />
+            <element signature="method#readUpdate#0;class#LibRec#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/baseline/GlobalAverage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39473686">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/config/TrustSVD.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/data/DenseVector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="160" column="16" selection-start-line="160" selection-start-column="16" selection-end-line="160" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/Results/SVD++-rating-predictions fold [1].txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/rating/TimeSVD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/rating/IncrementalSVDPlusPlus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/data/MatrixEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25925925">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/rating/SVDPlusPlus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6891892">
+          <caret line="104" column="23" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
+          <folding>
+            <element signature="docComment;class#SVDPlusPlus#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/data/DenseMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="236" column="25" selection-start-line="236" selection-start-column="25" selection-end-line="236" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/data/SparseMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24774775">
+          <caret line="136" column="5" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#SparseMatrix#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#SparseMatrix#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#SparseMatrix#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#SparseMatrix#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#SparseMatrix#2;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#SparseMatrix#2;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#SparseMatrix#3;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#SparseMatrix#3;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#copyCRS#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#copyCCS#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#clone#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#transpose#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#transpose#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getRowPointers#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getColumnIndices#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#size#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#getDataTable#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#construct#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#numRows#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#numColumns#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getData#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#set#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#set#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#add#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#add#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#get#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#get#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#row#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#row#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getColumns#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#getColumns#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#rowCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#rowCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#rowColumnsCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#rowColumnsCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#columnCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#columnCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#columnRowsCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#columnRowsCache#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#row#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#row#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#rowSize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#rowSize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#rows#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#rows#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#column#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#columnSize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getRows#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#columns#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#sum#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#mean#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#normalize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#normalize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#normalize#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#standardize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#standardize#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#reshape#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#reshape#1;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#toString#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#matString#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#matString#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getCRSIndex#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#getCRSIndex#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#getCCSIndex#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;class#SparseMatrixEntry#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="class#SparseMatrixEntry#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#update#0;class#SparseMatrixEntry#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#update#0;class#SparseMatrixEntry#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="class#MatrixIterator#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#MatrixIterator#0;class#MatrixIterator#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="docComment;method#nextNonEmptyRow#0;class#MatrixIterator#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#nextNonEmptyRow#0;class#MatrixIterator#0;class#SparseMatrix#0" expanded="false" />
+            <element signature="method#next#0;class#MatrixIterator#0;class#SparseMatrix#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.043290045">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/intf/IterativeRecommender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18181819">
+          <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/rating/BiasedMF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2900433">
+          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding>
+            <element signature="e#1248#1249#0" expanded="false" />
+            <element signature="e#1274#1275#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/util/Debug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8888888">
+          <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/intf/Recommender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31746033">
+          <caret line="317" column="39" selection-start-line="317" selection-start-column="39" selection-end-line="317" selection-end-column="39" />
+          <folding>
+            <element signature="docComment;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#cf#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#resetStatics#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;field#algoName#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;class#Measure#0;class#Recommender#0" expanded="false" />
+            <element signature="class#Measure#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#Recommender#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#execute#0;class#Recommender#0" expanded="false" />
+            <element signature="e#10906#10975#0" expanded="false" />
+            <element signature="method#printAlgoConfig#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#validateModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#getEvalInfo#0;class#Recommender#0" expanded="false" />
+            <element signature="method#getEvalInfo#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#initModel#0;class#Recommender#0" expanded="false" />
+            <element signature="method#getModelParams#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#buildCorrs#0;class#Recommender#0" expanded="false" />
+            <element signature="method#buildCorrs#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#correlation#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#correlation#1;class#Recommender#0" expanded="false" />
+            <element signature="method#correlation#1;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#buildModel#0;class#Recommender#0" expanded="false" />
+            <element signature="method#rebuildModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#saveModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#loadModel#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#isTestable#0;class#Recommender#0" expanded="false" />
+            <element signature="method#isTestable#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#evalRankings#0;class#Recommender#0" expanded="false" />
+            <element signature="method#evalRankings#0;class#Recommender#0" expanded="false" />
+            <element signature="e#20761#20819#0" expanded="false" />
+            <element signature="docComment;method#predict#0;class#Recommender#0" expanded="false" />
+            <element signature="method#predict#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#predict#1;class#Recommender#0" expanded="false" />
+            <element signature="method#predict#1;class#Recommender#0" expanded="false" />
+            <element signature="method#perplexity#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#ranking#0;class#Recommender#0" expanded="false" />
+            <element signature="method#ranking#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#diverseAt#0;class#Recommender#0" expanded="false" />
+            <element signature="method#diverseAt#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#g#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#gd#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#gaussian#0;class#Recommender#0" expanded="false" />
+            <element signature="method#gaussian#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#normalize#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#checkBinary#0;class#Recommender#0" expanded="false" />
+            <element signature="method#checkBinary#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#denormalize#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Recommender#0" expanded="false" />
+            <element signature="docComment;method#setAlgoName#0;class#Recommender#0" expanded="false" />
+            <element signature="method#setAlgoName#0;class#Recommender#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.6893735">
+          <caret line="276" column="0" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/LibRec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#execute#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#readData#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#preset#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#cmdLine#0;class#LibRec#0" expanded="false" />
+            <element signature="method#cmdLine#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#writeMatrix#0;class#LibRec#0" expanded="false" />
+            <element signature="method#writeMatrix#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#run#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#runAlgorithm#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runCrossValidation#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runTrainTest#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runTrainTestupdate#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+            <element signature="method#runLeaveOneOut#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+            <element signature="method#printEvalInfo#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#notifyMe#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#getRecommender#0;class#LibRec#0" expanded="false" />
+            <element signature="e#20696#20735#0" expanded="false" />
+            <element signature="method#writeData#0;class#LibRec#0" expanded="false" />
+            <element signature="docComment;method#setConfigFiles#0;class#LibRec#0" expanded="false" />
+            <element signature="e#25267#25268#0" expanded="true" />
+            <element signature="e#25317#25318#0" expanded="true" />
+            <element signature="docComment;method#about#0;class#LibRec#0" expanded="false" />
+            <element signature="method#about#0;class#LibRec#0" expanded="false" />
+            <element signature="method#readUpdate#0;class#LibRec#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/config/SVD++_init.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.111111">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/data/DataDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/util/FileIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="166" column="54" selection-start-line="166" selection-start-column="54" selection-end-line="166" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/librec/main/SVDPlusPlusDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49046323">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding>
+            <element signature="docComment;class#SVDPlusPlusDemo#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>librec</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.google.guava:guava:15.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
