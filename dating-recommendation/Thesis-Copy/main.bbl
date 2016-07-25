@@ -1,3 +1,123 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{lops2011content}
+P.~Lops, M.~De~Gemmis, and G.~Semeraro, ``Content-based recommender systems:
+  State of the art and trends,'' in {\em Recommender systems handbook},
+  pp.~73--105, Springer, 2011.
+
+\bibitem{hill1995recommending}
+W.~Hill, L.~Stead, M.~Rosenstein, and G.~Furnas, ``Recommending and evaluating
+  choices in a virtual community of use,'' in {\em Proceedings of the SIGCHI
+  conference on Human factors in computing systems}, pp.~194--201, ACM
+  Press/Addison-Wesley Publishing Co., 1995.
+
+\bibitem{resnick1994grouplens}
+P.~Resnick, N.~Iacovou, M.~Suchak, P.~Bergstrom, and J.~Riedl, ``Grouplens: an
+  open architecture for collaborative filtering of netnews,'' in {\em
+  Proceedings of the 1994 ACM conference on Computer supported cooperative
+  work}, pp.~175--186, ACM, 1994.
+
+\bibitem{shardanand1995social}
+U.~Shardanand and P.~Maes, ``Social information filtering: algorithms for
+  automating “word of mouth”,'' in {\em Proceedings of the SIGCHI
+  conference on Human factors in computing systems}, pp.~210--217, ACM
+  Press/Addison-Wesley Publishing Co., 1995.
+
+\bibitem{chevalier2009collaborative}
+M.~Chevalier, {\em Collaborative and Social Information Retrieval and Access:
+  Techniques for Improved User Modeling: Techniques for Improved User
+  Modeling}.
+\newblock IGI Global, 2009.
+
+\bibitem{adomavicius2005toward}
+G.~Adomavicius and A.~Tuzhilin, ``Toward the next generation of recommender
+  systems: A survey of the state-of-the-art and possible extensions,'' {\em
+  IEEE transactions on knowledge and data engineering}, vol.~17, no.~6,
+  pp.~734--749, 2005.
+
+\bibitem{balabanovic1997fab}
+M.~Balabanovi{\'c} and Y.~Shoham, ``Fab: content-based, collaborative
+  recommendation,'' {\em Communications of the ACM}, vol.~40, no.~3,
+  pp.~66--72, 1997.
+
+\bibitem{koren2008factorization}
+Y.~Koren, ``Factorization meets the neighborhood: a multifaceted collaborative
+  filtering model,'' in {\em Proceedings of the 14th ACM SIGKDD international
+  conference on Knowledge discovery and data mining}, pp.~426--434, ACM, 2008.
+
+\bibitem{tran2000hybrid}
+T.~Tran and R.~Cohen, ``Hybrid recommender systems for electronic commerce,''
+  in {\em Proc. Knowledge-Based Electronic Markets, Papers from the AAAI
+  Workshop, Technical Report WS-00-04, AAAI Press}, 2000.
+
+\bibitem{sarwar2000application}
+B.~Sarwar, G.~Karypis, J.~Konstan, and J.~Riedl, ``Application of
+  dimensionality reduction in recommender system-a case study,'' tech. rep.,
+  DTIC Document, 2000.
+
+\bibitem{funk2006netflix}
+S.~Funk, ``Netflix update: Try this at home,'' 2006.
+
+\bibitem{linden2003amazon}
+G.~Linden, B.~Smith, and J.~York, ``Amazon. com recommendations: Item-to-item
+  collaborative filtering,'' {\em IEEE Internet computing}, vol.~7, no.~1,
+  pp.~76--80, 2003.
+
+\bibitem{resnick1997recommender}
+P.~Resnick and H.~R. Varian, ``Recommender systems,'' {\em Communications of
+  the ACM}, vol.~40, no.~3, pp.~56--58, 1997.
+
+\bibitem{sarwar2001item}
+B.~Sarwar, G.~Karypis, J.~Konstan, and J.~Riedl, ``Item-based collaborative
+  filtering recommendation algorithms,'' in {\em Proceedings of the 10th
+  international conference on World Wide Web}, pp.~285--295, ACM, 2001.
+
+\bibitem{salakhutdinov2007restricted}
+R.~Salakhutdinov, A.~Mnih, and G.~Hinton, ``Restricted boltzmann machines for
+  collaborative filtering,'' in {\em Proceedings of the 24th international
+  conference on Machine learning}, pp.~791--798, ACM, 2007.
+
+\bibitem{salakhutdinov2008bayesian}
+R.~Salakhutdinov and A.~Mnih, ``Bayesian probabilistic matrix factorization
+  using markov chain monte carlo,'' in {\em Proceedings of the 25th
+  international conference on Machine learning}, pp.~880--887, ACM, 2008.
+
+\bibitem{zhang2012multi}
+Y.~Zhang, B.~Cao, and D.-Y. Yeung, ``Multi-domain collaborative filtering,''
+  {\em arXiv preprint arXiv:1203.3535}, 2012.
+
+\bibitem{jin2002preference}
+R.~Jin, L.~Si, and C.~Zhai, ``Preference-based graphic models for collaborative
+  filtering,'' in {\em Proceedings of the Nineteenth conference on Uncertainty
+  in Artificial Intelligence}, pp.~329--336, Morgan Kaufmann Publishers Inc.,
+  2002.
+
+\bibitem{rendle2010pairwise}
+S.~Rendle and L.~Schmidt-Thieme, ``Pairwise interaction tensor factorization
+  for personalized tag recommendation,'' in {\em Proceedings of the third ACM
+  international conference on Web search and data mining}, pp.~81--90, ACM,
+  2010.
+
+\bibitem{ma2011recommender}
+H.~Ma, D.~Zhou, C.~Liu, M.~R. Lyu, and I.~King, ``Recommender systems with
+  social regularization,'' in {\em Proceedings of the fourth ACM international
+  conference on Web search and data mining}, pp.~287--296, ACM, 2011.
+
+\bibitem{burke2007hybrid}
+R.~Burke, ``Hybrid web recommender systems,'' in {\em The adaptive web},
+  pp.~377--408, Springer, 2007.
+
+\bibitem{burke2002hybrid}
+R.~Burke, ``Hybrid recommender systems: Survey and experiments,'' {\em User
+  modeling and user-adapted interaction}, vol.~12, no.~4, pp.~331--370, 2002.
+
+\bibitem{oard1998implicit}
+D.~W. Oard, J.~Kim, {\em et~al.}, ``Implicit feedback for recommender
+  systems,'' in {\em Proceedings of the AAAI workshop on recommender systems},
+  pp.~81--83, 1998.
+
+\bibitem{koren2009matrix}
+Y.~Koren, R.~Bell, C.~Volinsky, {\em et~al.}, ``Matrix factorization techniques
+  for recommender systems,'' {\em Computer}, vol.~42, no.~8, pp.~30--37, 2009.
 
 \end{thebibliography}
