@@ -18,7 +18,12 @@
 
 package librec.rating;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import com.google.common.cache.LoadingCache;
 
 import librec.data.DenseMatrix;
 import librec.data.DenseVector;
@@ -37,7 +42,13 @@ import librec.util.Logs;
 public class SVDPlusPlus extends BiasedMF {
 
 	protected DenseMatrix Y;
+	// user biases
+	protected DenseVector means;
 	protected SparseMatrix updateMatrix;
+	List<Integer> userid = new ArrayList<Integer>();
+	List<Integer> itemid = new ArrayList<Integer>();
+	Map<Integer, List<Integer>> cacheIn = new HashMap<Integer, List<Integer>>();
+	Map<Integer, List<Integer>> cacheNotIn = new HashMap<Integer, List<Integer>>();
 
 	public SVDPlusPlus(SparseMatrix trainMatrix, SparseMatrix testMatrix, int fold) {
 		super(trainMatrix, testMatrix, fold);
@@ -51,13 +62,18 @@ public class SVDPlusPlus extends BiasedMF {
 
 		Y = new DenseMatrix(numItems, numFactors);
 		Y.init(initMean, initStd);
-
+		
+		means = new DenseVector(numUsers);
+		means.setAll(globalMean);
+		Logs.debug(globalMean);
+		
 		userItemsCache = trainMatrix.rowColumnsCache(cacheSpec);
 	}
 	
 	protected void saveModel() throws Exception {
 		// make a folder
 		Logs.debug("SAVE");
+		
 		String dirPath = FileIO.makeDirectory(tempDirPath, algoName);
 
 		// suffix info
@@ -78,6 +94,8 @@ public class SVDPlusPlus extends BiasedMF {
 			FileIO.serialize(userBias, dirPath + "userBiases" + suffix);
 		if (itemBias != null)
 			FileIO.serialize(itemBias, dirPath + "itemBiases" + suffix);
+		if (means != null)
+			FileIO.serialize(means, dirPath + "means" + suffix);
 
 		Logs.debug("Learned models are saved to folder \"{}\"", dirPath);
 	}
@@ -86,6 +104,7 @@ public class SVDPlusPlus extends BiasedMF {
 	protected void loadModel() throws Exception {
 		// make a folder
 		Logs.debug("LOAD");
+		SparseMatrix fullMatrix;
 		String dirPath = FileIO.makeDirectory(tempDirPath, algoName);
 
 		Logs.debug("A recommender model is loaded from {}", dirPath);
@@ -96,7 +115,9 @@ public class SVDPlusPlus extends BiasedMF {
 		//trainMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "trainMatrix" + suffix);
 		//testMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "testMatrix" + suffix);
 		updateMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "trainMatrix" + "update.bin");
+		fullMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "trainMatrix" + "full.bin");
 
+		globalMean = fullMatrix.sum() / fullMatrix.size();
 		// write matrices P, Q
 		P = (DenseMatrix) FileIO.deserialize(dirPath + "userFactors" + suffix);
 		Q = (DenseMatrix) FileIO.deserialize(dirPath + "itemFactors" + suffix);
@@ -105,8 +126,45 @@ public class SVDPlusPlus extends BiasedMF {
 		// write vectors
 		userBias = (DenseVector) FileIO.deserialize(dirPath + "userBiases" + suffix);
 		itemBias = (DenseVector) FileIO.deserialize(dirPath + "itemBiases" + suffix);
+		means = (DenseVector) FileIO.deserialize(dirPath + "means" + suffix);
 		
-		userItemsCache = trainMatrix.rowColumnsCache(cacheSpec);
+		userItemsCache = fullMatrix.rowColumnsCache(cacheSpec);
+		List<Integer> useridUpdate = new ArrayList<Integer>();
+
+		
+		for (MatrixEntry me : trainMatrix) {
+
+			int u = me.row(); // user
+			int j = me.column(); // item
+			if(!contains(userid, u)) {
+				userid.add(u);
+			}
+			if(!contains(itemid, j)) {
+				itemid.add(j);
+			}
+		}
+		for (int u : userid) {
+			means.set(u, globalMean);
+			List<Integer> items = userItemsCache.get(u);
+			List<Integer> itemsIn = new ArrayList<Integer>();
+			List<Integer> itemsNotIn = new ArrayList<Integer>();
+			split(items, itemsIn, itemsNotIn, itemid);
+			cacheIn.put(u, itemsIn);
+			cacheNotIn.put(u, itemsNotIn);
+		}
+		
+		for (MatrixEntry me : updateMatrix) {
+			int u = me.row(); // user
+			if(!contains(userid, u) && !contains(useridUpdate, u)) {
+				useridUpdate.add(u);
+				List<Integer> items = userItemsCache.get(u);
+				List<Integer> itemsIn = new ArrayList<Integer>();
+				List<Integer> itemsNotIn = new ArrayList<Integer>();
+				split(items, itemsIn, itemsNotIn, itemid);
+				cacheIn.put(u, itemsIn);
+				cacheNotIn.put(u, itemsNotIn);
+			}
+		}
 	}
 
 
@@ -185,160 +243,16 @@ public class SVDPlusPlus extends BiasedMF {
 
 	}
 	
-//	protected void rebuildModel() throws Exception {
-//		Logs.debug("REBUILD ++");
-//		for (int iter = 1; iter <= numIters; iter++) {
-//
-//			loss = 0;
-//			for (MatrixEntry me : trainMatrix) {
-//
-//				int u = me.row(); // user
-//				int j = me.column(); // item
-//				double ruj = me.get();
-//
-//				double pred = predict(u, j);
-//				double euj = ruj - pred;
-//
-//				loss += euj * euj;
-//
-//				List<Integer> items = userItemsCache.get(u);
-//				double w = Math.sqrt(items.size());
-//
-//				// update factors
-//				double bu = userBias.get(u);
-//				double sgd = euj - regB * bu;
-//				userBias.add(u, lRate * sgd);
-//
-//				loss += regB * bu * bu;
-//
-//				double bj = itemBias.get(j);
-//				sgd = euj - regB * bj;
-//				itemBias.add(j, lRate * sgd);
-//
-//				loss += regB * bj * bj;
-//
-//				double[] sum_ys = new double[numFactors];
-//				for (int f = 0; f < numFactors; f++) {
-//					double sum_f = 0;
-//					for (int k : items)
-//						sum_f += Y.get(k, f);
-//
-//					sum_ys[f] = w > 0 ? sum_f / w : sum_f;
-//				}
-//
-//				for (int f = 0; f < numFactors; f++) {
-//					double puf = P.get(u, f);
-//					double qjf = Q.get(j, f);
-//
-//					double sgd_u = euj * qjf - regU * puf;
-//					double sgd_j = euj * (puf + sum_ys[f]) - regI * qjf;
-//
-//					P.add(u, f, lRate * sgd_u);
-//					Q.add(j, f, lRate * sgd_j);
-//
-//					loss += regU * puf * puf + regI * qjf * qjf;
-//
-//					for (int k : items) {
-//						double ykf = Y.get(k, f);
-//						double delta_y = euj * qjf / w - regU * ykf;
-//						Y.add(k, f, lRate * delta_y);
-//
-//						loss += regU * ykf * ykf;
-//					}
-//				}
-//
-//			}
-//			
-//			int i = 0;
-//			for (MatrixEntry me : updateMatrix) {
-//				++i;
-//				int u = me.row(); // user
-//				int j = me.column(); // item
-//				double ruj = me.get();
-//
-//				double pred = predict(u, j);
-//				double euj = ruj - pred;
-//
-//				loss += euj * euj;
-//
-//				List<Integer> items = userItemsCache.get(u);
-//				double w = Math.sqrt(items.size());
-//
-//				// update factors
-//				double bu = userBias.get(u);
-//				double sgd = euj - regB * bu;
-//				userBias.add(u, lRate * sgd);
-//
-//				loss += regB * bu * bu;
-//
-//				double bj = itemBias.get(j);
-//				sgd = euj - regB * bj;
-//				itemBias.add(j, lRate * sgd);
-//
-//				loss += regB * bj * bj;
-//
-//				double[] sum_ys = new double[numFactors];
-//				for (int f = 0; f < numFactors; f++) {
-//					double sum_f = 0;
-//					for (int k : items)
-//						sum_f += Y.get(k, f);
-//
-//					sum_ys[f] = w > 0 ? sum_f / w : sum_f;
-//				}
-//
-//				for (int f = 0; f < numFactors; f++) {
-//					double puf = P.get(u, f);
-//					double qjf = Q.get(j, f);
-//
-//					double sgd_u = euj * qjf - regU * puf;
-//					double sgd_j = euj * (puf + sum_ys[f]) - regI * qjf;
-//
-//					P.add(u, f, lRate * sgd_u);
-//					Q.add(j, f, lRate * sgd_j);
-//
-//					loss += regU * puf * puf + regI * qjf * qjf;
-//
-//					for (int k : items) {
-//						double ykf = Y.get(k, f);
-//						double delta_y = euj * qjf / w - regU * ykf;
-//						Y.add(k, f, lRate * delta_y);
-//
-//						loss += regU * ykf * ykf;
-//					}
-//				}				
-//			}
-//			Logs.debug("i ++"+ i);
-//			loss *= 0.5;
-//
-//			if (isConverged(iter))
-//				break;
-//		}
-//	}
-//	
-
-	
 	
 	protected void rebuildModel() throws Exception {
 		Logs.debug("REBUILD ++");
 		for (int iter = 1; iter <= numIters; iter++) {
 			loss = 0;
-			int[] userid = new int[trainMatrix.size()];
-			int[] itemid = new int[trainMatrix.size()];
-			
-			int i = 0;
-			int a = 0;
+//			
 			for (MatrixEntry me : trainMatrix) {
 
 				int u = me.row(); // user
 				int j = me.column(); // item
-				if(!contains(userid, u)) {
-					userid[i] = u;
-					++i;
-				}
-				if(!contains(itemid, i)) {
-					itemid[a] = j;
-					++a;
-				}
 				double ruj = me.get();
 
 				double pred = predict(u, j);
@@ -382,12 +296,14 @@ public class SVDPlusPlus extends BiasedMF {
 					Q.add(j, f, lRate * sgd_j);
 
 					loss += regU * puf * puf + regI * qjf * qjf;
-
-					for (int k : items) {
+					for (int k : cacheNotIn.get(u)) {
+						double ykf = Y.get(k, f);
+						loss += regU * ykf * ykf;
+					}
+					for (int k : cacheIn.get(u)) {
 						double ykf = Y.get(k, f);
 						double delta_y = euj * qjf / w - regU * ykf;
 						Y.add(k, f, lRate * delta_y);
-
 						loss += regU * ykf * ykf;
 					}
 				}
@@ -405,9 +321,9 @@ public class SVDPlusPlus extends BiasedMF {
 				double euj = ruj - pred;
 
 				loss += euj * euj;
+				List<Integer> items = userItemsCache.get(u);
 				
 				if(contains(userid, u)) {
-					List<Integer> items = userItemsCache.get(u);
 					double w = Math.sqrt(items.size());
 
 					// update factors
@@ -431,21 +347,20 @@ public class SVDPlusPlus extends BiasedMF {
 
 						loss += regU * puf * puf + regI * qjf * qjf;
 
-						for (int k : items) {
+						for (int k : cacheNotIn.get(u)) {
 							double ykf = Y.get(k, f);
-							
-							if(contains(itemid, i)) {
-								double delta_y = euj * qjf / w - regU * ykf;
-								Y.add(k, f, lRate * delta_y);
-							}
-
+							loss += regU * ykf * ykf;
+						}
+						for (int k : cacheIn.get(u)) {
+							double ykf = Y.get(k, f);
+							double delta_y = euj * qjf / w - regU * ykf;
+							Y.add(k, f, lRate * delta_y);
 							loss += regU * ykf * ykf;
 						}
 					}
 
 				}
 				else {
-					List<Integer> items = userItemsCache.get(u);
 					double w = Math.sqrt(items.size());
 
 					// update factors
@@ -477,12 +392,14 @@ public class SVDPlusPlus extends BiasedMF {
 
 						loss += regU * puf * puf + regI * qjf * qjf;
 
-						for (int k : items) {
+						for (int k : cacheNotIn.get(u)) {
 							double ykf = Y.get(k, f);
-							if(contains(itemid, i)) {
-								double delta_y = euj * qjf / w - regU * ykf;
-								Y.add(k, f, lRate * delta_y);
-							}
+							loss += regU * ykf * ykf;
+						}
+						for (int k : cacheIn.get(u)) {
+							double ykf = Y.get(k, f);
+							double delta_y = euj * qjf / w - regU * ykf;
+							Y.add(k, f, lRate * delta_y);
 							loss += regU * ykf * ykf;
 						}
 					}
@@ -499,7 +416,7 @@ public class SVDPlusPlus extends BiasedMF {
 	
 	@Override
 	protected double predict(int u, int j) throws Exception {
-		double pred = globalMean + userBias.get(u) + itemBias.get(j) + DenseMatrix.rowMult(P, u, Q, j);
+		double pred = means.get(u) + userBias.get(u) + itemBias.get(j) + DenseMatrix.rowMult(P, u, Q, j);
 
 		List<Integer> items = userItemsCache.get(u);
 		double w = Math.sqrt(items.size());
@@ -509,7 +426,17 @@ public class SVDPlusPlus extends BiasedMF {
 		return pred;
 	}
 	
-	public static boolean contains(final int[] list, final int u) { 
+	public static void split(List<Integer> items, List<Integer> itemsIn, List<Integer> itemsNotIn, List<Integer> ids) {
+		for (int k: items) {
+			if(contains(ids, k)) {
+				itemsIn.add(k);
+			}
+			else 
+				itemsNotIn.add(k);
+		}
+	}
+	
+	public static boolean contains(List<Integer> list, final int u) { 
 		for (int e : list) { 
 			if (e == u ) { 
 				return true; 
@@ -518,5 +445,6 @@ public class SVDPlusPlus extends BiasedMF {
 		return false; 
 	}
     
+	
 
 }

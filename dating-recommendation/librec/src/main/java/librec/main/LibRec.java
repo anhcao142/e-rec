@@ -934,5 +934,20 @@ public class LibRec {
 
 		// writing training, test data
 		FileIO.serialize(updateRateMatrix, dirPath + "trainMatrix" + suffix);
+		
+		DataDAO dd1 = new DataDAO(cf.getPath("fullset.ratings"));
+		// is first line: headline
+		dd1.setHeadline(ratingOptions.contains("-headline"));
+		
+		SparseMatrix[] data2 = dd1.readData(columns, binThold);
+		SparseMatrix fullRateMatrix = data2[0];
+		SparseMatrix.reshape(fullRateMatrix);
+		String dirPath1 = FileIO.makeDirectory(tempDirPath, "SVD++");
+
+		// suffix info
+		String suffix1 = "full.bin";
+
+		// writing training, test data
+		FileIO.serialize(fullRateMatrix, dirPath1 + "trainMatrix" + suffix1);
 	}
 }
