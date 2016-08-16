@@ -18,7 +18,7 @@
 
 package librec.main;
 
-import librec.rating.SVDPlusPlus;
+//import librec.rating.SVDPlusPlus;
 import librec.util.Debug;
 import librec.util.FileIO;
 import librec.util.Logs;
@@ -37,7 +37,7 @@ public class SVDPlusPlusDemo {
 	public static void main(String[] args) {
 		try {
 			SVDPlusPlusDemo demo = new SVDPlusPlusDemo();
-			demo.execute(args, "SVD++.conf", false);
+			demo.execute(args, "SVD++_init.conf", false);
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -1,5 +1,0 @@
-user_attendee > 10
-
-des: 0.3410677
-time: 0.4407092
-location: 0.3133164
