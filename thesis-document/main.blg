@@ -1,0 +1,12 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+White space in argument---line 71 of file main.aux
+ : \citation{@article{koren2009matrix,
+ :                                     title={Matrix factorization techniques for recommender systems}, author={Koren, Yehuda and Bell, Robert and Volinsky, Chris and others}, journal={Computer}, volume={42}, number={8}, pages={30--37}, year={2009}, publisher={Institute of Electrical and Electronics Engineers, Inc., 3 Park Avenue, 17 th Fl New York NY 10016-5997 United States} }}
+I'm skipping whatever remains of this command
+The style file: ieeetr.bst
+Database file #1: reference.bib
+Warning--I didn't find a database entry for "Resnick94"
+Warning--I didn't find a database entry for "Chevalier"
+Warning--I didn't find a database entry for "@article{koren2009matrix"
+Warning--I didn't find a database entry for "("
+(There was 1 error message)

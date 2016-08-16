@@ -1,0 +1,20 @@
+\select@language {english}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Recommendations of Amazon\relax }}{3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Recommendation techniques\relax }}{4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The principle behind collaborative and content-based filtering\relax }}{10}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces High level architecture of a Content-based Recommender~\cite {lops2011content}\relax }}{12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The Collaborative Filtering Process.\relax }}{14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A simplified illustration of the latent factor approach, which characterizes both users and movies using two axes\IeC {\textemdash }male versus female and serious versus escapist.\relax }}{23}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A illustration of the Matrix factorization\relax }}{24}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The process of a recommender system\relax }}{34}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Recommendation accuracy (RMSE) comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens\relax }}{42}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Training times (ms) of SVD++\relax }}{43}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Updating times (ms) of ISVD++\relax }}{44}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Updating times (ms) of ISVD++\relax }}{46}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Updating times (ms) of ISVD++\relax }}{47}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Database structure\relax }}{51}
