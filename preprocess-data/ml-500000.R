@@ -77,7 +77,7 @@ update_file <- function(filename, index, no_update_rating, no_init_rating, maxin
 
 exp1 <- function() {
   filename = "ratings.dat"
-  no_rating = 700000
+  no_rating = 650000
   init_full_data(filename, no_rating)
   
   no_test_ratings = 100000
@@ -85,7 +85,7 @@ exp1 <- function() {
   train_test(filename, no_test_ratings)
   
   filename = "train.txt"
-  no_update_rating = 10000
+  no_update_rating = 4000
   no_init_rating = 500000
   maxindex = 9
   
