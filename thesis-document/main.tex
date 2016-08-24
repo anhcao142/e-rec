@@ -174,7 +174,7 @@ Let's look at a scenario:
 A young man, Harry loved the classical music. Every day, he listened to music on ABC online music website. this website recommended to him many classical songs. One day, he heard a rock songs and very loved it. He wanted to listen more rock music. He opened ABC website. Of course, it still recommended him classical songs. So he searched it by himself. After listening many songs on ABC website, he reloaded the page to get new recommendations but it was full of classical songs. And in the day after, ABC website suggested him a list of classical songs. What happened to the recommendation of ABC website?
 \end{quote}
 The problem described in the scenario is happened with many recommender systems in real-world applications. 
-\section{Thesis Contribution}
+\section{Thesis contribution}
 In this thesis, we present studies that improve recommender systems by solving the above mentioned problems. We propose \emph{Incremental SVD++} method which extends SVD++ with incremental updates. Our method suitable for the dynamic scenario faced by recommender systems today. New users and new items join the system constantly. Our method significant improves scalability of classic SVD++, while maintaining its recommendation quality. The pre-computed model is updated incrementally at the time of rating activity and recommended items are modified based on newest data. Experimental results have shown a significant increase in training speed without a loss in accuracy.
 
 The rest of the paper is organized as follows.
@@ -337,7 +337,7 @@ CF approaches take the ratings of the target user on the seen items and use them
 
 Collaborative filtering techniques can be divided into two categories: memory-based and model-based. Although simple and easy to implement, memory-based methods have the limitations in prediction accuracy and time consuming to make a prediction. 
 
-Despite the success of CF techniques, these techniques suffer from various problems such as Cold-start problem of new-user/new-item, data sparsity problem, and scalability.
+Despite the success of CF techniques, these techniques suffer from various problems such as cold-start problem of new-user/new-item, data sparsity problem, and scalability.
 
 In the following of this section,we first describe the notations that will be used throughout this thesis. We then review two approaches
 of collaborative filtering, including memory-based methods and model-based methods.
@@ -404,7 +404,7 @@ In equation~\ref{eq:user_based_pre2}, $\bar r_u$ denotes the mean ratings given 
 
 Several different approaches have been proposed to alleviate the bias problem by normalizing the rating before calculating the similarity.
 
-The time complexity of user-based approaches is $O(N^2xMxK)$ for the neighborhood model construction and $O(K)$ for the rating prediction. The  space complexity is O(NxK)`\cite{Chevalier}.
+The time complexity of user-based approaches is $O(N^2xMxK)$ for the neighborhood model construction and $O(K)$ for the rating prediction. The  space complexity is O(NxK)~\cite{chevalier2009collaborative}.
 
 \subsubsection{Item-based methods}
 \index{Item-based methods}
@@ -425,22 +425,13 @@ In equation~\ref{eq:item_based_pre}, $\bar r_i$ denotes the mean ratings on item
 
 Item-based methods could produce more accurate prediction and efficient than user based-methods~\cite{sarwar2001item}.
 
-The time complexity of item-based approaches is $O(M^2xNxK)$ for the neighborhood model construction and $O(K)$ for the rating prediction. The  space complexity is O(MxK)~\cite{Chevalier}.
+The time complexity of item-based approaches is $O(M^2xNxK)$ for the neighborhood model construction and $O(K)$ for the rating prediction. The  space complexity is O(MxK)~\cite{chevalier2009collaborative}.
 \subsection{Model-based methods}
 \index{Model-based methods}
-Model-based approaches provide a systematic way to train a predefined compact model in the training phase that explains observed ratings, which is then used to make predictions. The general idea is to build a model offline and use that model for online rating. For example, the system can build cluster model to divide users into $k$ groups based on similarities. Then in order to determine the community of a user, we need to solve a classification problem. These approaches potentially offers the benefits of both speed and scalability.
+Model-based approaches provide a systematic way to train a predefined compact model in that explains observed ratings, which is then used to make predictions. The general idea is to build a model offline and use that model for online rating. For example, the system can build cluster model to divide users into $k$ groups based on similarities. Then in order to determine the community of a user, we need to solve a classification problem. These approaches potentially offers the benefits of both speed and scalability.
 
 The model building process is performed by different machine learning algorithms such as Bayesian network, clustering, and rule-based approaches. The state-of-the-art model-based methods include restricted
-Boltzmann machines~\cite{salakhutdinov2007restricted}, SVD++~\cite{@article{koren2009matrix,
-  title={Matrix factorization techniques for recommender systems},
-  author={Koren, Yehuda and Bell, Robert and Volinsky, Chris and others},
-  journal={Computer},
-  volume={42},
-  number={8},
-  pages={30--37},
-  year={2009},
-  publisher={Institute of Electrical and Electronics Engineers, Inc., 3 Park Avenue, 17 th Fl New York NY 10016-5997 United States}
-}}, Probabilistic Matrix Factorization (PMF)~\cite{salakhutdinov2008bayesian}, and multi-domain collaborative filtering~\cite{zhang2012multi}, graphical models~\cite{jin2002preference}, pair-wise tensor factorization~\cite{rendle2010pairwise}, and matrix factorization with social regularization~\cite{ma2011recommender}, etc.
+Boltzmann machines~\cite{salakhutdinov2007restricted}, SVD++~\cite{koren2009matrix}, Probabilistic Matrix Factorization (PMF)~\cite{salakhutdinov2008bayesian}, and multi-domain collaborative filtering~\cite{zhang2012multi}, graphical models~\cite{jin2002preference}, pair-wise tensor factorization~\cite{rendle2010pairwise}, and matrix factorization with social regularization~\cite{ma2011recommender}, etc.
 
 There are several advantages of model-based collaborative filtering methods:
 \begin{description}
@@ -487,16 +478,7 @@ In recent years, many SVM algorithms such as SVM, boosting, ... was exploited by
     \caption{A simplified illustration of the latent factor approach, which
 characterizes both users and movies using two axes—male versus female
 and serious versus escapist.}
-\caption*{Source: Netflix Prize diagram~\cite(@article{koren2009matrix,
-  title={Matrix factorization techniques for recommender systems},
-  author={Koren, Yehuda and Bell, Robert and Volinsky, Chris and others},
-  journal={Computer},
-  volume={42},
-  number={8},
-  pages={30--37},
-  year={2009},
-  publisher={Institute of Electrical and Electronics Engineers, Inc., 3 Park Avenue, 17 th Fl New York NY 10016-5997 United States}
-})}
+\caption*{Source: Netflix Prize diagram~\cite{koren2009matrix}}
     \label{fig:LFM_example}
 \end{figure}
 
@@ -536,7 +518,7 @@ optimization problem quadratic.
 In this section we describe several matrix factorization techniques like SVD and SVD++.
 
 \subsection{Baseline predictors}
- Some users will tend to give higher or lower ratings than others. And some items received higher or lower ratings than others. So we consider two parameter: one parameter $b_u$ for each user and one $b_i$ for each item. The parameters $b_u$ and $b_i$ indicate the observed deviations of user $u$ and item $i$ from the average. For example, the average rating over all movies is 3.7 stars. Furthermore, \emph{Titanic} is better than an average movie, so it receives 0.5 stars above the average. On the other hand, \emph{Joe} is a critical user, who tends to rate 0.3 stars lower than the average. Thus, 0.5 and -0.3 reflects the deviations of \emph{Titanic} and \emph{Joe} from the global average 0.37. 
+ Some users will tend to give higher or lower ratings than others. And some items received higher or lower ratings than others. So we consider two parameter: one parameter $b_u$ for each user and one $b_i$ for each item. The parameters $b_u$ and $b_i$ indicate the observed deviations of user $u$ and item $i$ from the average. For example, the average rating over all movies is 3.7 stars. Furthermore, \emph{Titanic} is better than an average movie, so it receives 0.5 stars above the average. On the other hand, \emph{Joe} is a critical user, who tends to rate 0.3 stars lower than the average. Thus, 0.5 and -0.3 reflects the deviations of \emph{Titanic} and \emph{Joe} from the global average 3.7. 
  
 The overall average rating is denoted by $\mu$. Prediction is done by the rule:
 \begin{eqnarray}
@@ -548,10 +530,9 @@ The parameters $b_u$ and $b_i$ are estimated by solving the least squares proble
 \begin{eqnarray}
 mi{n_{{b_*}}}\mathop \sum \limits_{\left( {u,\;i} \right) \in K} {\left( {{r_{u,i}} - \;\mu  + \;{b_u} + \;{b_i}} \right)^2} + \;\lambda \left( {{b_u}^2 + \;{b_i}^2} \right)
 \label{eq:Baseline_minimize}
-{\hat r_{u,i}} = \mu + {b_u} + {b_i}
 \end{eqnarray}
 
- A simple gradient descent technique was applied successfully to solving (\ref{eq: Baseline_minimize}).
+ A simple gradient descent technique was applied successfully to solving (\ref{eq:Baseline_minimize}).
 We loop through all ratings in the training set. The associated prediction error is denoted by ${e_{u,i}} \stackrel{\text{def}}{=} \;{r_{u,i}} - \hat r_{u,i}$. For a given training case $r_{u,i}$, we modify the parameters by moving in the opposite direction of the gradient, yielding:
 $
 \begin{array}{l}{b_u} \leftarrow {b_u} + {\rm{\;}}\gamma .\left( {{e_{u,i}} - {\rm{\;}}\lambda .{b_u}} \right)\\{b_i} \leftarrow {b_i} + {\rm{\;}}\gamma .\left( {{e_{u,i}} - {\rm{\;}}\lambda .{b_i}} \right)\end{array}
@@ -609,11 +590,11 @@ For example, we apply matrix factorization methods on computing the rating that 
         $u_5$ & 0.46 & 1.77 \\
         \hline
     \end{tabular}
-    \caption*{Users features matrix $P_{mxk}$, $k=2$}
+    \caption*{Users features matrix $P_{m \times k}$, $k=2$}
 \end{table}
 \begin{table}[h!]
     \small\centering
-    \begin{tabular}{|c|c|g|c|c|}
+    \begin{tabular}{|c|c|c|g|c|}
         \hline
          & Titanic & Mummy & Apollo 13 & Spider Man \\
         \hline
@@ -622,7 +603,7 @@ For example, we apply matrix factorization methods on computing the rating that 
         $f_2$ & 0.06 & 0.18 & 2.17 & 2.13 \\
         \hline
     \end{tabular}
-    \caption*{Items features matrix ${Q^T}_{m \times n}$, $k=2$}
+    \caption*{Items features matrix ${Q^T}_{k \times n}$, $k=2$}
 \end{table}
 
 Therefore, the rating that user $u_2$ gives to item $Apollo 13$ is:
@@ -703,7 +684,7 @@ vector ${y_i} \in {\mathbb{R}^f}$ . Those new item factors are used to character
 set of items that they rated. The exact model is as follows:
 \begin{eqnarray}
 \label{eq:svd++_pre}
-{\hat r_{u,i}} = \;\mu  + \;{b_i} + \;{b_i} + q_i^T\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in  {N_u}} {{y_j}} } \right)
+{\hat r_{u,i}} = \;\mu  + \;{b_i} + \;{b_u} + q_i^T\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in  {N_u}} {{y_j}} } \right)
 \end{eqnarray}
 
 Now, a user $u$ is modeled as $p_u + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in  {N_u}} {{y_j}}$ . We use a free user-factors
@@ -744,13 +725,13 @@ The SVD++ algorithm is summarized in the following pseudo-code:
 		$\Delta {q_i} \leftarrow {e_{ui}}.\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in  \in {N_u}} {{y_j}} } \right) - {\lambda _2}.{q_i}$\\ 
 		
 			$b_u = b_u + \gamma.\Delta b_u$\\
+			$b_i = b_i + \gamma.\Delta b_i$\\
 			$p_u = p_u + \gamma.\Delta b_u$\\
+			$q_i = q_i + \gamma.\Delta q_i$\\
 			\ForAll{$j \in N_u$}
 			{
 					${y_j} = {y_j} + {\rm{\;}}{\gamma}.\left( {{e_{ui}}.{{\left| {{N_u}} 									\right|}^{ - \frac{1}{2}}}.{q_i} - {\lambda _2}.{y_j}} \right)$
 			}
-			$b_i = b_i + \gamma.\Delta b_i$\\
-			$q_i = q_i + \gamma.\Delta q_i$\\
 	}
 }
  \caption{SVD++}
@@ -764,11 +745,12 @@ type of implicit feedback to the items in ${N^2}_u$ (e.g., she browsed them), we
 could use the model: 
 \begin{eqnarray}
 \label{eq:svd++_pre2}
-{r_{u,i}} = \;\mu  + \;{b_i} + \;{b_i} + q_i^T\left( {{p_u} + {{\left| {{N^1}_u} \right|}^{ - \frac{1}{2}}}\sum\limits_{j  \in {N^1}_u} {{y_j}}  + {{\left| {{N^2}_u} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in   {N^2}_u} {{y_j}} } \right)
+{r_{u,i}} = \;\mu  + \;{b_i} + \;{b_u} + q_i^T\left( {{p_u} + {{\left| {{N^1}_u} \right|}^{ - \frac{1}{2}}}\sum\limits_{j  \in {N^1}_u} {{y_j}}  + {{\left| {{N^2}_u} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in   {N^2}_u} {{y_j}} } \right)
 \end{eqnarray}
 The relative importance of each source of implicit feedback will be automatically
 learned by the algorithm by its setting of the respective values of model parameters.
 \section{Incremental SVD++}
+\label{Incremental SVD++}
 Most users’ preferences are more or less consistent throughout a short period of time. In other words, if a user enjoys a certain type of music today, we assume that she will enjoy the same genre in the near future. This assumption is needed so that the collected past information can be utilized to produce recommendations for the future. If all users change their preferences, there is no way for a recommender
 system to make any meaningful recommendations. In the other hand, the consistency is assumed for a short period of time. In real life scenarios, users do change preferences throughout time. The change might due to the awareness of new things, change of attitude, etc. So we must keep the recommender system up to date.
 
@@ -779,25 +761,21 @@ Figure~\ref{fig:RS_process} shows the process of a recommender system which can 
     \includegraphics[width=\textwidth]{"RS process".png} 
     \caption{The process of a recommender system}
     \!\!\!\!
-    \caption*{Source: The Rapid-I Marketplace .}
+    \caption*{Source: The Rapid-I Marketplace.}
     \label{fig:RS_process}
 \end{figure}
 
 
 The main task of SVD++ model is creating the features of users and items by minimizing the associated regularized squared error function through stochastic gradient descent. So it must loop for all known rating to get the best fit model. This becomes a big problem when applying the model in a large-scale dataset.
  
-We make an assumption that is the new ratings do not effect the hold system. Fox example, when user Joe rates  a movie - Mummy. The features of Joe and Mummy change and need to be updated. But the features of another user Harry who has no relation to Joe or Mummy do not change. We propose Incremental SVD++, a new method based on the SVD++ technique. By cutting down the size of training data, our method reduces significant reduces the training time of classic SVD++, while maintaining its recommendation quality. 
+We make an assumption that is the new ratings do not effect the hold system. Fox example, when user Joe rates  a movie - Mummy. The features of Joe and Mummy change and need to be updated. But the features of another user Harry who has no relation to Joe or Mummy do not change. We propose Incremental SVD++, a new method based on the SVD++ technique. By cutting down the size of training data, our method significantly reduces the training time of classic SVD++, while maintaining its recommendation quality. 
 
 \subsection{Notations}
 We describe again some notations.
 The set of all items that user $u$ have rated is denoted by $I_u$ and the set of all users who have rated item $i$ is denoted by $U_i$.
 The set of all ratings user $u$ have rated is denoted by $R_{u,*}$ and the set of all ratings for items $i$ is denoted by $R_{*,i}$.
 \subsection{Algorithm}
-Similar to SVD++, the rating is predicted by the following equation:
-\begin{eqnarray}
-\label{eq:isvd++_pre1}
-{\hat r_{u,i}} = \;\mu  + \;{b_i} + \;{b_i} + q_i^T\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in  \in {N_u}} {{y_j}} } \right)
-\end{eqnarray}
+
 Given that $r_{x,y}$ is the new rating given by user $x$ to item $y$.
 In our method, we divide the set of known ratings $K$ into two subset: $S_1$ and $S_2$. $S_1$ includes all the ratings that have directly relation with $x$ or $y$ such as $R_{x,*}$ the known ratings given by $x$  and $R_{*,y}$ the known ratings for $y$. $S_2$ includes the rest known ratings which have no directly relation with $x$ or $y$.
 
@@ -907,14 +885,14 @@ To minimize the regularized squared error on the training set, we minimize the r
 
 Model parameters are determined by minimizing the associated regularized squared error function through conditional gradient descent on the related ratings $S_1$. Obviously, \ref{eq:isvd++_min2} is unchanged, so it is not concerned in the learning process. 
 
-$Q$ is denoted as the set of objects (e.g. $x$, $y$) which need to be updated. The Incremental SVD++ is summarized in the following pseudo-code:
+$O$ is denoted as the set of objects (e.g. $x$, $y$) which need to be updated. The Incremental SVD++ is summarized in the following pseudo-code:
 \\\\
 
 \begin{algorithm}[H]
- \KwData{$S_1$, $Q$}
+\KwData{ $S_1$, $O$, users bias, items bias, $P$, $Q$, $Y$}
  \KwResult{Updated model }
- Load model\;
- \Repeat{convergence}{
+
+ \Repeat{regularized squared error $\approx 0$}{
 
 	\ForAll{$(u, i, r) \in S_1$}
 	{ 	${e_{u,i}} = \;{r_{u,i}} - \hat r_{u,i}$\\
@@ -927,14 +905,6 @@ $Q$ is denoted as the set of objects (e.g. $x$, $y$) which need to be updated. T
 		{
 			$b_u = b_u + \gamma.\Delta b_u$\\
 			$p_u = p_u + \gamma.\Delta b_u$\\
-			\ForAll{$j \in N_u$}
-			{
-				\If{$j \in Q$}
-				{
-					
-					${y_j} = {y_j} + {\rm{\;}}{\gamma}.\left( {{e_{ui}}.{{\left| {{N_u}} 									\right|}^{ - \frac{1}{2}}}.{q_i} - {\lambda _2}.{y_j}} \right)$
-				}
-			}
 		}
 		\CommentSty{//this is an extra condition in Incremental SVD++}\\
 		\If{$i \in Q$} 
@@ -942,11 +912,25 @@ $Q$ is denoted as the set of objects (e.g. $x$, $y$) which need to be updated. T
 			$b_i = b_i + \gamma.\Delta b_i$\\
 			$q_i = q_i + \gamma.\Delta q_i$\\
 		}
+		\ForAll{$j \in N_u$}
+		{
+			\CommentSty{//this is an extra condition in Incremental SVD++}\\
+			\If{$j \in Q$}
+			{		
+				${y_j} = {y_j} + {\rm{\;}}{\gamma}.\left( {{e_{ui}}.{{\left| {{N_u}} 									\right|}^{ - \frac{1}{2}}}.{q_i} - {\lambda _2}.{y_j}} \right)$
+			}
+		}
 	}
 }
  \caption{Incremental SVD++}
 \end{algorithm}
-
+\clearpage
+Similar to SVD++, the rating is predicted by the following equation:
+\begin{eqnarray}
+\label{eq:isvd++_pre1}
+{\hat r_{u,i}} = \;\mu  + \;{b_i} + \;{b_u} + q_i^T\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in {N_u}} {{y_j}} } \right)
+\end{eqnarray}
+Note that each time the model is updated, the overall average rating changes. So in equation~\ref{eq:isvd++_pre1}, $\mu$ is calculated at the last update of user $u$'s factors. 
 
 \chapter{Experiments}
 \label{experiments}
@@ -975,7 +959,7 @@ performance of our algorithms. The basic statistics of the dataset.
         \hline
         No. items &  3295 \\
         \hline
-        Rating range & $\left[1, 5\right[$ \\
+        Rating range & $\left[1, 5\right]$ \\
         \hline
         Rating type &  Integer\\
         \hline
@@ -984,10 +968,14 @@ performance of our algorithms. The basic statistics of the dataset.
     \caption{ Statistics of MovieLens dataset}
 \end{table}
 
-The data set is  randomly from the MovieLens 1M dataset. All the ratings are ordered by the time stamp. Test set includes $10000$ newest ratings. Training set includes $90000$ ratings.
+The data set is  randomly from the MovieLens 1M dataset. All the ratings are ordered by the time stamp.
 \subsection{Parameters} 
-The meta-parameters are the same in all experiments. 
-Number of factors $k = 100$. $\gamma = \lambda = 0.01$.
+The meta-parameters were the same in all experiments and set as follows: 
+number of factors $k = 100$. $\gamma = \lambda = 0.01$.
+
+\subsection{Environment} 
+All experiments were run on a PC with Intel Core i3-2310M @ 2.10GHz and 4 GB
+RAM, running Windows 7.
 
 \section{Evaluation measures}
 We adopt Root Mean Square Error(RMSE) to evaluate two algorithms i.e. SVD++ and Incremental SVD++.
@@ -998,153 +986,155 @@ RMSE = \sqrt {\frac{{\sum\limits_{(u,i,r) \in T} {{{(\widehat {{r_{u,i}}} - r)}^
  \end{eqnarray}
 
 \section{Experiment Result}
-We denote the training set of the initialization model by $T$ and the updating set by $U$.  
-
-\subsection{Comparisons between SVD++ and Incremental SVD++}
-The aim of this experiment is to compare the accuracy and training time of SVD++ and Incremental SDV++ in dynamic scenario where ratings happen continuously. 
-
-Experimental 1 scenario: 
+\subsection{Comparison between SVD++ and ISVD++}
+The aim of these experiment is to compare the accuracy and training time of SVD++ and Incremental SDV++ in dynamic scenario where ratings happen continuously. Experimental scenario: 
 \begin{description}
     \item{\textbf{1.}} The model is pre-buit with a subset of $20000$ ratings.
-    \item{\textbf{2.}} The ISVD++, as an online training system, updates the model per $2000$ new ratings.
-    \item{\textbf{3.}} The SVD++, as an offline training system, updates the model per $10000$ new ratings.
+    \item{\textbf{2.}} Each $n$ new ratings, the model is updated by SVD++ and Incremental SVD++ (ISVD++). 
+     \item{\textbf{3.}}Test set includes $10000$ newest ratings.
+\end{description}
+The number of new ratings will be changed in three experiments: 
+\begin{itemize}
+\item Experiment \#1: $n=500$
+\item Experiment \#2: $n=2000$
+\item Experiment \#3: $n=10000$
+\end{itemize}
+\clearpage
+\subsubsection{Experiment \#1: $n=500$}
+In this experiment, we compare training time and accuracy of two algorithm: SVD++ and Incremental SDV++. The model will be re-computed per $500$ new ratings.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{"exp5_RMSE".jpg} 
+    \caption{ Recommendation accuracy (RMSE) comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens}
+    \label{fig:exp5_RMSE}
+\end{figure}
+
+Figure~\ref{fig:exp5_RMSE} shows a comparison between SVD++ and ISVD++ based on their recommendation accuracies. Two methods constantly updates the model after each $500$ new ratings. In general, RMSE value of both ISVD++ and SVD++ significantly decrease and are approximate. 
+
+At some point, the RMSE value increases. The quality of new ratings can be the explanation for these certainty increasing. Recommender systems update model with new data in order to "catch up" the preferences of users. But new data does not always expresses the users' preferences. For example, Joe loves classical music. One day, he heard a rock song and loved it. But it do not mean that Joe loves rock music. In this situation, the updating new data will decrease the recommendation accuracy. 
+
+%\clearpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{"exp5_time".jpg} 
+    \caption{ Training time comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens}
+    \label{fig:exp5_time}
+\end{figure}
+
+Figure~\ref{fig:exp5_time} presents the times required for SVD++ and ISVD++ to update the model after each $500$ new ratings. It can be seen that once the model has been trained, the time ISVD++ requires for updating is significantly lower than that of SVD++. The training time of ISVD++ and SVD++ increase along with the increase in revealed ratings. While, there is a sharp rise in training time of SVD++, the training time of ISVD++ slightly rises.
+
+\clearpage
+\subsubsection{Experiment \#2: $n=2000$}
+In this experiment, we compare training time and accuracy of two algorithm: SVD++ and Incremental SDV++. The model will be re-computed per $2000$ new ratings.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{"exp1_RMSE".jpg} 
+    \caption{ Recommendation accuracy (RMSE) comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens}
+    \label{fig:exp1_RMSE}
+\end{figure}
+
+Figure~\ref{fig:exp1_RMSE} shows a comparison between SVD++ and ISVD++ based on their recommendation accuracies. Two methods constantly updates the model after each $2000$ new ratings.In general, RMSE value of both ISVD++ and SVD++ significantly decrease and are approximate. 
+
+\clearpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{"exp1_time".jpg} 
+    \caption{ Training time comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens}
+    \label{fig:exp1_time}
+\end{figure}
+Figure~\ref{fig:exp1_time} compares the times required for SVD++ and ISVD++ to update the model after each $2000$ new ratings. Similar to experiment \#1, in this experiment ISVD++ requires less time to update model than SVD++. However, the distance between training times of two algorithms decreases because of the increase of number of new ratings in each update.  
+
+\clearpage
+\subsubsection{Experiment \#3: $n=10000$}
+In this experiment, we compare training time and accuracy of two algorithm: SVD++ and Incremental SDV++. The model will be re-computed per $10000$ new ratings.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{"exp4_RMSE".jpg} 
+    \caption{ Recommendation accuracy (RMSE) comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens}
+    \label{fig:exp4_RMSE}
+\end{figure}
+Figure~\ref{fig:exp4_RMSE} shows a comparison between SVD++ and ISVD++ based on their recommendation accuracies. Two methods constantly updates the model after each $10000$ new ratings.Similar to experiment \#1 and  experiment \#2, RMSE value of both ISVD++ and SVD++ in this  experiment sharply decrease and are approximate.
+\clearpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{"exp4_time".jpg} 
+    \caption{ Training time comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens}
+    \label{fig:exp4_time}
+\end{figure}
+Figure~\ref{fig:exp4_time} compares the times required for SVD++ and ISVD++ to update the model after each $2000$ new ratings. The training time of two methods sharply increase. Different than experiment \#1 and experiment \#2, in this experiment ISVD++ requires more time to update model than SVD++. 
+
+\subsubsection{Experiment \#4:}
+In this experiment, we evaluate training time of Incremental SDV++ in a bigger dataset. The model will be pre-built with a dataset of $500000$ ratings and re-computed per $500$ new ratings.
+
+\clearpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{"exp7_5".jpg} 
+    \caption{ Update time of Incremental SVD++}
+    \label{fig:exp7_5}
+\end{figure}
+Figure~\ref{fig:exp7_5} shows the times required for ISVD++ to update the model after each $500$ new ratings. Comparing this result with the result of experiment \#1, the time required for each update is bigger. So the update time if ISVD++ does not only depend on the number of new ratings. On the other hand, it can be seen that the training time of SVD++ is very big (nearly 9 hours for training $500000$ ratings).
+
+The result of these experiments shows that Incremental SVD++ produces the same recommendation accuracy as SVD++. In the purpose to apply into real application, Incremental SVD++ has an advantage in the time required for updating compared with SVD++. However, this advantage is affected by many factors. For real application, we must consider the impact of these factors to build a more effective system. In next section, we evaluate the impact of factors: number of observed ratings, number of new ratings, and number of observed ratings.
+
+
+\subsection{Factors affecting updating time}
+\subsubsection{Number of observed ratings and new ratings}
+In this experiment, we evaluate the impact of number of observed ratings and number of new ratings on the update time of ISVD++. Experimental scenario: 
+\begin{description}
+    \item{\textbf{1.}} The model is pre-buit with a dataset of $n$ ratings. The values of $n$ are 20000, 50000, 10000.
+    \item{\textbf{2.}} With each value of $n$, the model is updated with different number of new ratings. 
+\end{description}
+\clearpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{"exp7_123".jpg} 
+    \caption{ Update times of Incremental SVD++}
+    \label{fig:exp7_123}
+\end{figure}
+Figure~\ref{fig:exp7_123} shows the times ISVD++ required for updating model in 3 size of pre-computed data. With the increasing of number of new ratings, the update time is increasing. On the other hand, with the same number of new ratings, the bigger dataset requires more time to update model.
+
+\subsubsection{Number of update objects}
+In this experiment, we evaluate the impact of number of update objects on the update time of ISVD++. Experimental scenario: 
+\begin{description}
+    \item{\textbf{1.}} The model is pre-buit with a dataset of $100000$ ratings.
+    \item{\textbf{2.}} The number of new ratings is fixed at $5000$
+    \item{\textbf{3.}} The number of update object is changed
 \end{description}
 
-
-
-%\clearpage
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth]{"result1".png} 
-    \caption{ Recommendation accuracy (RMSE) comparison between the proposed Incremental SVD++ and SVD++ algorithm in MovieLens}
-    \label{fig:RMSE}
+    \includegraphics[width=\textwidth]{"exp7_4".jpg} 
+    \caption{ Update times of Incremental SVD++}
+    \label{fig:exp7_4}
 \end{figure}
-Figure~\ref{fig:RMSE} shows a comparison between SVD++ and ISVD++ based on their recommendation accuracies. SVD++ methods updates the model after each $10000$ new ratings. So the recommendations are not modified in the period between two updates and the accuracy remained the same. On the other hand, ISVD++ constantly updates the model after each $2000$ news ratings. According to the increasing of observed ratings, the accuracy of two methods significantly increases. But ISVD++ has a slightly better accuracy.
+With fixed number of new ratings and size of pre-computed data, the update time increases when we increase the number of update objects. 
+
+In conclusion, the update time of ISVD++ depends on number of observed ratings, number of new ratings, and number of observed ratings. In section~\ref{Incremental SVD++}, we mentioned  that the update time of ISVD++ is cutting down by updating in related set instead of all observed data. Number of observed ratings and number of observed ratings affect the size of related set. And the number of new ratings has an impact on the size of update objects.
+
 
 \clearpage
+\chapter{Conclusion}
+\label{Conclusion}
+\section{Conclusion}
+Throughout our observation and experiments, Incremental SVD++ proved to be more adaptive to production than its predecessor SVD++. The update time of Incremental SVD++ was much lower than SVD++ which means user will receive faster up-to-date recommended items. In production system, when need a frequently updated recommender system, the training need to be done on-the-fly. Incremental SVD++ would solve the scalability problem and bring about a more effective system.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{"training_timeSVD".png} 
-    \caption{Training times (ms) of SVD++}
-    \label{fig:train_timeSVD++}
-\end{figure}
-%\clearpage
+Although the speed gap from the two algorithms were large, there is virtually no accuracy trade-off as the accuracy of Incremental SVD++ was usually the same as SVD++.
 
-Average training time of SVD++: $\bar t_{SVD++} = 305832.75$
+On the other hand, the algorithm still have some major drawbacks that should be kept in mind when using. One of them is to keep track of the update data's size. In some of our experiments we found out that if the size was too large the updating time will be long and if the size was too small, there is virtually no impact to the overall result.
 
-Figure~\ref{fig:train_timeSVD++} shows the traning times of SVD++ method. It is clearly seen that the training times of SVD++ method increases rapidly according to the number of observed ratings. This is a drawback of SVD++ method when applying in a large-scale dataset. 
-\clearpage
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{"training_timeISVD".png} 
-    \caption{Updating times (ms) of ISVD++}
-    \label{fig:train_timeISVD++}
-\end{figure}
-%\clearpage
-Average training time of ISVD++: $\bar t_{ISVD++} =94476.44$
-
-The updating times of ISVD++ method are erratic. Unlike SVD++, the updating time of ISVD++ does not depend on the number of observed ratings. Because ISVD++ only scans over a subset of ratings when modifying the model.
-In the next experiments, we will evaluate the factors that affect the updating tims of ISVD++ method. Based on the average updating time, ISVD++ method has smaller updating time than than SVD++ method.
-
-Based on the accuracy (RMSE) and the updating time, ISVD++ performs better recommendation than SVD++.
-\subsection{Impact of Parameters}
-\label{Impact of Parameters}
-In this section, we evaluate the impact of parameters on the performance of ISVD++.
-\subsubsection{Impact of the stable of pre-built model}
-We assume that the stable of pre-built model depends on the number of observed ratings which are used to build the model. In this experiment, we evaluate the impact of the number of ratings which are used to pre-built the model, on the updating time of ISVD++ method.
-
-Experimental 2 scenario: 
-\begin{quote}
-The set of new ratings is fixed. ISVD++ will integrate this dataset into models which built of various training datasets. The number of ratings in each dataset are different. 
-
-Specifically, the number of ratings in each training datasets are: $20000$, $30000$, $40000$, $50000$, $60000$, $70000$, $80000$. The updating data includes $2000$ ratings.
-\end{quote}
-\clearpage
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{"init".png} 
-    \caption{Updating times (ms) of ISVD++}
-    \label{fig:train_timeISVD++_impact_1}
-\end{figure}
-Figure~\ref{fig:train_timeISVD++_impact_1} shows the updating times of ISVD++ method with the given trainning datasets. The updating times of ISVD++ method increases steadily according to the number of new ratings.
-
-\subsubsection{Impact of the number of new ratings}
-As mentioned before, ISVD++ method only scans over a subset of ratings which is relevant to new ratings. So in this experiment, we evaluate the relation between the updating time of ISVD++ method and the number of updating dataset.
- 
-Experimental 3 scenario: 
-\begin{quote}
-The model is pre-buit with a fix number of ratings. ISVD++ updates the model with various dataset. And the number of ratings in these dataset are different. Each update, the model will be rebuilt based on the original dataset. So the stable of pre-built model does not affect the result. 
-
-Specifically, the training data includes $70000$ ratings. The number of ratings in updating datasets are: $1$, $100$, $1000$, $5000$, $10000$, $20000$.
-\end{quote}
-
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{"no_new".png} 
-    \caption{Updating times (ms) of ISVD++}
-    \label{fig:train_timeISVD++_impact_2}
-\end{figure}
-%\clearpage
-Figure~\ref{fig:train_timeISVD++_impact_2} shows the updating times of ISVD++ method with the given updating datasets. It is clearly seen that the updating times of ISVD++ method increases rapidly according to the number of new ratings. It cost too much time to update model with large updating data.
-
-\subsubsection{Explanation}
-The result in experiment 2 and experiment 3 can be explained by the number of related ratings in each experiment. Table~\ref{tab:related_1} and ~\ref{tab:related_2} show the number of related ratings in each experiment.
-\begin{table}[h!]
-    \small\centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        No. new ratings & 1 &	100 &	1000&	5000&	10000&	20000\\
-        \hline
-         No. related ratings & 47&	5650&	33003&	60865&	66246&	68502 \\
-        \hline
-    \end{tabular}
-    \caption{ The number of related ratings in experiment 2}
-    \label{tab:related_1}
-\end{table}
-
-\begin{table}[h!]
-    \small\centering
-    \begin{tabular}{|c|c|c|c|c|c||c|c|}
-        \hline
-        No. traning ratings & 20000	&30000	&40000	&50000&	60000&	70000&	80000\\
-        \hline
-         No. related ratings & 15126&	20475&	27147&	33984&	40887&	47873&	54736\\
-        \hline
-    \end{tabular}
-    
-    \caption{ The number of related ratings in experiment 3}
-    \label{tab:related_2}
-\end{table}
-
-The updating step of ISVD++ is faster than SVD++ because it only minimizes the regularized squared error on a subset, the related ratings $S_1$. In experiment 2 and experiment 3, the number of related ratings changes when adjusting other parameters. Therefore, the updating time changes according to the related dataset. 
-
-On the other hand, the increasing of the number of related ratings reduces the speed of the system. In order to get the best performance of ISVD++, the size of updating steps must be adjusting based on the related ratings.
-
-\chapter{Summarization}
-\label{Summarization}
-\section{Summarization}
-We have thoroughly investigated the 
-Incremental SVD++ has performed an out standing performance in comparison with one of the best recommendation algorithm in the world - Singular Value Decomposition with implicit feedback.
-
-In a dynamic scenario, Incremental SVD++ totally beats SVD++ in updating time. In average, ISVD++ run faster than SVD++ 3 times. ISVD++ also produces a slightly better recommendation accuracy then SVD++.
-
-On the other hand, we also evaluate the impart of the size of training data and updating data on the updating time of ISVD++. In order to apply ISVD++ into a real system, we have to adjust the size of updating step to achieve the best results.
- 
 \section{Future work}
 \label{future_work}
-Incremetal SVD++ has a major flaw that is it can not run as an offline algorithms. If we use ISVD++ to pre-compute the model, the systems will face the same  as using ISVD++ to update model with a huge updating dataset.  So in order to get advantage of live update from incremetal SVD++ and recommendations for new data we propose a system where both SVD++ and Incremental SVD++ must be implemented.
+Incremental SVD++ has a major weakness that it can not run as an offline algorithms. If we use ISVD++ to pre-compute the model, the systems will face the same situation as using ISVD++ to update model with a huge updating dataset.  So in order to get advantage of live update from incremental SVD++ and recommendations for new data we propose a system where both SVD++ and Incremental SVD++ must be implemented.
 
-Also despite the fact that Incremental SVD++ was researched for scaled commercial systems, the project was not production ready. Every time we want to recommend a list of items to user we need to reload the whole trained model into memory in which when the model file size becomes to big it won't be able to fit onto the computer's RAM.
+Despite the fact that Incremental SVD++ was researched for scaled commercial systems, the project was not production ready. Every time we want to predict a rating of a user to an items we need to reload the whole trained model into memory. 
 
-\subsection{Application using Incremental SVD++ with offline SVD++}
+In this project we computed and stored the trained model into our data structure matrices - sparse matrix and dense matrix - which the size of the matrices were defined before hand by processing the input data such as the number of items, the number of users and the number of implicit feedback features for each user. These matrices are isolated within the input data, new users and items cannot be integrated into the model. So each time testing with new user or new item, we must initialize their factors at the time to pre-compute model.
 
-In this project we computed and stored the trained model into our data structure matrices - sparse matrix and dense matrix - which the size of the matrices were defined before hand by processing the input data such as the number of items, the number of users and the number of implicit feedback features for each user. These matrices are isolated within the input data, new users and items with new ratings won't get their recommendation list until the whole data model is re-trained, so a system with Incremental SVD++ alone won't generate much profit. In this thesis, we propose a system using the combination of both SVD++ and Incremental SVD++ where Incremental SVD++ is call periodically to update ratings for old data (e.g. update every several minutes) and daily rebuild new model with new data using SVD++.
-
-\subsection{Storing model to database management system}
-
-Our model data is first stored in matrices and then writed to binary files. Next time we want to update our model or suggest items to someone, we have to load the model from files to our data struture and store it in the memory. The problem for scale is that, when the files size exceed the memory size, the memory will be out of ram and crash the application.
+Our model data is first stored in matrices and then writes to binary files. Next time we want to update our model or suggest items to someone, we have to load the model from files to our data structure and store it in the memory. The problem for scale is that, when the files size exceed the memory size, the memory will be out of ram and crash the application.
 
 On the other hand, our Incremental SVD++ algorithm was fast because it only rebuild a portion of the trained model to predict items more up to date. But with the currently save-load model mechanism, time and resource was wasted to load and save other unnecessary data during the process.
 
@@ -1154,7 +1144,7 @@ Propose database structure:
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\textwidth]{"database".png} 
+    \includegraphics[width=0.7\textwidth]{"database".png} 
     \caption{Database structure}
     \label{fig:database}
 \end{figure}

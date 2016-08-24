@@ -1,0 +1,41 @@
+\documentclass[10pt, oneside]{article}
+\usepackage[a6paper,margin=0.1in,landscape]{geometry}
+\usepackage{amsmath}
+\usepackage[lined, linesnumbered, longend]{algorithm2e}
+\usepackage{multicol}
+
+\begin{document}
+\pagenumbering{gobble}
+%\fontsize{20pt}{18pt} 
+\begin{algorithm}[H] 
+ \KwData{ $S_1$, $O$, users bias, items bias, $P$, $Q$, $Y$}
+ \KwResult{Updated model }
+
+ \Repeat{regularized squared error $\approx 0$}{
+
+	\ForAll{$(u, i, r) \in S_1$}
+	{ 	${e_{u,i}} = \;{r_{u,i}} - \hat r_{u,i}$;\\
+		$\Delta b_u = e_{u,i} - \lambda_1 .{b_u}$;	$\Delta b_i = e_{u,i} - \lambda_1 .{b_i}$;\\
+		$\Delta p_u = e_{u,i}.q_i - \lambda_2 .{p_u}$;	$\Delta {q_i} \leftarrow {e_{ui}}.\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j \in  \in {N_u}} {{y_j}} } \right) - {\lambda _2}.{q_i}$;\\ 
+		
+		\If{$u \in O$} 
+		{
+			$b_u = b_u + \gamma.\Delta b_u$;     $p_u = p_u + \gamma.\Delta b_u$;\\
+		}
+		
+		\If{$i \in O$} 
+		{
+			$b_i = b_i + \gamma.\Delta b_i$; $q_i = q_i + \gamma.\Delta q_i$;\\
+		}
+		\ForAll{$j \in N_u$}
+		{
+			\If{$j \in O$}
+			{		
+				${y_j} = {y_j} + {\rm{\;}}{\gamma}.\left( {{e_{ui}}.{{\left| {{N_u}} 									\right|}^{ - \frac{1}{2}}}.{q_i} - {\lambda _2}.{y_j}} \right)$;
+			}
+		}
+	}
+}
+\end{algorithm}
+
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass[12pt, oneside]{article}
+%\usepackage[a5paper,margin=0.1in,landscape]{geometry}
+%\usepackage[pass,paperwidth=8.5in,paperheight=8.5in]{geometry}
+
+\usepackage[paperheight=1.7in,paperwidth=8.5in,left=0in,right=0.01in,top=0in,heightrounded]{geometry}
+
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[lined, linesnumbered, longend]{algorithm2e}
+\usepackage{listings}
+\usepackage{nameref}
+\usepackage{url}
+\usepackage{imakeidx}
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage[labelsep=newline,font=sc, justification=centerlast]{caption}
+\graphicspath{ {figures/} }
+\usepackage{array}
+\makeindex[columns=2, intoc]
+\usepackage{setspace}
+\usepackage[english]{babel} % for vietnamese support
+\usepackage{tikz} % for drawing rectangle
+\usepackage{color, colortbl}
+%\usepackage[]{algorithm2e}
+\usetikzlibrary{calc}
+\usepackage{breqn}
+
+
+
+
+\begin{document}
+%\setmainfont{Georgia}
+\pagenumbering{gobble}
+\begin{equation}
+\label{eq:isvd++_min1}
+\mathop \sum \limits_{\left( {u,\;i} \right) \in S_1} {\left( {{r_{u,i}} - \;\mu  + \;{b_u} + \;{b_i} + \;q_i^T\;\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j  \in {N_u}} {{y_j}} } \right)} \right)^2} \\[\jot]\\+ \;\lambda \left( {{b_u}^2 + \;{b_i}^2 + \;{{\left\| {{q_i}} \right\|}^2} + \;{{\left\| {{p_u}} \right\|}^2} + \sum\limits_{j \in {N_u}} {{{\left\| {{y_j}} \right\|}^2}} } \right)
+\end{equation}
+
+\begin{equation}
+\label{eq:isvd++_min2}
+\mathop \sum \limits_{\left( {u,\;i} \right) \in S_2} {\left( {{r_{u,i}} - \;\mu  + \;{b_u} + \;{b_i} + \;q_i^T\;\left( {{p_u} + {{\left| {{N_u}} \right|}^{ - \frac{1}{2}}}\sum\limits_{j  \in {N_u}} {{y_j}} } \right)} \right)^2} \\[\jot]\\+ \;\lambda \left( {{b_u}^2 + \;{b_i}^2 + \;{{\left\| {{q_i}} \right\|}^2} + \;{{\left\| {{p_u}} \right\|}^2} + \sum\limits_{j \in {N_u}} {{{\left\| {{y_j}} \right\|}^2}} } \right)
+\end{equation}
+
+
+
+\end{document}

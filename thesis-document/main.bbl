@@ -77,6 +77,10 @@ R.~Salakhutdinov, A.~Mnih, and G.~Hinton, ``Restricted boltzmann machines for
   collaborative filtering,'' in {\em Proceedings of the 24th international
   conference on Machine learning}, pp.~791--798, ACM, 2007.
 
+\bibitem{koren2009matrix}
+Y.~Koren, R.~Bell, C.~Volinsky, {\em et~al.}, ``Matrix factorization techniques
+  for recommender systems,'' {\em Computer}, vol.~42, no.~8, pp.~30--37, 2009.
+
 \bibitem{salakhutdinov2008bayesian}
 R.~Salakhutdinov and A.~Mnih, ``Bayesian probabilistic matrix factorization
   using markov chain monte carlo,'' in {\em Proceedings of the 25th
@@ -115,9 +119,5 @@ R.~Burke, ``Hybrid recommender systems: Survey and experiments,'' {\em User
 D.~W. Oard, J.~Kim, {\em et~al.}, ``Implicit feedback for recommender
   systems,'' in {\em Proceedings of the AAAI workshop on recommender systems},
   pp.~81--83, 1998.
-
-\bibitem{koren2009matrix}
-Y.~Koren, R.~Bell, C.~Volinsky, {\em et~al.}, ``Matrix factorization techniques
-  for recommender systems,'' {\em Computer}, vol.~42, no.~8, pp.~30--37, 2009.
 
 \end{thebibliography}
