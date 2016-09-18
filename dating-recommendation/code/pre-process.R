@@ -212,4 +212,37 @@ exp2 <- function() {
   }
 }
 
+exp4 <- function() {
+  
+  
+  filename = "train.txt"
+  no_update_rating = 10000
+  no_init_rating = 20000
+  maxindex = 6
+  
+  d <- read.table(filename,header=FALSE, sep = "\t")
+  i1 <- no_init_rating +1
+  d$V3[i1: length(d$V2)] <- 0
+  write.table(d,file="init.txt",row.names=FALSE,col.names=FALSE,sep='\t')
+  
+  for(index in 0:6) {
+    update_file(filename, index, no_update_rating, no_init_rating, maxindex)
+  }
+}
+
+exp5 <- function() {
+  
+  
+  filename = "train.txt"
+  no_update_rating = 500
+  no_init_rating = 20000
+  maxindex = 139
+  
+  
+  for(index in 0:maxindex) {
+    update_file(filename, index, no_update_rating, no_init_rating, maxindex)
+  }
+}
+
+
 
